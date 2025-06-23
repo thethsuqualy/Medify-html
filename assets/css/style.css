@@ -1,0 +1,153 @@
+@charset "utf-8";
+/* ===============================
+Top Page
+=============================== */
+
+@media screen and (max-width: 768px) {}
+
+.header {
+    font-family: 'Ubuntu';
+    font-size: 42px;
+    color: #0a3380;
+
+}
+
+.history-section {
+    font-family: Nunito;
+}
+
+.history {
+    background-image: url(../img/half-doctor.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: bottom center;
+    background-color: #f2f2f4;
+    height: 300px;
+    margin-bottom: 90px;
+    padding-top: 80px;
+    padding-bottom: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner-history {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.breadcrumb {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    content: ">";
+    padding: 0 5px;
+    color: #54ced4;
+}
+
+.breadcrumb-item a {
+    color: #0a3380;
+}
+
+.breadcrumb-item.active {
+    color: #0a3380;
+}
+
+.mission {
+    max-width: 1210px;
+    padding: 0 20px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.mission-h3 {
+    margin: 20px 0;
+}
+
+.mission-img {
+    max-width: 656px;
+}
+.our-mission-wrapper{
+    max-width:calc(100% - 656px);
+    width: 100%;
+    padding: 20px 0;
+}
+
+.mission-ul {
+    position: relative;
+}
+
+.mission-ul li::before {
+    content: '';
+    background: url(../img/check.png) no-repeat;
+    background-size: contain;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: 0;
+}
+
+.mission-ul li {
+    padding-left: 35px;
+    line-height: 38px;
+    display: flex;
+    align-items: center;
+}
+
+.our-mission {
+    color: #ff9e21;
+    padding: 0 12px;
+    position: relative;
+}
+
+.our-mission span::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 10px;
+    height: 3px;
+    border-radius: 2px;
+    top: 50%;
+    margin-top: -2px;
+    background-color: #ff9e21;
+    left: 0;
+}
+
+.our-mission span::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 10px;
+    height: 3px;
+    border-radius: 2px;
+    top: 50%;
+    /* right: -20px; */
+    margin-top: -2px;
+    background-color: #ff9e21;
+}
+.our-history-wrapper{
+    background-color: #54ced4;
+    background-image: url(../img/our-history-bg.png);
+    background-position: center center;
+    background-repeat: repeat;
+}
+.inner-our-history{
+     max-width: 1320px;
+    margin: 0 auto;
+    color: #ffff;
+}
+.our-history-h3{
+    margin-bottom: 20px;
+    color: #ffff;
+}
