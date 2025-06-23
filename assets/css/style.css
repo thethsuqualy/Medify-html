@@ -5,11 +5,11 @@ Top Page
 
 @media screen and (max-width: 768px) {}
 
-.header {
+/* Our History */
+.history-header {
     font-family: 'Ubuntu';
     font-size: 42px;
     color: #0a3380;
-
 }
 
 .history-section {
@@ -17,7 +17,7 @@ Top Page
 }
 
 .history {
-    background-image: url(../img/half-doctor.jpg);
+    background-image: url(../img/our-history/half-doctor.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -65,7 +65,7 @@ Top Page
 }
 
 .mission {
-    max-width: 1210px;
+    max-width: 1320px;
     padding: 0 20px;
     margin: 0 auto;
     display: flex;
@@ -78,8 +78,9 @@ Top Page
 .mission-img {
     max-width: 656px;
 }
-.our-mission-wrapper{
-    max-width:calc(100% - 656px);
+
+.our-mission-wrapper {
+    max-width: calc(100% - 656px);
     width: 100%;
     padding: 20px 0;
 }
@@ -90,7 +91,7 @@ Top Page
 
 .mission-ul li::before {
     content: '';
-    background: url(../img/check.png) no-repeat;
+    background: url(../img/our-history/check.png) no-repeat;
     background-size: contain;
     width: 15px;
     height: 15px;
@@ -107,8 +108,11 @@ Top Page
 
 .our-mission {
     color: #ff9e21;
-    padding: 0 12px;
     position: relative;
+    max-width: 140px;
+    padding:0 20px;
+    font-size: 14px;
+    font-family: 'Ubuntu';
 }
 
 .our-mission span::before {
@@ -132,26 +136,151 @@ Top Page
     height: 3px;
     border-radius: 2px;
     top: 50%;
-    /* right: -20px; */
+    right: 0;
     margin-top: -2px;
     background-color: #ff9e21;
 }
-.our-history-wrapper{
+
+.our-history-wrapper {
     background-color: #54ced4;
-    background-image: url(../img/our-history-bg.png);
+    background-image: url(../img/our-history/our-history-bg.png);
     background-position: center center;
     background-repeat: repeat;
+    height: 100%;
 }
-.inner-our-history{
-     max-width: 1320px;
-    margin: 0 auto;
+
+.inner-our-history {
+    max-width: 1320px;
+    margin: 86px auto 0 auto;
+    padding: 112px 20px;
+    color: #ffff;
+    text-align: center;
+}
+
+.our-history-h3 {
+    margin: 20px 0;
     color: #ffff;
 }
-.our-history-h3{
+
+.our-history-p {
+    font-family: 'Nunito';
+    font-size: 18px;
+    line-height: 2;
+    text-align: center;
     margin-bottom: 20px;
-    color: #ffff;
 }
-/* Our History */
+.history-card-wrapper{
+    display: flex;
+    gap: 20px;
+   justify-content: center;
+}
+
+.history-card-h3 {
+    color: #0a3380;
+    font-size: 20px;
+    line-height: 1.4;
+    transition: 0.4s;
+    margin-bottom: 8px;
+    font-family: 'Ubuntu';
+}
+
+.history-card-p {
+    color: #3b4964;
+    font-family: 'Nunito';
+}
+.history-card {
+    background-color: #ffffff;
+    border-radius: 15px 15px 15px 15px;
+    padding: 24px 30px 24px 50px;
+    margin-bottom: 30px;
+    position: relative;
+}
+.history-card::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: -40px;
+    width: 30px;
+    height: 30px;
+    background: url(../img/our-history/white_circle_icon.png) no-repeat;
+    background-position: center;
+    background-size: contain;
+
+}
+.year{
+    font-family: "Ubuntu", Sans-serif;
+    color: #ccd0de;
+    font-weight: 500;
+    font-size: 48px;
+    transition: 0.4s;
+    position: relative;
+    padding-right: 30px;
+    text-align: center;
+}
+.year::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 100%;
+    background-color:#ffffff;
+}
+.history-card-wrapper:last-child .history-card {
+    margin-bottom: 0;
+}
+.our-history{
+    position: relative;
+    max-width: 140px;
+    margin: 0 auto;
+    font-size: 14px;
+    font-family: 'Ubuntu';
+}
+.our-history span::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 10px;
+    height: 3px;
+    border-radius: 2px;
+    top: 50%;
+    margin-top: -2px;
+    background-color: #ffffff;
+    left: 0;
+}
+
+.our-history span::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 10px;
+    height: 3px;
+    border-radius: 2px;
+    top: 50%;
+    right: 0;
+    margin-top: -2px;
+    background-color: #ffffff;
+}
+
+.care-a{
+    color: #ff9e21;
+    font-size: 14px;
+    font-family: 'Ubuntu';
+}
+.carea-lower-content p{
+    font-family: 'Nunito';
+    color: #3b4964;
+    margin-bottom:20px ;
+}
+.lower-carea{
+    font-family: "Ubuntu", Sans-serif;
+    font-weight: 700;
+    /* color: #0a3380; */
+    color: #ccd0de;
+    font-size: 18px;
+}
+
+
 /* Our History End*/
 /* Service */
 /* Service End */
