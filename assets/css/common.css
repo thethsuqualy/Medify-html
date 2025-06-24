@@ -203,6 +203,7 @@ Background Color
   justify-content: space-between;
   align-items: start;
   margin: 0px 20px;
+  flex-wrap: wrap;
 }
 .our-contacts-ttl {
   font-family: "Ubuntu";
@@ -217,20 +218,22 @@ Background Color
   padding: 10px;
 }
 .location {
-  width: 26px;
-  height: 26px;
+  width: 23px;
+  height: 23px;
 }
 .contact {
-  width: 26px;
+  width: 23px;
+  height: 23px;
 }
 .content {
   font-family: "Nunito";
   font-size: 16px;
   color: #3b4964;
+  line-height: 1.2;
 }
 .clock {
-  width: 26px;
-  height: 26px;
+  width: 23px;
+  height: 23px;
 }
 .our-location {
   display: flex;
@@ -289,7 +292,7 @@ Background Color
   display: flex;
   align-items: center;
   gap: 10px;
-  margin: 8px 0;
+  margin: 18px 0;
 }
 .line {
   flex-grow: 1;
@@ -304,75 +307,97 @@ Background Color
 }
 .below-footer-section {
   text-align: center;
-  padding: 15px 0px 15px;
-  font-family: "Nunito", sans-serif;
+  padding: 23px 0px 15px;
+  font-family: "Nunito";
   font-size: 16px;
+  font-weight: 500;
   color: #aeb6c2;
-  border-top:1px solid #aeb6c2;
-}
-.underline {
-  width: 100%;
-  height: 0.5px;
-  background-color: #aeb6c2;
-  margin-bottom: 12px;
+  margin-top: 70px;
+  border-top: 1px solid #e5e5e5;
 }
 
-.single-layout-plus {
-  display: inline-block;
-  position: relative;
-  width: 12px;
-  height: 12px;
-  margin-left: 94px;
+@media screen and (max-width: 1177px) {
+  .footer-wrapper {
+    display: flex;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-areas:
+      "contacts hours"
+      "map map";
+    grid-template-columns: 400px 400px;
+    gap: 0;
+    max-width: 800px;
+    width: 100%;
+  }
+  .our-contacts {
+    grid-area: contacts;
+    width: 100%;
+  }
+  .open-hours {
+    grid-area: hours;
+    width: 100%;
+  }
+  .map-section {
+    grid-area: map;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .access-map {
+    width: 100%;
+    max-width: 800px;
+    height: 264px;
+  }
 }
-.single-layout-plus::before,
-.single-layout-plus::after {
-  content: "";
-  position: absolute;
-  background-color: #0a3380;
-  border-radius: 1px;
+@media screen and (max-width: 1025px) {
+  .footer-wrapper {
+    display: flex;
+    justify-content: space-around;
+  }
+  .open-hours {
+    max-width: 425px;
+  }
+  .our-contacts {
+    max-width: 503px;
+  }
+  .map-section {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  .map-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* padding: 0 20px; */
+    box-sizing: border-box;
+  }
+  .access-map {
+    width: 900px;
+    height: 300px;
+    border: 0;
+    display: block;
+  }
 }
-.single-layout-plus::before {
-  width: 8px;
-  height: 2px;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.single-layout-plus::after {
-  width: 2px;
-  height: 8px;
-  right: 3px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.blog-grid-submenu {
-  display: none;
-  background: #ffffff;
-  padding: 15px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  margin-top: 10px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.submenu-item:hover .blog-grid-submenu {
-  display: grid;
-}
-
-.blog-grid-submenu a {
-  padding: 5px 10px;
-  background-color: #f8f8f8;
-  border-radius: 5px;
-  text-decoration: none;
-  color: #333;
-  transition: 0.3s ease;
-}
-
-.blog-grid-submenu a:hover {
-  background-color: #ececec;
+@media screen and (max-width: 862px) {
+  .access-map {
+    width: 650px;
+  }
+  .open-hours {
+    max-width: 340px;
+  }
 }
 @media screen and (max-width: 768px) {
+  .footer-wrapper {
+    flex-direction: column;
+    margin: 0 90px;
+  }
+  .open-hours {
+        max-width: 550px;
+    }
+    .access-map {
+    width: 570px;
+  }
 }
