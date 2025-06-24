@@ -343,7 +343,6 @@ Top Page
 
 .lower-carea-h4.active {
     color: #0a3380;
-
 }
 
 .carea-img2 {
@@ -387,7 +386,7 @@ Top Page
     background-color: #ff9e21;
 }
 
-@media screen and (max-width: 1190px) {
+@media screen and (max-width: 1200px) {
     .mission-img {
         max-width: 550px;
     }
@@ -409,7 +408,7 @@ Top Page
     }
 }
 
-@media screen and (max-width: 1075px) {
+@media screen and (max-width: 1095px) {
     .mission-ul li:first-child:before {
         margin-top: -35px;
     }
@@ -424,10 +423,6 @@ Top Page
 
     .mission-img {
         max-width: 656px;
-    }
-
-    .our-mission-wrapper {
-        max-width: calc(100% - 656px);
     }
 
     .our-mission-wrapper {
@@ -450,9 +445,158 @@ Top Page
     .care-a-img {
         max-width: 650px;
     }
-
 }
 
+@media screen and (max-width: 768px) {
+    .history{
+        margin-bottom: 45px;
+    }
+    .mission-img {
+        max-width: 500px;
+        width: 100%;
+    }
+
+    .our-mission-wrapper {
+        max-width: 100%;
+    }
+
+    .care-a-wrapper {
+        padding: 0 50px 0 100px;
+    }
+
+    .care-a-content {
+        max-width: 100%;
+    }
+
+    .mission-ul li:first-child:before {
+        margin-top: 0px;
+    }
+
+    .care-a-img {
+        max-width: 650px;
+    }
+
+    .care-a-wrapper {
+        display: flex;
+        max-width: 600px;
+        padding: 0 20px;
+        margin: 50px auto 0 auto;
+    }
+
+    .mission {
+        max-width: 600px;
+        padding: 0 20px;
+        margin: 0 auto;
+        display: flex;
+    }
+
+    .year {
+        font-size: 35px;
+        transition: 0.4s;
+        padding-right: 30px;
+    }
+
+    .history-card {
+        background-color: #ffffff;
+        border-radius: 15px 15px 15px 15px;
+        padding: 24px 15px 24px 25px;
+        margin-bottom: 30px;
+        position: relative;
+    }
+
+    .our-history-h3 {
+        font-size: 30px;
+    }
+
+    .inner-our-history {
+        max-width: 600px;
+        margin: 43px auto 0 auto;
+        padding: 56px 20px;
+        color: #ffff;
+        text-align: center;
+    }
+
+    .lower-carea {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        gap: 20px;
+    }
+
+    .lower-carea-h4 {
+        position: relative;
+        max-width: 100%;
+        text-align: center;
+        cursor: pointer;
+        margin-bottom: 22px;
+    }
+}
+
+@media screen and (max-width: 525px) {
+    .mission-ul li:first-child::before {
+        margin-top: -33px;
+    }
+
+    .year {
+        font-size: 30px;
+        transition: 0.4s;
+        padding-right: 30px;
+    }
+
+    .history-card {
+        background-color: #ffffff;
+        border-radius: 15px 15px 15px 15px;
+        padding: 24px 10px 24px 10px;
+        margin-bottom: 30px;
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 428px) {
+    .mission-ul li:nth-child(5)::before {
+        margin-top: -33px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .history-card-wrapper {
+        gap: 15px;
+    }
+
+    .history-card::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: -28px;
+        width: 20px;
+        height: 20px;
+        background: url(../img/our-history/white_circle_icon.png) no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+
+    .year {
+        font-size: 22px;
+        transition: 0.4s;
+        padding-right: 20px;
+    }
+
+    .history-card {
+        background-color: #ffffff;
+        border-radius: 15px 15px 15px 15px;
+        padding: 24px 10px 24px 10px;
+        margin-bottom: 30px;
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 347px) {
+    .mission-ul li:nth-child(2)::before {
+        margin-top: -33px;
+    }
+}
 /* Our History End*/
+
+
 /* Service */
 /* Service End */
