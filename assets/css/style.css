@@ -858,6 +858,7 @@ Top Page
     display: flex;
     justify-content: space-between;
     padding: 15px;
+    gap: 20px;
 }
 
 .pricing_plan-wrap.blue {
