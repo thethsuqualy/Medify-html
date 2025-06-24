@@ -3,7 +3,8 @@
 Top Page
 =============================== */
 
-@media screen and (max-width: 768px) {}
+/* About us start */
+/* About us End */
 
 /* Our History */
 .history-header {
@@ -12,7 +13,6 @@ Top Page
     color: #0a3380;
     font-weight: 700;
     margin: 20px 0;
-
 }
 
 .history-section {
@@ -35,6 +35,10 @@ Top Page
     justify-content: center;
 }
 
+.history-h2 {
+    margin: 0;
+}
+
 .inner-history {
     margin: 0 auto;
     display: flex;
@@ -51,6 +55,7 @@ Top Page
     font-weight: 700;
     font-size: 16px;
     font-weight: 400;
+    margin-top: 10px;
 }
 
 .breadcrumb-item+.breadcrumb-item::before {
@@ -147,9 +152,9 @@ Top Page
 }
 
 .inner-our-history {
-    max-width: 1340px;
+    max-width: 1320px;
     margin: 86px auto 0 auto;
-    padding: 112px 30px;
+    padding: 112px 20px;
     color: #ffff;
     text-align: center;
 }
@@ -345,21 +350,8 @@ Top Page
     font-weight: 700;
     position: relative;
     max-width: 175px;
-    /* padding-left: 20px; */
 }
 
-/* .care-a::before{
-    content: "";
-    position: absolute;
-    z-index: 1;
-    width: 10px;
-    height: 3px;
-    border-radius: 2px;
-    top: 50%;
-    margin-top: -2px;
-    background-color: #ff9e21;
-    left: 0;
-} */
 .care-a::after {
     content: "";
     position: absolute;
@@ -587,7 +579,6 @@ Top Page
 /* Our History End*/
 
 /* Service start */
-
 .service {
     background-image: url(../img/service/half-doctor.jpg);
     background-size: cover;
@@ -596,9 +587,11 @@ Top Page
     background-position: bottom center;
     background-color: #f2f2f4;
     height: 300px;
-    margin-bottom: 40px;
     padding-top: 80px;
     padding-bottom: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .inner-service {
@@ -622,8 +615,8 @@ Top Page
 
 .service-container {
     max-width: 1340px;
-    padding: 0 30px;
-    margin: 0 auto;
+    padding: 0 20px;
+    margin: 80px auto 100px auto;
 }
 
 .inner-service-container {
@@ -633,7 +626,6 @@ Top Page
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 40px;
 }
 
 .our-service {
@@ -644,6 +636,10 @@ Top Page
     font-family: 'Ubuntu';
     font-weight: 700;
     padding-left: 20px;
+}
+
+.our-service-h3 {
+    text-align: center;
 }
 
 .our-service span::after {
@@ -678,12 +674,15 @@ Top Page
     font-family: 'Nunito';
     text-align: center;
     line-height: 2;
+    font-weight: 400;
+    color: #3b4964;
 }
 
 .icon-wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     place-items: center;
+    margin-top: 15px;
 }
 
 .special-icon {
@@ -740,7 +739,6 @@ Top Page
     right: 13px;
 }
 
-
 .icon {
     width: 50px;
     height: 50px;
@@ -760,12 +758,14 @@ Top Page
     font-family: "Ubuntu", Sans-serif;
     font-weight: 700;
     max-width: 370px;
+    width: 100%;
     transition: 0.5s;
     background-size: cover;
     background-position: center;
-    background-color: #9e9696;
-    box-shadow: 10px 8px 35px 0px rgba(49, 49, 49, 0.08);
+    background-color: #ffffff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     border-radius: 15px;
+    margin: 20px 0;
 }
 
 .pricing-header {
@@ -774,27 +774,61 @@ Top Page
     padding: 43px 35px 37px;
     text-align: center;
 }
-.pricing-h4{
+
+.pricing-header::after {
+    content: "";
+    position: absolute;
+    z-index: 100;
+    bottom: 0;
+    left: 50%;
+    height: 3px;
+    width: 60px;
+    margin-left: -30px;
+    background-color: #2ea6f7;
+}
+
+.pricing-h4 {
     display: inline-block;
     font-size: 24px;
     line-height: 1.4;
     margin-bottom: 28px;
     color: #0a3380;
 }
-.pricing_cur{
-    display: inline-block;
-    padding-top: 0;
-    padding-right: 0.3em;
+
+.pricing-price-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-weight: 700;
-    color: #2ea6f7;
-    vertical-align: top;
-    margin-bottom: 3px;
 }
+
+.pricing-price {
+    color: #2ea6f7;
+    font-size: 80px;
+    padding-left: 10px;
+}
+
+.pricing_cur {
+    display: inline-block;
+    color: #2ea6f7;
+    margin-top: -45px;
+    font-size: 25px;
+}
+
+.pricing-month {
+    font-size: 18px;
+    color: #2ea6f7;
+    font-weight: 400;
+    vertical-align: bottom;
+    margin-top: 42px;
+}
+
 .pricing_content {
     color: #0a3380;
     font-size: 18px;
     margin: 34px 35px 18px;
     text-align: center;
+    line-height: 2;
 }
 
 .pricing_content p {
@@ -807,6 +841,7 @@ Top Page
     font-weight: 400;
     font-family: 'Ubuntu';
     max-width: 142px;
+    border-radius: 7px 7px 0px 0px;
 }
 
 .pricing-btn {
@@ -819,7 +854,150 @@ Top Page
     text-align: center;
 }
 
-/* special end */
+.pricing-plan-flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    gap: 20px;
+}
 
+.pricing_plan-wrap.blue {
+    background: url(../img/service/price_bg.jpg) no-repeat;
+    background-size: cover;
+}
 
+.pricing_cur.blue {
+    color: #ffffff;
+}
+
+.pricing-price.blue {
+    color: #ffffff;
+}
+
+.pricing-month.blue {
+    color: #ffffff;
+}
+
+.pricing-h4.blue {
+    color: #ffffff;
+}
+
+.pricing_content.blue {
+    color: #ffffff;
+}
+
+.pricing-btn.blue {
+    background-color: #ffffff;
+    color: #2ea6f7;
+}
+
+.pricing-header.blue::after {
+    background-color: #ffffff;
+}
+
+.pricing_cur.green {
+    color: #54ced4;
+}
+
+.pricing-price.green {
+    color: #54ced4;
+}
+
+.pricing-month.green {
+    color: #54ced4;
+}
+
+.pricing-btn.green {
+    background-color: #54ced4;
+}
+
+.pricing-header.green::after {
+    background-color: #54ced4;
+}
+
+.pricing_footer.active {
+    background-color: #2ea6f7;
+}
+
+.pricing_footer.active .pricing-btn {
+    width: 100%;
+    background-color: #ff9e21;
+}
+
+.pricing_footer.active .pricing-btn.blue {
+    color: #ffffff;
+}
+
+@media screen and (max-width: 1025px) {
+    .icon-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+        margin-top: 15px;
+    }
+
+    .pricing-plan-flex {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 15px;
+        justify-content: space-evenly;
+        row-gap: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .our-service-h3 {
+        font-size: 30px;
+    }
+
+    .icon-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        place-items: center;
+        margin-top: 15px;
+    }
+
+    .special-icon {
+        max-width: 300px;
+        width: 100%;
+        height: 300px;
+        margin-bottom: 10px;
+    }
+    .pricing-price-wrap {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .pricing-header {
+        padding: 43px 25px 37px;
+    }
+
+    .pricing-month {
+        margin-top: 10px;
+    }
+
+    .pricing-plan-flex {
+        padding: 0px;
+    }
+}
+@media screen and (max-width: 325px) {
+     .our-service-h3 {
+        font-size: 29px;
+    }
+}
 /* Service End */
+
+/* Doctor Start */
+/* Doctor End */
+
+/* FAQ Start */
+/* FAQ End */
+
+/* Blog 2column Start */
+/* Blog 2column End */
+
+/* Blog single Start */
+/* Blog single End */
+
+/* Contact Start */
+/* Contact End */
