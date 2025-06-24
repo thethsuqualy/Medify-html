@@ -10,6 +10,7 @@ Top Page
     font-family: 'Ubuntu';
     font-size: 42px;
     color: #0a3380;
+    font-weight: 700;
 }
 
 .history-section {
@@ -65,14 +66,16 @@ Top Page
 }
 
 .mission {
-    max-width: 1320px;
-    padding: 0 20px;
+    max-width: 1340px;
+    padding: 0 30px;
     margin: 0 auto;
     display: flex;
 }
 
 .mission-h3 {
-    margin: 20px 0;
+    margin: 10px 0;
+    line-height: 1.5;
+    font-weight: 700;
 }
 
 .mission-img {
@@ -82,6 +85,7 @@ Top Page
 .our-mission-wrapper {
     max-width: calc(100% - 656px);
     width: 100%;
+    font-weight: 700;
     padding: 20px 0;
 }
 
@@ -93,15 +97,16 @@ Top Page
     content: '';
     background: url(../img/our-history/check.png) no-repeat;
     background-size: contain;
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     position: absolute;
     left: 0;
 }
 
 .mission-ul li {
-    padding-left: 35px;
-    line-height: 38px;
+    padding-left: 30px;
+    line-height: 2.5;
+    font-weight: 300;
     display: flex;
     align-items: center;
 }
@@ -110,12 +115,12 @@ Top Page
     color: #ff9e21;
     position: relative;
     max-width: 140px;
-    padding:0 20px;
+    /* padding: 0 20px; */
     font-size: 14px;
     font-family: 'Ubuntu';
 }
 
-.our-mission span::before {
+/* .our-mission span::before {
     content: "";
     position: absolute;
     z-index: 1;
@@ -126,7 +131,7 @@ Top Page
     margin-top: -2px;
     background-color: #ff9e21;
     left: 0;
-}
+} */
 
 .our-mission span::after {
     content: "";
@@ -136,7 +141,7 @@ Top Page
     height: 3px;
     border-radius: 2px;
     top: 50%;
-    right: 0;
+    right: 20px;
     margin-top: -2px;
     background-color: #ff9e21;
 }
@@ -150,9 +155,9 @@ Top Page
 }
 
 .inner-our-history {
-    max-width: 1320px;
+    max-width: 1340px;
     margin: 86px auto 0 auto;
-    padding: 112px 20px;
+    padding: 112px 30px;
     color: #ffff;
     text-align: center;
 }
@@ -169,10 +174,11 @@ Top Page
     text-align: center;
     margin-bottom: 20px;
 }
-.history-card-wrapper{
+
+.history-card-wrapper {
     display: flex;
     gap: 20px;
-   justify-content: center;
+    justify-content: center;
 }
 
 .history-card-h3 {
@@ -188,6 +194,7 @@ Top Page
     color: #3b4964;
     font-family: 'Nunito';
 }
+
 .history-card {
     background-color: #ffffff;
     border-radius: 15px 15px 15px 15px;
@@ -195,21 +202,21 @@ Top Page
     margin-bottom: 30px;
     position: relative;
 }
-.history-card::before{
+
+.history-card::before {
     content: "";
     position: absolute;
     top: 0px;
-    left: -40px;
+    left: -38px;
     width: 30px;
     height: 30px;
     background: url(../img/our-history/white_circle_icon.png) no-repeat;
     background-position: center;
     background-size: contain;
-
 }
-.year{
+
+.year {
     font-family: "Ubuntu", Sans-serif;
-    color: #ccd0de;
     font-weight: 500;
     font-size: 48px;
     transition: 0.4s;
@@ -217,25 +224,33 @@ Top Page
     padding-right: 30px;
     text-align: center;
 }
-.year::after{
+
+.year::after {
     content: "";
     position: absolute;
     top: 0;
     right: 0;
     width: 5px;
     height: 100%;
-    background-color:#ffffff;
+    background-color: #ffffff;
 }
+
+.history-card-wrapper:last-child .year::after {
+    content: none;
+}
+
 .history-card-wrapper:last-child .history-card {
     margin-bottom: 0;
 }
-.our-history{
+
+.our-history {
     position: relative;
     max-width: 140px;
     margin: 0 auto;
     font-size: 14px;
     font-family: 'Ubuntu';
 }
+
 .our-history span::before {
     content: "";
     position: absolute;
@@ -262,25 +277,326 @@ Top Page
     background-color: #ffffff;
 }
 
-.care-a{
+.care-a-wrapper {
+    display: flex;
+    max-width: 1320px;
+    padding: 0 20px;
+    margin: 100px auto 0 auto;
+}
+
+.care-a-img {
+    max-width: 650px;
+    position: relative;
+}
+
+.care-a-content {
+    max-width: calc(100% - 670px);
+    margin-top: 75px;
+    padding: 10px;
+}
+
+.care-a-h3 {
+    margin: 20px 0;
+}
+
+.carea-lower-content p {
+    font-family: 'Nunito';
+    color: #3b4964;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    font-weight: 500;
+}
+
+.lower-carea {
+    font-family: "Ubuntu", Sans-serif;
+    font-weight: 700;
+    color: #ccd0de;
+    font-size: 18px;
+    display: flex;
+    margin-bottom: 22px;
+    padding: 5px 43px 20px 0;
+}
+
+.lower-carea-h4 {
+    position: relative;
+    max-width: 200px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.lower-carea-h4::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    height: 4px;
+    width: 0;
+    left: 0;
+    top: 35px;
+    transition: width 0.1s;
+    background-color: #ff9e21;
+}
+
+.lower-carea-h4.active::before {
+    width: 100%;
+}
+
+.lower-carea-h4.active {
+    color: #0a3380;
+}
+
+.carea-img2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.care-a {
     color: #ff9e21;
     font-size: 14px;
     font-family: 'Ubuntu';
-}
-.carea-lower-content p{
-    font-family: 'Nunito';
-    color: #3b4964;
-    margin-bottom:20px ;
-}
-.lower-carea{
-    font-family: "Ubuntu", Sans-serif;
     font-weight: 700;
-    /* color: #0a3380; */
-    color: #ccd0de;
-    font-size: 18px;
+    position: relative;
+    max-width: 175px;
+    /* padding-left: 20px; */
 }
 
+/* .care-a::before{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 10px;
+    height: 3px;
+    border-radius: 2px;
+    top: 50%;
+    margin-top: -2px;
+    background-color: #ff9e21;
+    left: 0;
+} */
+.care-a::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 10px;
+    height: 3px;
+    border-radius: 2px;
+    top: 50%;
+    right: 15px;
+    margin-top: -2px;
+    background-color: #ff9e21;
+}
 
+@media screen and (max-width: 1200px) {
+    .mission-img {
+        max-width: 550px;
+    }
+
+    .our-mission-wrapper {
+        max-width: calc(100% - 550px);
+        width: 100%;
+    }
+
+    .care-a-img {
+        max-width: 550px;
+        position: relative;
+    }
+
+    .care-a-content {
+        max-width: calc(100% - 550px);
+        margin-top: 75px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 1095px) {
+    .mission-ul li:first-child:before {
+        margin-top: -35px;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .mission {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .mission-img {
+        max-width: 656px;
+    }
+
+    .our-mission-wrapper {
+        max-width: 100%;
+    }
+
+    .care-a-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .care-a-content {
+        max-width: 100%;
+    }
+
+    .mission-ul li:first-child:before {
+        margin-top: 0px;
+    }
+
+    .care-a-img {
+        max-width: 650px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .history{
+        margin-bottom: 45px;
+    }
+    .mission-img {
+        max-width: 500px;
+        width: 100%;
+    }
+
+    .our-mission-wrapper {
+        max-width: 100%;
+    }
+
+    .care-a-wrapper {
+        padding: 0 50px 0 100px;
+    }
+
+    .care-a-content {
+        max-width: 100%;
+    }
+
+    .mission-ul li:first-child:before {
+        margin-top: 0px;
+    }
+
+    .care-a-img {
+        max-width: 650px;
+    }
+
+    .care-a-wrapper {
+        display: flex;
+        max-width: 600px;
+        padding: 0 20px;
+        margin: 50px auto 0 auto;
+    }
+
+    .mission {
+        max-width: 600px;
+        padding: 0 20px;
+        margin: 0 auto;
+        display: flex;
+    }
+
+    .year {
+        font-size: 35px;
+        transition: 0.4s;
+        padding-right: 30px;
+    }
+
+    .history-card {
+        background-color: #ffffff;
+        border-radius: 15px 15px 15px 15px;
+        padding: 24px 15px 24px 25px;
+        margin-bottom: 30px;
+        position: relative;
+    }
+
+    .our-history-h3 {
+        font-size: 30px;
+    }
+
+    .inner-our-history {
+        max-width: 600px;
+        margin: 43px auto 0 auto;
+        padding: 56px 20px;
+        color: #ffff;
+        text-align: center;
+    }
+
+    .lower-carea {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        gap: 20px;
+    }
+
+    .lower-carea-h4 {
+        position: relative;
+        max-width: 100%;
+        text-align: center;
+        cursor: pointer;
+        margin-bottom: 22px;
+    }
+}
+
+@media screen and (max-width: 525px) {
+    .mission-ul li:first-child::before {
+        margin-top: -33px;
+    }
+
+    .year {
+        font-size: 30px;
+        transition: 0.4s;
+        padding-right: 30px;
+    }
+
+    .history-card {
+        background-color: #ffffff;
+        border-radius: 15px 15px 15px 15px;
+        padding: 24px 10px 24px 10px;
+        margin-bottom: 30px;
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 428px) {
+    .mission-ul li:nth-child(5)::before {
+        margin-top: -33px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .history-card-wrapper {
+        gap: 15px;
+    }
+
+    .history-card::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: -28px;
+        width: 20px;
+        height: 20px;
+        background: url(../img/our-history/white_circle_icon.png) no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+
+    .year {
+        font-size: 22px;
+        transition: 0.4s;
+        padding-right: 20px;
+    }
+
+    .history-card {
+        background-color: #ffffff;
+        border-radius: 15px 15px 15px 15px;
+        padding: 24px 10px 24px 10px;
+        margin-bottom: 30px;
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 347px) {
+    .mission-ul li:nth-child(2)::before {
+        margin-top: -33px;
+    }
+}
 /* Our History End*/
+
+
 /* Service */
 /* Service End */
