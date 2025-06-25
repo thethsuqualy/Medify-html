@@ -41,6 +41,263 @@ Top Page
     align-items: center;
     justify-content: center;
 }
+
+.circle-feature-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+    gap: 0px;
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.feature-item .right {
+    text-align: right;
+}
+
+.feature-left,
+.feature-right {
+    display: flex;
+    flex-direction: column;
+    max-width: 363px;
+    width: 100%;
+    height: 420px;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 0 10px;
+    text-align: left;
+}
+
+.feature-item img {
+    width: 40px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.feature-item-content.left {
+    text-align: right;
+}
+
+.feature-item-content {
+    width: calc(100% - 60px);
+}
+
+.feature-item h4 {
+    font-family: "Ubuntu";
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.feature-item span {
+    color: #2ea6f7;
+}
+
+.feature-item p {
+    font-family: "Nunito";
+    font-size: 16px;
+    font-weight: 500;
+    color: #3B4964;
+    line-height: 1.6;
+}
+
+.doctor-image-wrapper {
+    position: relative;
+    width: 571px;
+    height: 600px;
+    z-index: 2;
+    flex-shrink: 0;
+}
+
+.doctor-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.circle-bg {
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    border: 1px dashed #47c2ff;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.our-feature {
+    font-weight: 700;
+    color: #ff9e21;
+    position: relative;
+    max-width: fit-content;
+    font-size: 14px;
+    text-align: center;
+    font-family: "Ubuntu";
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.our-feature::before,
+.our-feature::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 15px;
+    height: 2px;
+    border-radius: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ff9e21;
+}
+
+.our-feature::before {
+    left: 0;
+}
+
+.our-feature::after {
+    right: 0;
+}
+
+.our-feature-header {
+    font-family: "Ubuntu";
+    font-size: 42px;
+    color: #0a3380;
+    font-weight: 700;
+    text-align: center;
+    padding: 22px 0px 24px;
+}
+
+.our-feature-content {
+    font-family: "Nunito";
+    font-size: 16px;
+    color: #3b4964;
+    font-weight: 500;
+    text-align: center;
+    max-width: 824px;
+    padding: 10px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.our-feature-cover {
+    padding: 10px;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 93px;
+}
+
+@media screen and (max-width:1199px) {
+    .doctor-image-wrapper {
+        width: 471px;
+        height: 495px;
+    }
+}
+
+/* Responsive */
+@media screen and (max-width: 1092px) {
+    .circle-feature-section {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .feature-left,
+    .feature-right {
+        flex-direction: column;
+        max-width: 839px;
+        width: 100%;
+    }
+
+    .feature-item {
+        max-width: 839px;
+        padding-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 912px) {
+    .counter {
+        flex-direction: column;
+        gap: 50px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .our-feature-content {
+        max-width: 626px;
+    }
+
+    .our-feature-header {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 539px) {
+    .doctor-image-wrapper {
+        width: 420px;
+        height: 447px;
+    }
+}
+
+@media screen and (max-width: 447px) {
+    .doctor-image-wrapper {
+        width: 362px;
+        height: 381px;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .doctor-image-wrapper {
+        width: 341px;
+        height: 361px;
+    }
+}
+
+@media screen and (max-width: 382px) {
+    .doctor-image-wrapper {
+        width: 321px;
+        height: 341px;
+    }
+}
+
+@media screen and (max-width: 357px) {
+    .doctor-image-wrapper {
+        width: 281px;
+        height: 301px;
+    }
+
+    .circle-feature-section {
+
+        gap: 20px;
+    }
+
+    .feature-item:nth-child(2) {
+        padding-bottom: 0;
+    }
+}
+@media screen and (max-width:325px){
+    .counter-h3{
+        font-size: 13px;
+    }
+}
+
 /* About us End */
 
 /* Our History */
@@ -1000,6 +1257,7 @@ Top Page
         height: 300px;
         margin-bottom: 10px;
     }
+
     .pricing-price-wrap {
         display: flex;
         flex-wrap: wrap;
@@ -1017,11 +1275,13 @@ Top Page
         padding: 0px;
     }
 }
+
 @media screen and (max-width: 325px) {
-     .our-service-h3 {
+    .our-service-h3 {
         font-size: 29px;
     }
 }
+
 /* Service End */
 
 /* Doctor Start */
