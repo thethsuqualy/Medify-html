@@ -291,6 +291,7 @@ Background Color
   align-items: start;
   margin: 0px 20px;
   flex-wrap: wrap;
+  margin-top: 70px;
 }
 
 .our-contacts-ttl {
@@ -818,7 +819,8 @@ Background Color
   color: #3b4964;
   font-weight: 500;
   text-align: center;
-  max-width: 804px;
+  max-width: 824px;
+  padding: 10px;
   width: 100%;
   margin: 0 auto;
   margin-bottom: 20px;
@@ -996,119 +998,6 @@ Background Color
   position: relative;
   z-index: 1;
   display: block;
-}
-
-.circle-feature-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 80px 20px;
-  flex-wrap: wrap;
-  gap: 0px;
-  position: relative;
-      width: fit-content;
-}
-.feature-item .right{
-  text-align: right;
-}
-.feature-left,
-.feature-right {
-  display: flex;
-  flex-direction: column;
-  max-width: 500px;
-  width: 100%;
-  height: 420px;
-  flex: 1;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.feature-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  padding: 0 10px;
-  text-align: left;
-}
-
-.feature-item img {
-  width: 40px;
-  height: auto;
-  flex-shrink: 0;
-}
-.feature-item-content.left{
-  text-align: right;
-}
-.feature-item-content {
-  width: calc(100% - 60px);
-}
-
-.feature-item h4 {
-  font-size: 16px;
-  color: #0a3380;
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-
-.feature-item span {
-  color: #0a3380;
-}
-
-.feature-item p {
-  font-size: 14px;
-  color: #3b4964;
-  line-height: 1.6;
-}
-
-.doctor-image-wrapper {
-  position: relative;
-  width: 571px;
-  height: 600px;
-  z-index: 2;
-  flex-shrink: 0;
-}
-
-.doctor-img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-  position: relative;
-  z-index: 2;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
-
-.circle-bg {
-  position: absolute;
-  top: -30px;
-  left: -30px;
-  width: 360px;
-  height: 360px;
-  border-radius: 50%;
-  border: 1px dashed #47c2ff;
-  z-index: 1;
-  pointer-events: none;
-}
-
-/* Responsive */
-@media screen and (max-width: 1024px) {
-  .circle-feature-section {
-    flex-direction: column;
-    gap: 60px;
-  }
-
-  .feature-left,
-  .feature-right {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    max-width: 100%;
-  }
-
-  .feature-item {
-    max-width: 300px;
-  }
 }
 
 @media screen and (max-width: 1025px) {
