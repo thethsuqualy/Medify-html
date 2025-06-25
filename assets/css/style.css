@@ -67,6 +67,7 @@ Top Page
 .breadcrumb-item a {
     color: #0a3380;
     opacity: 0.7;
+    font-weight: 700;
 }
 
 .breadcrumb-item.active {
@@ -963,6 +964,7 @@ Top Page
         height: 300px;
         margin-bottom: 10px;
     }
+
     .pricing-price-wrap {
         display: flex;
         flex-wrap: wrap;
@@ -980,14 +982,530 @@ Top Page
         padding: 0px;
     }
 }
+
 @media screen and (max-width: 325px) {
-     .our-service-h3 {
+    .our-service-h3 {
         font-size: 29px;
     }
 }
+
 /* Service End */
 
 /* Doctor Start */
+.doctor {
+    background-image: url(../img/doctor/half-doctor.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: bottom center;
+    background-color: #f2f2f4;
+    height: 300px;
+    padding: 80px 0 88px 0;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner-doctor {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.doctor-header {
+    font-family: 'Ubuntu';
+    font-size: 42px;
+    color: #0a3380;
+    font-weight: 700;
+}
+
+.doctor-section {
+    font-family: Nunito;
+}
+
+/* breadcrumb End */
+.doctor-skill-flex {
+    display: flex;
+    max-width: 1320px;
+    padding: 90px 20px 0 20px;
+    margin: 0 auto 79px auto;
+    justify-content: space-between;
+}
+
+.doctor-skill {
+    max-width: calc(100% - 630px);
+    padding: 15px;
+    margin: 47px 0 0 0;
+}
+
+.doctor-skill-img {
+    max-width: 570px;
+    width: 100%;
+}
+
+.doctor-skill-img img {
+    border-radius: 15px;
+}
+
+.our-skill {
+    font-weight: 700;
+    color: #ff9e21;
+    position: relative;
+    max-width: 130px;
+    font-size: 14px;
+    font-family: 'Ubuntu';
+}
+
+.our-skill span::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 10px;
+    height: 3px;
+    border-radius: 2px;
+    top: 50%;
+    right: 20px;
+    margin-top: -2px;
+    background-color: #ff9e21;
+}
+
+.our-skill-content {
+    font-family: "Ubuntu", Sans-serif;
+    color: #0a3380;
+    margin: 0px 0px 5px 0px;
+}
+
+.our-skill-h3 {
+    margin-bottom: 40px;
+}
+
+.content-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #3b4964;
+    border-radius: 4px 4px 4px 4px;
+    margin: 15px 0;
+    position: relative;
+}
+
+.content-bar-label {
+    width: 40px;
+    height: 25px;
+    font-family: "Ubuntu", Sans-serif;
+    font-size: 12px;
+    color: #ffffff;
+    background-color: #ff9e21;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0px;
+    bottom: -6px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.content-bar-label.green {
+    background-color: #54ced4;
+}
+
+.content-bar-label.blue {
+    background-color: #2ea6f7;
+}
+
+.width87 {
+    max-width: 87%;
+    background-color: #ff9e21;
+}
+
+.width65 {
+    width: 65%;
+    background-color: #54ced4;
+}
+
+.width92 {
+    width: 92%;
+    background-color: #2ea6f7;
+}
+
+/* flex end */
+.our-team-section {
+    background-color: #f9f9f9;
+}
+
+.our-team-container {
+    max-width: 1320px;
+    padding: 79px 20px 159px 20px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+}
+
+.our-team-wrapper {
+    text-align: center;
+}
+
+.doctor-card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.doctor-card {
+    max-width: 300px;
+    width: 100%;
+}
+
+.dcard-img-group img {
+    border-radius: 15px;
+}
+
+.our-team {
+    max-width: 105px;
+    margin: 0 auto;
+}
+
+.dcard-img-group {
+    position: relative;
+}
+
+.dcard-icon-wrapper {
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 19px;
+    right: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dcard-icon {
+    background: url(../img/doctor/plus.png) no-repeat;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+}
+
+.dcard-icon-wrapper:hover {
+    background-color: #54ced4;
+}
+
+.dcard-icon-wrapper:hover .dcard-icon {
+    background: url(../img/doctor/cross.png) no-repeat;
+    background-size: contain;
+    width: 15px;
+    height: 15px;
+}
+
+.dcard-hover-icon {
+    opacity: 0;
+    position: absolute;
+    top: 40px;
+    transition: all 0.6s ease-in-out;
+}
+
+.hover-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.dcard-hover-icon img {
+    width: 20px;
+    height: 20px;
+}
+
+.dcard-icon-wrapper:hover .dcard-hover-icon {
+    opacity: 1;
+}
+
+.dcard-info-title {
+    font-family: 'Ubuntu';
+    font-size: 20px;
+    color: #0a3380;
+    font-weight: 700;
+}
+
+.dcard-info {
+    font-family: 'Nunito';
+    font-size: 16px;
+    line-height: 1.4;
+    color: #3b4964;
+    margin: 30px 0;
+}
+
+.dcard-info-department {
+    color: #3b4964;
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+.dcard-info-year {
+    margin-top: 10px;
+    color: #2ea6f7;
+    font-weight: 700;
+}
+
+.consultancy-section {
+    max-width: 1320px;
+    padding: 0 20px 40px 20px;
+    margin: -80px auto 0 auto;
+}
+
+.consultancy {
+    display: flex;
+    background-color: #ffffff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 17px;
+    overflow: hidden;
+    min-height: 180px;
+    gap: 20px;
+}
+
+.consultancy-left {
+    max-width: 370px;
+    width: 100%;
+    background-color: #2ea6f7;
+    padding: 44px 20px 45px 20px;
+}
+
+.consultancy-left-text {
+    font-family: 'Ubuntu';
+    font-size: 24px;
+    line-height: 1.5;
+    color: #ffffff;
+    display: block;
+    display: flex;
+    flex-direction: column;
+}
+
+.consultancy-right {
+    max-width: calc(100% - 390px);
+    flex: 1;
+    display: flex;
+    font-family: 'Nunito';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+    border: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-right: 20px;
+}
+
+.doctor-textbox {
+    padding: 10px 20px;
+    max-width: 270px;
+    width: 100%;
+    height: 52px;
+    border: none;
+    transition: 0.3s;
+    background: #f6f7fa;
+    border-radius: 5px;
+}
+
+.doctor-btn {
+    max-width: 200px;
+    width: 100%;
+    height: 52px;
+    font-family: 'Ubuntu';
+    color: #ffffff;
+    font-weight: 700;
+    background: #54ced4;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+    .doctor-card-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        place-items: center;
+    }
+
+    .doctor-skill-img {
+        max-width: 460px;
+        width: 100%;
+    }
+
+    .doctor-skill {
+        max-width: calc(100% - 500px);
+        padding: 15px;
+        margin: 15px 0 0 0;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .doctor-skill-flex {
+        display: flex;
+        flex-direction: column;
+        padding: 90px 20px 0 20px;
+        margin: 0 auto 79px auto;
+    }
+
+    .doctor-skill-img {
+        max-width: 570px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .doctor-skill {
+        max-width: 100%;
+        padding: 15px;
+        margin: 60px 0 0 0;
+    }
+
+    .consultancy {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .consultancy-left {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .consultancy-right {
+        max-width: 100%;
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    .doctor-card-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        place-items: center;
+    }
+
+    .doctor-card {
+        max-width: 350px;
+        width: 100%;
+    }
+
+    .doctor-card:nth-child(odd) {
+        justify-self: end;
+    }
+
+    .doctor-card:nth-child(even) {
+        justify-self: start;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .doctor-card-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        place-items: center;
+    }
+
+    .doctor-card {
+        max-width: 350px;
+        width: 100%;
+    }
+
+    .doctor-card:nth-child(odd) {
+        justify-self: center;
+    }
+
+    .doctor-card:nth-child(even) {
+        justify-self: center;
+    }
+
+    .consultancy {
+        gap: 0;
+    }
+
+    .consultancy-right {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: start;
+        padding: 20px 0;
+    }
+
+    .doctor-textbox {
+        padding: 10px 20px;
+        max-width: 100%;
+        height: 52px;
+        border-radius: 5px;
+    }
+
+    .doctor-btn {
+        max-width: 200px;
+        width: 100%;
+        height: 52px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .consultancy-left {
+        max-width: 100%;
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    .consultancy-section {
+        margin: -90px auto 0 auto;
+    }
+
+    .consultancy {
+        padding: 10px;
+
+    }
+
+    .our-skill-h3 {
+        font-size: 30px;
+    }
+
+    .our-team-h3 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .consultancy-left-text {
+        font-size: 21px;
+    }
+
+    .consultancy-left {
+        padding: 15px 10px;
+    }
+
+    .consultancy-right {
+        gap: 10px;
+    }
+
+    .doctor-btn {
+        max-width: 150px;
+        width: 100%;
+    }
+
+    .doctor-skill-flex {
+        padding: 50px 20px 0 20px;
+    }
+}
+
 /* Doctor End */
 
 /* FAQ Start */
@@ -1001,3 +1519,6 @@ Top Page
 
 /* Contact Start */
 /* Contact End */
+
+/* 404 start */
+/* 404 End */
