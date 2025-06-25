@@ -1,8 +1,10 @@
 @charset "utf-8";
+
 html {
   text-rendering: optimizeLegibility !important;
   scroll-behavior: smooth;
 }
+
 body {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
@@ -13,79 +15,100 @@ body {
   background: transparent;
   text-rendering: optimizeLegibility;
 }
+
 .pc {
   display: block;
 }
+
 .sp {
   display: none;
 }
+
 .tel {
   pointer-events: none;
 }
+
 @media screen and (max-width: 768px) {
   .pc {
     display: none;
   }
+
   .sp {
     display: block;
   }
+
   .tel {
     pointer-events: auto;
   }
 }
+
 /* ===============================
 Text align
 =============================== */
 .txt-left {
   text-align: left;
 }
+
 .txt-center {
   text-align: center;
 }
+
 .txt-right {
   text-align: right;
 }
+
 @media screen and (max-width: 768px) {
   .txt-left-sp {
     text-align: left;
   }
+
   .txt-center-sp {
     text-align: center;
   }
+
   .txt-right-sp {
     text-align: right;
   }
 }
+
 /* ===============================
 Color
 =============================== */
 .main-color {
   color: #000;
 }
+
 .sub-color {
   color: #24140e;
 }
+
 .b-color {
   color: #000;
 }
+
 .w-color {
   color: #fff;
 }
+
 /* ===============================
 Background Color
 =============================== */
 .bg-main {
   background: #900;
 }
+
 .bg-sub {
   /* background: #000; */
 }
+
 .bg-b {
   background: #000;
 }
+
 .bg-w {
   background: #fff;
 }
+
 .bg-gray {
   background: #f1f1f1;
 }
@@ -93,6 +116,7 @@ Background Color
 /* ===============================
 
 =============================== */
+/* start header */
 .clinic-header {
   display: flex;
   justify-content: space-between;
@@ -101,10 +125,12 @@ Background Color
   background: #ffffff;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
+
 .clinic-logo-img {
   width: 171px;
   height: 50px;
 }
+
 .menu {
   display: flex;
   gap: 55px;
@@ -112,10 +138,12 @@ Background Color
   font-size: 16px;
   font-weight: 500;
 }
+
 .menu-item {
   position: relative;
   top: 20px;
 }
+
 .menu a {
   color: #0a3380;
   text-decoration: none;
@@ -129,15 +157,18 @@ Background Color
   align-items: center;
   gap: 6px;
 }
+
 .menu a:hover {
   border-bottom-color: #2ea6f7;
 }
+
 .menu-item-plus {
   display: inline-block;
   position: relative;
   width: 12px;
   height: 12px;
 }
+
 .menu-item-plus::before,
 .menu-item-plus::after {
   content: "";
@@ -145,6 +176,7 @@ Background Color
   background-color: #0a3380;
   border-radius: 1px;
 }
+
 .menu-item-plus::before {
   width: 8px;
   height: 2px;
@@ -152,12 +184,14 @@ Background Color
   left: 2px;
   transform: translateY(-50%);
 }
+
 .menu-item-plus::after {
   width: 2px;
   height: 8px;
   top: 2px;
   left: 5px;
 }
+
 .submenu {
   display: none;
   position: absolute;
@@ -165,36 +199,89 @@ Background Color
   left: 50%;
   transform: translateX(-50%);
   background: #ffffff;
-  border-radius: 20px;
+  border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  width: 280px;
 }
+
 .submenu a {
   display: block;
-  padding: 24px 20px;
+  padding: 22px 20px;
   color: #0a3380;
   text-decoration: none;
   font-size: 15px;
-  border-bottom: 0.5px solid #ffffff;
+  border-bottom: 0.5px solid #f1efef;
 }
+
+.submenu a:last-child {
+  border-bottom: unset;
+}
+
 .submenu a:first-child:hover {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
+
 .submenu a:hover {
   background-color: #299cff;
   color: white;
 }
+
 .submenu a:last-child:hover {
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
+
 .menu-item:hover .submenu {
   display: block;
 }
-.menu-item:hover > a {
+
+.menu-item:hover>a {
   border-bottom-color: #2ea6f7;
 }
+
+.hamburger-menu {
+  cursor: pointer;
+  display: none;
+  width: 60px;
+  height: 50px;
+  position: relative;
+}
+
+.bar {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #222f49;
+  transition: all 0.3s ease-in-out;
+}
+
+.first-bar {
+  top: 6px;
+}
+
+.second-bar {
+  top: 27px;
+}
+
+.third-bar {
+  bottom: 1px;
+}
+
+.hamburger-menu.active .first-bar {
+  transform: rotate(45deg);
+  top: 24px;
+}
+
+.hamburger-menu.active .second-bar {
+  opacity: 0;
+}
+
+.hamburger-menu.active .third-bar {
+  transform: rotate(-45deg);
+  bottom: 23px;
+}
+
 /* end header */
 
 /* start footer */
@@ -204,8 +291,8 @@ Background Color
   align-items: start;
   margin: 0px 20px;
   flex-wrap: wrap;
-  margin-top: 70px;
 }
+
 .our-contacts-ttl {
   font-family: "Ubuntu";
   font-size: 20px;
@@ -213,29 +300,35 @@ Background Color
   color: #0a3380;
   margin-bottom: 20px;
 }
+
 .our-contacts {
   max-width: 270px;
   width: 100%;
   padding: 10px;
 }
+
 .location {
   width: 23px;
   height: 23px;
 }
+
 .contact {
   width: 23px;
   height: 23px;
 }
+
 .content {
   font-family: "Nunito";
   font-size: 16px;
   color: #3b4964;
   line-height: 1.2;
 }
+
 .clock {
   width: 23px;
   height: 23px;
 }
+
 .our-location {
   display: flex;
   gap: 20px;
@@ -243,6 +336,7 @@ Background Color
   width: 100%;
   padding-bottom: 20px;
 }
+
 .our-phone {
   display: flex;
   gap: 20px;
@@ -250,6 +344,7 @@ Background Color
   width: 100%;
   padding-bottom: 20px;
 }
+
 .our-opening-clock {
   display: flex;
   gap: 20px;
@@ -257,6 +352,7 @@ Background Color
   width: 100%;
   padding-bottom: 20px;
 }
+
 .open-hour-ttl {
   font-family: "Ubuntu";
   font-size: 20px;
@@ -264,18 +360,21 @@ Background Color
   color: #0a3380;
   margin-bottom: 20px;
 }
+
 .time {
   font-family: "Nunito";
   font-size: 16px;
   color: #54ced4;
   white-space: nowrap;
 }
+
 .day {
   font-family: "Nunito";
   font-size: 16px;
   color: #3b4964;
   white-space: nowrap;
 }
+
 .time::after {
   content: "";
   width: 100%;
@@ -284,28 +383,33 @@ Background Color
   order: 2;
   transform: translateY(1px);
 }
+
 .open-hours {
   max-width: 304px;
   width: 100%;
   padding: 10px;
 }
+
 .day-row {
   display: flex;
   align-items: center;
   gap: 10px;
   margin: 18px 0;
 }
+
 .line {
   flex-grow: 1;
   height: 1px;
   background-color: #e5e5e5;
 }
+
 .access-map {
   width: 566px;
   height: 264px;
   border: 0;
   display: block;
 }
+
 .below-footer-section {
   text-align: center;
   padding: 23px 0px 15px;
@@ -317,10 +421,13 @@ Background Color
   border-top: 1px solid #e5e5e5;
 }
 
+/* end footer */
+/* for sp footer start  */
 @media screen and (max-width: 1177px) {
   .footer-wrapper {
     display: flex;
   }
+
   .footer-grid {
     display: grid;
     grid-template-areas:
@@ -331,42 +438,51 @@ Background Color
     max-width: 800px;
     width: 100%;
   }
+
   .our-contacts {
     grid-area: contacts;
     width: 100%;
   }
+
   .open-hours {
     grid-area: hours;
     width: 100%;
   }
+
   .map-section {
     grid-area: map;
     display: flex;
     justify-content: center;
     width: 100%;
   }
+
   .access-map {
     width: 100%;
     max-width: 800px;
     height: 264px;
   }
 }
+
 @media screen and (max-width: 1025px) {
   .footer-wrapper {
     display: flex;
     justify-content: space-around;
   }
+
   .open-hours {
     max-width: 425px;
   }
+
   .our-contacts {
     max-width: 503px;
   }
+
   .map-section {
     width: 100%;
     padding: 0 20px;
     box-sizing: border-box;
   }
+
   .map-wrapper {
     display: flex;
     justify-content: center;
@@ -375,6 +491,7 @@ Background Color
     /* padding: 0 20px; */
     box-sizing: border-box;
   }
+
   .access-map {
     width: 900px;
     height: 300px;
@@ -382,23 +499,688 @@ Background Color
     display: block;
   }
 }
+
 @media screen and (max-width: 862px) {
   .access-map {
     width: 650px;
   }
+
   .open-hours {
     max-width: 340px;
   }
 }
+
+@media screen and (max-width: 800px) {
+  .hamburger-menu {
+    display: block;
+  }
+
+  .menu-order-now {
+    display: none;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    height: 100vh;
+    background-color: #972626;
+    z-index: 999;
+    justify-content: unset;
+    align-items: unset;
+  }
+
+  .menu.show {
+    display: flex;
+    position: fixed;
+    left: 0;
+    gap: 5px;
+    top: 119px;
+  }
+
+  .menu a {
+    color: #000;
+    padding: 29px 20px 20px 52px;
+    width: 100%;
+    position: relative;
+    font-weight: 500;
+    font-family: "Noto Sans JP";
+    font-size: 18px;
+  }
+
+  .menu a::after {
+    content: " →";
+    position: absolute;
+    right: 58px;
+    font-size: 18px;
+    width: 24px;
+    height: 24px;
+    background: #000000;
+    color: #fff;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 2px 0px 0px 4px;
+  }
+
+  .menu a::before {
+    content: "";
+    position: absolute;
+    bottom: 6px;
+    left: 52px;
+    width: 90%;
+    height: 1px;
+    background-color: #ccc;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .footer-wrapper {
     flex-direction: column;
     margin: 0 90px;
   }
+
   .open-hours {
-        max-width: 550px;
-    }
-    .access-map {
+    max-width: 550px;
+  }
+
+  .access-map {
     width: 570px;
   }
 }
+<<<<<<< HEAD
+=======
+
+@media screen and (max-width: 738px) {
+  .access-map {
+    width: 620px;
+    padding: 10px;
+  }
+
+  .open-hours {
+    max-width: 620px;
+  }
+
+  .footer-wrapper {
+    margin: 0 55px;
+  }
+}
+
+@media screen and (max-width: 738px) {
+  .access-map {
+    width: 580px;
+  }
+
+  .open-hours {
+    max-width: 580px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .access-map {
+    width: 550px;
+  }
+
+  .open-hours {
+    max-width: 550px;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .access-map {
+    width: 530px;
+  }
+
+  .open-hours {
+    max-width: 530px;
+  }
+}
+
+@media screen and (max-width: 634px) {
+  .access-map {
+    width: 500px;
+  }
+
+  .open-hours {
+    max-width: 500px;
+  }
+}
+
+@media screen and (max-width: 608px) {
+  .access-map {
+    width: 470px;
+  }
+
+  .open-hours {
+    max-width: 470px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .access-map {
+    width: 450px;
+  }
+
+  .open-hours {
+    max-width: 450px;
+  }
+}
+
+@media screen and (max-width: 541px) {
+  .access-map {
+    width: 430px;
+  }
+
+  .open-hours {
+    max-width: 430px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .access-map {
+    width: 400px;
+  }
+
+  .open-hours {
+    max-width: 400px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .access-map {
+    width: 430px;
+  }
+
+  .open-hours {
+    max-width: 430px;
+  }
+
+  .footer-wrapper {
+    margin: 0 20px;
+  }
+}
+
+@media screen and (max-width: 478px) {
+  .access-map {
+    width: 410px;
+  }
+
+  .open-hours {
+    max-width: 410px;
+  }
+}
+
+@media screen and (max-width: 478px) {
+  .access-map {
+    width: 395px;
+  }
+
+  .open-hours {
+    max-width: 395px;
+  }
+}
+
+@media screen and (max-width: 433px) {
+  .access-map {
+    width: 385px;
+  }
+
+  .open-hours {
+    max-width: 385px;
+  }
+}
+
+@media screen and (max-width: 419px) {
+  .access-map {
+    width: 375px;
+  }
+
+  .open-hours {
+    max-width: 375px;
+  }
+}
+
+@media screen and (max-width: 412px) {
+  .access-map {
+    width: 360px;
+  }
+
+  .open-hours {
+    max-width: 360px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .access-map {
+    width: 345px;
+  }
+
+  .open-hours {
+    max-width: 345px;
+  }
+}
+
+@media screen and (max-width: 368px) {
+  .access-map {
+    width: 100%;
+    max-width: 2000px;
+  }
+}
+
+/* for sp footer end  */
+
+/* advanced services start */
+.adv-services {
+  font-weight: 700;
+  color: #ff9e21;
+  position: relative;
+  max-width: fit-content;
+  font-size: 14px;
+  text-align: center;
+  font-family: "Ubuntu";
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.adv-services::before,
+.adv-services::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 15px;
+  height: 2px;
+  border-radius: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ff9e21;
+}
+
+.adv-services::before {
+  left: 0;
+}
+
+.adv-services::after {
+  right: 0;
+}
+
+.adv-services-header {
+  font-family: "Ubuntu";
+  font-size: 42px;
+  color: #0a3380;
+  font-weight: 700;
+  text-align: center;
+  padding: 20px 0px 22px;
+}
+
+.adv-services-content {
+  font-family: "Nunito";
+  font-size: 16px;
+  color: #3b4964;
+  font-weight: 500;
+  text-align: center;
+  max-width: 804px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.adv-services-cover {
+  padding: 10px;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.family-care-img,
+.pediatrics-care-img,
+.adv-care-img {
+  width: 55px;
+  height: 55px;
+  margin-top: 20px;
+}
+
+.pediatrics-care-ttl,
+.adv-care-ttl,
+.family-care-ttl {
+  font-family: "Ubuntu";
+  font-size: 24px;
+  color: #0a3380;
+  font-weight: 500;
+  margin: 30px 0px 10px;
+}
+
+.adv-care-content,
+.pediatrics-care-content,
+.family-care-content {
+  font-family: "Nunito";
+  font-size: 16px;
+  color: #3b4964;
+  font-weight: 400;
+  max-width: 300px;
+  width: 100%;
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.adv-services-card {
+  max-width: 407px;
+  width: 100%;
+  padding: 36px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  gap: 10px;
+  box-shadow: 10px 8px 35px rgba(49, 49, 49, 0.08);
+}
+
+.adv-services-card-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto 70px;
+  padding: 20px;
+  gap: 49px;
+}
+
+.number {
+  font-family: "Ubuntu";
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  padding: 18px 0px 10px;
+}
+
+.number::after {
+  content: "+";
+  font-weight: bold;
+  color: #ffffff;
+  margin-left: -8px;
+}
+
+.counter {
+  display: flex;
+  max-width: 1280px;
+  width: 100%;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 70px;
+}
+
+.counter-cover {
+  background-color: #2ea6f7;
+}
+
+.heartbeat-img {
+  width: 50px;
+}
+
+.pharmacy-img {
+  width: 46px;
+}
+
+.prescription-img {
+  width: 48px;
+}
+
+.counter-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.counter-h3 {
+  font-family: "Ubuntu";
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-top: 8px;
+}
+
+.counter-icon-wrapper {
+  position: relative;
+}
+
+.counter-icon-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -16px;
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/common/counter-bg-2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.counter-icon-wrapper img {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  z-index: 1;
+  display: block;
+}
+
+.counter-pharmacy-wrapper {
+  position: relative;
+}
+
+.counter-pharmacy-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 18px;
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/common/counter-bg-2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.counter-pharmacy-wrapper img {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  z-index: 1;
+  display: block;
+}
+
+.circle-feature-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  flex-wrap: wrap;
+  gap: 0px;
+  position: relative;
+      width: fit-content;
+}
+.feature-item .right{
+  text-align: right;
+}
+.feature-left,
+.feature-right {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  width: 100%;
+  height: 420px;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 0 10px;
+  text-align: left;
+}
+
+.feature-item img {
+  width: 40px;
+  height: auto;
+  flex-shrink: 0;
+}
+.feature-item-content.left{
+  text-align: right;
+}
+.feature-item-content {
+  width: calc(100% - 60px);
+}
+
+.feature-item h4 {
+  font-size: 16px;
+  color: #0a3380;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.feature-item span {
+  color: #0a3380;
+}
+
+.feature-item p {
+  font-size: 14px;
+  color: #3b4964;
+  line-height: 1.6;
+}
+
+.doctor-image-wrapper {
+  position: relative;
+  width: 571px;
+  height: 600px;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.doctor-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.circle-bg {
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  border: 1px dashed #47c2ff;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+  .circle-feature-section {
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .feature-left,
+  .feature-right {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 100%;
+  }
+
+  .feature-item {
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .adv-services-card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    gap: 30px;
+    justify-items: center;
+  }
+
+  .adv-services-card-wrapper .adv-services-card:nth-child(3) {
+    grid-column: 1 / 3;
+    justify-self: center;
+  }
+}
+
+@media screen and (max-width: 925px) {
+  .adv-services-card {
+    max-width: 357px;
+  }
+
+  .adv-services-card-wrapper {
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .adv-services-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .adv-services-card {
+    max-width: 627px;
+  }
+
+  .pediatrics-care-content,
+  .adv-care-content,
+  .family-care-content {
+    max-width: 563px;
+    width: 100%;
+  }
+
+  .adv-services-header {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .adv-services-content {
+    max-width: 626px;
+  }
+}
+
+@media screen and (max-width: 664px) {
+
+  .pediatrics-care-content,
+  .adv-care-content,
+  .family-care-content {
+    max-width: 431px;
+    width: 100%;
+  }
+
+  .adv-services-card {
+    max-width: 510px;
+  }
+}
+
+/* advanced services end */
+>>>>>>> tzpw
