@@ -4,6 +4,46 @@ Top Page
 =============================== */
 
 /* About us start */
+
+
+
+.aboutus-header {
+    font-family: "Ubuntu";
+    font-size: 42px;
+    color: #0a3380;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.aboutus-section {
+    font-family: "Nunito";
+}
+
+.aboutus {
+    background-image: url(../img/aboutus/aboutus-logo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-color: #f2f2f4;
+    height: 300px;
+    margin-bottom: 90px;
+    padding: 80px 0px 88px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutus-h2 {
+    margin: 0;
+}
+
+.inner-aboutus {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 /* About us End */
 
 /* Our History */

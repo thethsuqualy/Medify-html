@@ -204,6 +204,7 @@ Background Color
   align-items: start;
   margin: 0px 20px;
   flex-wrap: wrap;
+  margin-top: 70px;
 }
 .our-contacts-ttl {
   font-family: "Ubuntu";
