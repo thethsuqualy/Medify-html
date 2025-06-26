@@ -27,7 +27,7 @@ Top Page
     background-position: bottom center;
     background-color: #f2f2f4;
     height: 300px;
-    margin-bottom: 90px;
+    margin-bottom: 40px;
     padding-top: 80px;
     padding-bottom: 88px;
     display: flex;
@@ -77,8 +77,8 @@ Top Page
 }
 
 .mission {
-    max-width: 1340px;
-    padding: 0 30px;
+    max-width: 1320px;
+    padding: 90px 20px 107px 20px;
     margin: 0 auto;
     display: flex;
 }
@@ -154,7 +154,7 @@ Top Page
 
 .inner-our-history {
     max-width: 1320px;
-    margin: 86px auto 0 auto;
+    margin: 0 auto;
     padding: 112px 20px;
     color: #ffff;
     text-align: center;
@@ -278,7 +278,7 @@ Top Page
     display: flex;
     max-width: 1320px;
     padding: 0 20px;
-    margin: 100px auto 0 auto;
+    margin: 100px auto 86px auto;
 }
 
 .care-a-img {
@@ -402,7 +402,8 @@ Top Page
     }
 
     .mission-img {
-        max-width: 656px;
+        max-width: 100%;
+        width: 100%;
     }
 
     .our-mission-wrapper {
@@ -433,7 +434,7 @@ Top Page
     }
 
     .mission-img {
-        max-width: 500px;
+        max-width: 100%;
         width: 100%;
     }
 
@@ -442,7 +443,10 @@ Top Page
     }
 
     .care-a-wrapper {
-        padding: 0 50px 0 100px;
+        display: flex;
+        max-width: 1320px;
+        padding: 0 20px;
+        margin: 50px auto 43px auto;
     }
 
     .care-a-content {
@@ -464,9 +468,16 @@ Top Page
         margin: 50px auto 0 auto;
     }
 
-    .mission {
+    /* .mission {
         max-width: 600px;
         padding: 0 20px;
+        margin: 0 auto;
+        display: flex;
+    } */
+    .mission {
+        /* max-width: 1320px; */
+        /* max-width:100%; */
+        padding: 45px 20px 53px 20px;
         margin: 0 auto;
         display: flex;
     }
@@ -491,7 +502,7 @@ Top Page
 
     .inner-our-history {
         max-width: 600px;
-        margin: 43px auto 0 auto;
+        margin: 0 auto;
         padding: 56px 20px;
         color: #ffff;
         text-align: center;
@@ -617,7 +628,7 @@ Top Page
 .service-container {
     max-width: 1340px;
     padding: 0 20px;
-    margin: 80px auto 100px auto;
+    margin: 90px auto 102px auto;
 }
 
 .inner-service-container {
@@ -627,6 +638,7 @@ Top Page
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-top: 22px;
 }
 
 .our-service {
@@ -670,7 +682,7 @@ Top Page
 }
 
 .our-service-p {
-    margin: 0 0 20px 0;
+    margin: 0 0 30px 0;
     font-size: 16px;
     font-family: 'Nunito';
     text-align: center;
@@ -679,18 +691,19 @@ Top Page
     color: #3b4964;
 }
 
-.icon-wrapper {
+.service-icon-wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     place-items: center;
     margin-top: 15px;
+    row-gap: 20px;
 }
 
 .special-icon {
     max-width: 270px;
     width: 100%;
     height: 270px;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -705,7 +718,7 @@ Top Page
     border-radius: 15px;
 }
 
-.icon-group {
+.service-icon-group {
     width: 110px;
     height: 110px;
     line-height: 110px;
@@ -719,8 +732,8 @@ Top Page
 }
 
 /* dots */
-.icon-group::before,
-.icon-group::after {
+.service-icon-group::before,
+.service-icon-group::after {
     content: '';
     width: 8px;
     height: 8px;
@@ -730,22 +743,22 @@ Top Page
     transition: transform 2s ease;
 }
 
-.icon-group::before {
+.service-icon-group::before {
     bottom: 11px;
     left: 12px;
 }
 
-.icon-group::after {
+.service-icon-group::after {
     top: 10px;
     right: 13px;
 }
 
-.icon {
+.service-icon {
     width: 50px;
     height: 50px;
 }
 
-.icon-label {
+.service-icon-label {
     color: #0a3380;
     margin: 15px 0px 10px 0px;
     font-size: 24px;
@@ -753,6 +766,12 @@ Top Page
     font-weight: 700;
     line-height: 1.4;
     transition: 0.4s;
+}
+
+.pricing {
+    margin: 0 auto 85px auto;
+    background-color: #f9f9f9;
+    padding: 95px 20px 80px 20px;
 }
 
 .pricing_plan-wrap {
@@ -930,11 +949,10 @@ Top Page
 }
 
 @media screen and (max-width: 1025px) {
-    .icon-wrapper {
+    .service-icon-wrapper {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         place-items: center;
-        margin-top: 15px;
     }
 
     .pricing-plan-flex {
@@ -947,15 +965,26 @@ Top Page
 }
 
 @media screen and (max-width: 768px) {
+    .service-container {
+        margin: 40px auto 51px auto;
+    }
+
     .our-service-h3 {
         font-size: 30px;
     }
 
-    .icon-wrapper {
+    .pricing {
+        margin: 0 auto;
+        background-color: #f9f9f9;
+        padding: 45px 20px 40px 20px;
+    }
+
+    .service-icon-wrapper {
         display: grid;
         grid-template-columns: 1fr;
         place-items: center;
-        margin-top: 15px;
+        margin-top: 0px;
+        gap: 0;
     }
 
     .special-icon {
@@ -1351,8 +1380,6 @@ Top Page
     .doctor-skill-flex {
         display: flex;
         flex-direction: column;
-        padding: 90px 20px 0 20px;
-        margin: 0 auto 79px auto;
     }
 
     .doctor-skill-img {
@@ -1410,6 +1437,11 @@ Top Page
 }
 
 @media screen and (max-width: 768px) {
+    .doctor-skill-flex {
+        padding: 45px 20px 0 20px;
+        margin: 0 auto 39px auto;
+    }
+
     .doctor-card-grid {
         display: grid;
         grid-template-columns: 1fr;
@@ -1471,7 +1503,6 @@ Top Page
 
     .consultancy {
         padding: 10px;
-
     }
 
     .our-skill-h3 {
@@ -1501,8 +1532,8 @@ Top Page
         width: 100%;
     }
 
-    .doctor-skill-flex {
-        padding: 50px 20px 0 20px;
+    .our-team-container {
+        padding: 50px 20px 129px 20px;
     }
 }
 
@@ -1518,6 +1549,248 @@ Top Page
 /* Blog single End */
 
 /* Contact Start */
+.contact-wrapper {
+    max-width: 1320px;
+    padding: 90px 20px 107px 20px;
+    margin: 0 auto;
+}
+
+.contacts {
+    background-image: url(../img/contact-us/half-doctor.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: bottom center;
+    background-color: #f2f2f4;
+    height: 300px;
+    padding: 80px 0 88px 0;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner-contacts {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contacts-h2 {
+    margin: 0;
+}
+
+.contacts-section {
+    font-family: Nunito;
+}
+
+.quick-support {
+    max-width: 165px;
+}
+
+.left-contact {
+    max-width: 420px;
+    width: 100%;
+    margin-top: 34px;
+    padding-left: 20px;
+
+}
+
+.left-contact-p {
+    font-size: 16px;
+    font-family: 'Nunito';
+    font-weight: 400;
+    color: #3b4964;
+    padding-top: 10px;
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+.contact-icon-flex {
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+    line-height: 1.7;
+}
+
+.contact-icon {
+    width: 40px;
+    height: 35px;
+    background-size: contain;
+    margin: 0 20px 10px 0;
+}
+
+.contact-icon-label {
+    font-size: 14px;
+    font-family: 'Nunito';
+    color: #2ea6f7;
+    font-weight: 900;
+}
+
+.contact-address {
+    font-family: 'Nunito';
+    font-size: 16px;
+    color: #3b4964;
+    font-weight: 400;
+}
+
+.write-us {
+    max-width: 110px;
+}
+
+.contact-textbox, .contact-textarea {
+    font-family: Nunito;
+    font-size: 16px;
+    line-height: 1.875;
+    font-weight: 400;
+    color: #3b4964;
+    border: none;
+    border-radius: 5px;
+    background-color: #f6f7fa;
+    padding: 10px 20px;
+}
+
+.name, .email {
+    max-width: 360px;
+    width: 100%;
+}
+
+.contact-textarea, .website {
+    max-width: 740px;
+    width: 100%;
+}
+
+.contact-textarea {
+    height: 120px;
+}
+
+.contact-textbox.website {
+    margin: 20px 0;
+}
+
+.contact-textbox-flex {
+    display: flex;
+    gap: 20px;
+}
+
+.right-contact {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 30px 50px;
+    border-radius: 15px;
+    max-width: calc(100% - 440px);
+    width: 100%;
+}
+
+.contact-btn {
+    max-width: 200px;
+    width: 100%;
+    background-color: #54ced4;
+    border-radius: 5px;
+    padding: 20px;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.inner-contact-wrapper {
+    display: flex;
+    gap: 40px;
+}
+
+.write-us-h3 {
+    margin-bottom: 40px;
+}
+
+.contact-women {
+    max-width: 1320px;
+    padding: 0 20px 100px 20px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-women img {
+    border-radius: 15px;
+}
+
+@media screen and (max-width: 1000px) {
+    .inner-contact-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding-left: 10px;
+    }
+
+    .contact-wrapper {
+        padding: 60px 20px 107px 20px;
+    }
+
+    .left-contact {
+        max-width: 100%;
+        margin-top: 34px;
+        padding-left: 0px;
+    }
+
+    .right-contact {
+        max-width: 100%;
+    }
+
+    .name, .email {
+        max-width: 50%;
+        width: 100%;
+    }
+
+    .contact-textarea, .website {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact-textbox-flex {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .name, .email {
+        max-width: 100%;
+    }
+
+    .right-contact {
+        padding: 20px;
+    }
+
+    .contact-wrapper {
+        padding: 45px 20px 54px 20px;
+    }
+
+    .left-contact {
+        margin-top: 0px;
+    }
+
+    .contact-women {
+        padding: 0 20px 50px 20px;
+    }
+
+    .inner-contact-wrapper {
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .write-us-h3 {
+        font-size: 30px;
+    }
+
+    .contact-h3 {
+        font-size: 30px;
+    }
+}
+
 /* Contact End */
 
 /* 404 start */
