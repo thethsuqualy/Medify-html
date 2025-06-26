@@ -1072,14 +1072,36 @@ Background Color
 /* advanced services end */
 
 /* faq support center start */
-.adv-services-cover.above{
-     margin: 80px auto 0px;
-  
+.adv-services-cover.above {
+  margin: 80px auto 0px;
 }
-.counter-increase-cover{
-  
+
+.counter-icons-wrapper {
+  position: relative;
 }
+
+.counter-icons-wrapper img {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  z-index: 1;
+  display: block;
+}
+
+.counter-pharmacies-wrapper {
+  position: relative;
+}
+
+.counter-pharmacies-wrapper img {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  z-index: 1;
+  display: block;
+}
+
+.counter-wrapper {
+  background-color: #54ced4;
+}
+
 /* faq support center end */
-
-
-

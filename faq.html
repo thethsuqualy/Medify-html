@@ -44,7 +44,7 @@
     </header>
 
     <main>
-      <section class="faq-section">
+        <section class="faq-section">
             <div class="faq">
                 <div class="inner-faq">
                     <h2 class="faq-h2 faq-header">About Us</h2>
@@ -56,13 +56,74 @@
                     </div>
                 </div>
             </div>
-        </section> 
-        
-        <section></section>
-        <section class="counter-increase-cover">
+        </section>
+
+        <section class="faq-question-answwer-cover">
+            <span class="faq-label">FAQ</span>
+            <div class="faq-second-section">
+                <div class="faq-intro">
+                    <h2 class="intro-ttl">Have Any Questions?</h2>
+                    <p class="paragraph">The major goal of family medicine is to build trust between the patient and the general
+                        practitioner, which allows achieving the best treatment outcome.</p>
+                    <p class="paragraph">The specific features of work of the general practitioner (family doctor) are more reasonable and
+                        beneficial to both GPs and patients in many respects.</p>
+                </div>
+
+
+                <div class="faq-list">
+
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4 class="faq-ttl">Who are always careful to our patient?</h4>
+                        </div>
+                        <div class="faq-answer">
+                            The specific features of work of the general practitioner (family doctor) are more
+                            reasonable and beneficial to both GPs and patients in many respects.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4 class="faq-ttl">What has access to my health and life?</h4>
+                        </div>
+                        <div class="faq-answer">
+                            The specific features of work of the general practitioner (family doctor) are more
+                            reasonable and beneficial to both GPs and patients in many respects.
+                        </div>
+                    </div>
+
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4 class="faq-ttl">Who are allways carefull to our patient?</h4>
+                        </div>
+                        <div class="faq-answer">
+                            The specific features of work of the general practitioner (family doctor) are more
+                            reasonable and beneficial to both GPs and patients in many respects.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4 class="faq-ttl">What is Medify and how does it work?</h4>
+                        </div>
+                        <div class="faq-answer">
+                            The specific features of work of the general practitioner (family doctor) are more
+                            reasonable and beneficial to both GPs and patients in many respects.
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="counter-wrapper">
             <div class="counter">
                 <div class="counter-card">
-                    <div class="counter-icon-wrapper">
+                    <div class="counter-icons-wrapper">
                         <img src="./assets/img/common/heartbeat (1).png" alt="heartbeat">
 
                     </div>
@@ -74,7 +135,7 @@
                     </div>
                 </div>
                 <div class="counter-card">
-                    <div class="counter-pharmacy-wrapper">
+                    <div class="counter-pharmacies-wrapper">
                         <img src="./assets/img/common/pharmacy.png" alt="pharmacy">
                     </div>
                     <div class="number">
@@ -85,7 +146,7 @@
                     </div>
                 </div>
                 <div class="counter-card">
-                    <div class="counter-icon-wrapper">
+                    <div class="counter-icons-wrapper">
                         <img src="./assets/img/common/prescription (1).png" alt="prescription">
                     </div>
                     <div class="number">
@@ -96,7 +157,7 @@
                     </div>
                 </div>
                 <div class="counter-card">
-                    <div class="counter-pharmacy-wrapper">
+                    <div class="counter-pharmacies-wrapper">
                         <img src="./assets/img/common/pharmacy (1).png" alt="pharmacy">
                     </div>
                     <div class="number">
@@ -108,6 +169,7 @@
                 </div>
             </div>
         </section>
+
         <section>
             <div class="adv-services-cover above">
                 <div class="adv-services">
@@ -116,11 +178,6 @@
                 <div class="adv-services-header">
                     <h3>Still Need Help?</h3>
                 </div>
-                <!-- <div class="adv-services-content">
-                    <span>We have introduced the principle of family medicine, which means that the family practitioner
-                        will handle the majority of medical requests, with a specialists involved only if
-                        necessary.</span>
-                </div> -->
             </div>
             <div class="adv-services-card-wrapper">
                 <div class="adv-services-card">
@@ -154,6 +211,7 @@
             </div>
             </div>
         </section>
+
     </main>
 
     <footer>
@@ -166,6 +224,46 @@
     <script src="/assets/slick/slick.min.js"></script>
     <script src="/assets/js/template-part.js"></script>
     <script src="/assets/js/common.js"></script>
+    <!-- <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+
+                // Close other FAQ items if you want only one open at a time (optional)
+                document.querySelectorAll('.faq-item').forEach(el => {
+                    if (el !== item) el.classList.remove('active');
+                });
+
+                // Toggle active state on clicked item
+                item.classList.toggle('active');
+            });
+        });
+    </script> -->
+
+    <script>
+document.querySelectorAll('.faq-question').forEach(question => {
+  question.addEventListener('click', () => {
+    const item = question.parentElement;
+    const answer = item.querySelector('.faq-answer');
+    const isActive = item.classList.contains('active');
+
+    // Close all
+    document.querySelectorAll('.faq-item').forEach(el => {
+      el.classList.remove('active');
+      el.querySelector('.faq-answer').style.maxHeight = null;
+    });
+
+    // Open clicked
+    if (!isActive) {
+      item.classList.add('active');
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+    }
+  });
+});
+
+</script>
+    
+
 </body>
 
 </html>

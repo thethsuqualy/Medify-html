@@ -205,10 +205,58 @@ Top Page
     margin-top: 93px;
 }
 
+.quality {
+    text-align: left;
+}
+
+.stuff {
+    color: #ff9e21;
+    position: relative;
+    max-width: 200px;
+    font-size: 14px;
+    font-family: 'Ubuntu';
+    font-weight: 700;
+
+}
+
+.stuff span::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 13px;
+    height: 3px;
+    border-radius: 2px;
+    top: 50%;
+    right: 57px;
+    margin-top: -2px;
+    background-color: #ff9e21;
+}
+
+.stuff-header {
+    font-family: 'Ubuntu';
+    font-size: 42px;
+    color: #0a3380;
+    font-weight: 700;
+    margin: 20px 0 40px;
+    text-align: left;
+}
+
+@media screen and (max-width:1201px) {
+    .stuff-team-wrapper {
+        margin-left: 40px;
+    }
+}
+
 @media screen and (max-width:1199px) {
     .doctor-image-wrapper {
         width: 471px;
         height: 495px;
+    }
+}
+
+@media screen and (max-width:1175px) {
+    .stuff-team-wrapper {
+        margin-left: 17px;
     }
 }
 
@@ -232,6 +280,36 @@ Top Page
     }
 }
 
+@media screen and (max-width:1073px) {
+    .stuff-team-wrapper {
+        margin-left: 8px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .stuff-team-wrapper {
+        margin-left: 112px;
+    }
+}
+
+@media screen and (max-width:974px) {
+    .stuff-team {
+        max-width: 788px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .stuff-team-wrapper {
+        margin-left: 28px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .stuff-team-wrapper {
+        margin-left: 20px;
+    }
+}
+
 @media screen and (max-width: 912px) {
     .counter {
         flex-direction: column;
@@ -246,6 +324,17 @@ Top Page
 
     .our-feature-header {
         font-size: 30px;
+    }
+
+    .stuff-team {
+        max-width: 393px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .stuff-header {
+        font-size: 30px;
+
     }
 }
 
@@ -296,6 +385,10 @@ Top Page
 @media screen and (max-width:325px) {
     .counter-h3 {
         font-size: 13px;
+    }
+
+    .stuff-header {
+        margin: 15px 0 30px;
     }
 }
 
@@ -1842,12 +1935,288 @@ Top Page
     justify-content: center;
 }
 
+/* dropdown content start */
+.faq-second-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 100px;
+    padding: 40px 20px;
+    max-width: 1320px;
+    width: 100%;
+}
+
+.faq-intro {
+    max-width: 537px;
+    flex: 1;
+}
+
+.faq-label {
+    color: #ff9e21;
+    font-family: "Ubuntu";
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: inline-block;
+    padding-left: 24px;
+    position: relative;
+}
+
+.faq-label::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 9px;
+    height: 3px;
+    border-radius: 2px;
+    top: 47%;
+    left: 58px;
+    transform: translateY(-50%);
+    background-color: #ff9e21;
+}
+
+.intro-ttl {
+    font-family: "Ubuntu";
+    font-size: 42px;
+    color: #0A3380;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.paragraph {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    line-height: 2;
+    font-size: 16px;
+    font-family: "Nunito";
+    font-weight: 500;
+    color: #3b4964;
+}
+
+.faq-list {
+    width: calc(100% - 637px);
+    flex: 1;
+
+}
+
+.faq-item {
+    padding-top: 15px;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    gap: 15px;
+    position: relative;
+    padding: 0 40px 0 0;
+}
+
+.faq-ttl {
+    margin: 0;
+    font-weight: 700;
+    flex: 1;
+    text-align: left;
+    font-family: "Ubuntu";
+    font-size: 20px;
+    color: #0a3380;
+    line-height: 1.5;
+}
+
+.faq-question::after {
+    content: "+";
+    width: 30px;
+    height: 30px;
+    color: #2ea6f7;
+    border-radius: 50%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    font-size: 34px;
+    flex-shrink: 0;
+    transition: content 0.3s ease;
+}
+
+.faq-question:hover::after {
+    color: #0a3380;
+}
+
+.faq-question::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.faq-question::after {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding-top: 23px;
+    opacity: 0;
+    line-height: 1.8;
+    font-family: "Nunito";
+    font-size: 16px;
+    color: #3b4964;
+    max-width: 587px;
+    transition: max-height 0.5s ease, opacity 0.5s ease, padding-top 0.5s ease;
+}
+
+.faq-item.active .faq-answer {
+    opacity: 1;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.faq-item.active .faq-question::after {
+    content: "−";
+    background-color: #2ba4f9;
+    color: #ffffff;
+}
+
+.faq-question-answwer-cover {
+    max-width: 1320px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.faq-ttl:hover {
+    color: #2ba4f9;
+}
+
+.faq-item.active .faq-ttl {
+    color: #2ba4f9;
+}
+
+@media screen and (max-width:908px) {
+    .faq-second-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .faq-intro {
+        max-width: 898px;
+    }
+
+    .faq-list {
+        width: 100%;
+    }
+    .faq-answer{
+        padding-top: 13px;
+    }
+}
+@media screen and (max-width:768px){
+    .faq{
+        margin-bottom:45px;
+    }
+}
+@media screen and (max-width:670px) {
+    .intro-ttl {
+        font-size: 30px;
+    }
+    .faq-second-section{
+        padding: 20px;
+    }
+}
+
+/* dropdown content end */
+
 /* FAQ End */
 
 /* Blog 2column Start */
 /* Blog 2column End */
 
 /* Blog single Start */
+.blogsingle-section {
+      background-color: #f2f2f4;
+      background-image: url("./assets/img/singleblog/blogsingle-mv.jpg"); /* Replace if needed */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: bottom center;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 20px 88px;
+      text-align: center;
+    }
+
+    .inner-blogsingle {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: 1000px;
+    }
+
+    .blogsingle-header {
+      font-family: "Ubuntu", sans-serif;
+      font-size: 42px;
+      font-weight: 700;
+      margin: 20px 0;
+      color: #0a3380;
+    }
+
+    .breadcrumb-nav {
+      white-space: nowrap;
+      margin-top: 10px;
+    }
+
+    .blogsingle-breadcrumb {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      gap: 5px;
+      font-size: 16px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .item {
+      opacity: 0.8;
+      font-weight: 400;
+    }
+
+    .item + .items::before {
+      content: ">";
+      padding: 0 6px;
+      color: #54ced4;
+    }
+
+    .items::after {
+      content: ">";
+      padding: 0 6px;
+      color: #54ced4;
+    }
+
+    .item a {
+      text-decoration: none;
+      color: #0a3380;
+      font-weight: 700;
+    }
+    .items{
+       color: #0a3380; 
+       font-weight: 700;
+       opacity: 0.8;
+    }
+
+    .item.active {
+      font-weight: 700;
+      color: #0a3380;
+      opacity: 1;
+    }
+
 /* Blog single End */
 
 /* Contact Start */
@@ -1899,8 +2268,8 @@ Top Page
     line-height: 1.277;
     margin-top: 25px;
     text-align: center;
-    color:#0A3380;
-        padding: 10px;
+    color: #0A3380;
+    padding: 10px;
 }
 
 .error-content {
@@ -1911,31 +2280,38 @@ Top Page
     margin: 0 auto;
     text-align: center;
     padding: 19px 10px 29px;
-    color:#3b4964;
+    color: #3b4964;
 }
-.error-img{
+
+.error-img {
     width: 509px;
-    height:249px;
+    height: 249px;
     margin: 0 auto;
 }
-@media screen and (max-width:552px){
+
+@media screen and (max-width:552px) {
     .error-img {
-    width: 409px;
-    height: 209px;}
+        width: 409px;
+        height: 209px;
+    }
 }
-@media screen and (max-width:457px){
-    .error-ttl{
+
+@media screen and (max-width:457px) {
+    .error-ttl {
         font-size: 35px;
     }
-        .error-img {
+
+    .error-img {
         width: 336px;
         height: 164px;
     }
 }
-@media screen and (max-width:378px){
-        .error-img {
+
+@media screen and (max-width:378px) {
+    .error-img {
         width: 264px;
         height: 129px;
     }
 }
+
 /* 404 end */

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -45,4 +45,107 @@
 
 </body>
 
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Breadcrumb Example</title>
+  <style>
+    body {
+      font-family: "Nunito", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+      color: #0a3380;
+    }
+
+    .blogsingle-section {
+      background-color: #f2f2f4;
+      background-image: url("./assets/img/singleblog/blogsingle-mv.jpg"); /* Replace if needed */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: bottom center;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 20px 88px;
+      text-align: center;
+    }
+
+    .inner-blogsingle {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: 1000px;
+    }
+
+    .blogsingle-header {
+      font-family: "Ubuntu", sans-serif;
+      font-size: 42px;
+      font-weight: 700;
+      margin: 20px 0;
+      color: #0a3380;
+    }
+
+    .breadcrumb-nav {
+      white-space: nowrap;
+      overflow-x: auto;
+      margin-top: 10px;
+    }
+
+    .blogsingle-breadcrumb {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      gap: 5px;
+      font-size: 16px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .blogsingle-breadcrumb-item {
+      opacity: 0.8;
+      font-weight: 400;
+    }
+
+    .blogsingle-breadcrumb-item + .blogsingle-breadcrumb-item::before {
+      content: ">";
+      padding: 0 6px;
+      color: #54ced4;
+    }
+
+    .blogsingle-breadcrumb-item a {
+      text-decoration: none;
+      color: #0a3380;
+      font-weight: 700;
+    }
+
+    .blogsingle-breadcrumb-item.active {
+      font-weight: 700;
+      color: #0a3380;
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="blogsingle-section">
+    <div class="inner-blogsingle">
+      <h2 class="blogsingle-header">Blog</h2>
+      <nav class="breadcrumb-nav">
+        <ul class="blogsingle-breadcrumb">
+          <li class="blogsingle-breadcrumb-item"><a href="/">Home</a></li>
+          <li class="blogsingle-breadcrumb-item"><a href="/beauty">Beauty</a></li>
+          <li class="blogsingle-breadcrumb-item active">Hospital Nursing Care: Some Observations</li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+
+</body>
 </html>
