@@ -292,8 +292,9 @@ Top Page
         padding-bottom: 0;
     }
 }
-@media screen and (max-width:325px){
-    .counter-h3{
+
+@media screen and (max-width:325px) {
+    .counter-h3 {
         font-size: 13px;
     }
 }
@@ -1288,6 +1289,44 @@ Top Page
 /* Doctor End */
 
 /* FAQ Start */
+.faq-header {
+    font-family: "Ubuntu";
+    font-size: 42px;
+    color: #0a3380;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.faq-section {
+    font-family: "Nunito";
+}
+
+.faq {
+    background-image: url(../img/faq/faq-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-color: #f2f2f4;
+    height: 300px;
+    margin-bottom: 90px;
+    padding: 80px 0px 88px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.faq-h2 {
+    margin: 0;
+}
+
+.inner-faq {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 /* FAQ End */
 
 /* Blog 2column Start */
@@ -1298,3 +1337,90 @@ Top Page
 
 /* Contact Start */
 /* Contact End */
+
+/* 404 start */
+.error-header {
+    font-family: "Ubuntu";
+    font-size: 42px;
+    color: #0a3380;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.error-section {
+    font-family: "Nunito";
+}
+
+.error {
+    background-image: url(../img/404page/404_page_title.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-color: #f2f2f4;
+    height: 300px;
+    margin-bottom: 90px;
+    padding: 80px 0px 88px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-h2 {
+    margin: 0;
+}
+
+.inner-error {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.error-ttl {
+    font-family: "Ubuntu";
+    padding-bottom: 7px;
+    font-size: 48px;
+    line-height: 1.277;
+    margin-top: 25px;
+    text-align: center;
+    color:#0A3380;
+        padding: 10px;
+}
+
+.error-content {
+    font-family: "Ubuntu";
+    font-size: 18px;
+    max-width: 479px;
+    line-height: 36px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 19px 10px 29px;
+    color:#3b4964;
+}
+.error-img{
+    width: 509px;
+    height:249px;
+    margin: 0 auto;
+}
+@media screen and (max-width:552px){
+    .error-img {
+    width: 409px;
+    height: 209px;}
+}
+@media screen and (max-width:457px){
+    .error-ttl{
+        font-size: 35px;
+    }
+        .error-img {
+        width: 336px;
+        height: 164px;
+    }
+}
+@media screen and (max-width:378px){
+        .error-img {
+        width: 264px;
+        height: 129px;
+    }
+}
+/* 404 end */
