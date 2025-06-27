@@ -2316,6 +2316,8 @@ Top Page
     font-size: 36px;
     color: #0a3380;
     font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 21px;
 }
 
 .blog-single p {
@@ -2323,13 +2325,18 @@ Top Page
     font-size: 16px;
     color: #3b4964;
     font-weight: 500;
+    padding-top: 7px;
+    line-height: 1.8;
+    padding-bottom: 10px;
 }
 
-.blog-single strong {
+.blog-single a {
     font-family: "Nunito";
     font-size: 16px;
     color: #2ea6f7;
+    display: inline;
     font-weight: 500;
+    text-decoration: underline;
 }
 
 .blog-single u {
@@ -2337,6 +2344,9 @@ Top Page
     font-size: 16px;
     color: #3b4964;
     font-weight: 500;
+    line-height: 1.8;
+    margin-top: 20px;
+    display: block;
 }
 
 .blog-single h3 {
@@ -2344,6 +2354,8 @@ Top Page
     font-size: 24px;
     color: #0a3380;
     font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 32px;
 }
 
 .blog-single span {
@@ -2354,66 +2366,118 @@ Top Page
 }
 
 .blog-single ul {
-  list-style: none;
-  padding-left: 0;
+    list-style: none;
+    padding-left: 0;
 }
 
 .blog-single li {
-  position: relative;
-  padding-left: 20px;
-  margin-bottom: 8px;
-  font-family: "Nunito";
-  font-size: 16px;
-  color: #3b4964;
-  font-weight: 500;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    font-family: "Nunito";
+    font-size: 16px;
+    color: #3b4964;
+    font-weight: 500;
+    margin-top: 25px;
 }
 
 .blog-single li::before {
-  content: "+";
-  position: absolute;
-  left: 0;
-  color: #2ea6f7; /* You can change the color */
-  font-weight: bold;
+    content: "+";
+    position: absolute;
+    left: 0;
+    color: #2ea6f7;
+    /* You can change the color */
+    font-weight: bold;
 }
-.blog-single img{
+
+.blog-single img {
     width: 870px;
     height: 500%;
+    margin-top: 45px;
+    border-radius: 5px;
 }
-.blog-single blockquote{
-  position: relative;
-  font-family: "Nunito", sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  color: #0a3380;
-  border-left: 4px solid #54ced4;
-  padding-left: 40px;
-  margin: 30px 0;
-  line-height: 1.6;
-  left: 30px;
+
+.blog-single blockquote {
+    position: relative;
+    font-family: "Ubuntu";
+    font-size: 24px;
+    font-weight: 700;
+    color: #0a3380;
+    border-left: 3px solid #54ced4;
+    padding-left: 29px;
+    margin: 30px 0;
+    line-height: 1.6;
+    left: 69px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 96px;
 }
 
 .blog-single blockquote::after {
-  content: "❝";
-  font-family: "Flaticon";
-  font-size: 22px;
-  font-weight: 400;
-  position: absolute;
-  left: 10px;
-  top: 0;
-  font-size: 32px;
-  color: #54ced4;
-  font-family: serif;
-  left: -30px;
+    content: " ";
+    position: absolute;
+    left: -65px;
+    top: 24px;
+    width: 32px;
+    height: 32px;
+    background-image: url("../img/singleblog/blockquote.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
 }
 
-.specialist {
+.blog-single cite {
+    font-family: "Nunito";
+    font-size: 16px;
+    color: #aeb6c2;
+    font-weight: 600;
+    display: block;
+    position: relative;
+    margin-top: 12px;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 0;
+    margin-top: 17px;
+}
+
+.blog-single-leftside {
+    max-width: 965px;
+    width: 100%;
+}
+.blog-single div{
     display: flex;
+    justify-content: space-between;
+    margin: 57px 40px 0px 40px;
+}
+.blog-single div a{
+    color:#3b4964;
+    font-family: "Nunito";
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    width:90px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#f7f7f7;
+    border-radius: 5px;
+    box-shadow: 7px 5px 15px 0px rgba(0, 0, 0, 0.09);
+}
+.blog-single div:hover{
+    color: red;
+}
+.blog-single div a:hover {
+    background-color: #2ea6f7;
+    color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.experience-doctors {
-    width: 342px;
-    height: 326px;
-}
 
 /* Blog single End */
 
