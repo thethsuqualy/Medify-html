@@ -1105,3 +1105,15 @@ Background Color
 }
 
 /* faq support center end */
+
+/* side bar start */
+.widget-banner {
+  background-image: url("../img/common/widget-banner.jpg");
+  background-size: cover;      
+  background-position: center; 
+  background-repeat: no-repeat;
+  width: 270px;
+  height: 314px;
+  border-radius: 15px;
+}
+/* side bar end */
