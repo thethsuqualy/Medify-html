@@ -1105,3 +1105,83 @@ Background Color
 }
 
 /* faq support center end */
+
+/* company ads slider start */
+.logo-slider {
+  max-width: 1280px;
+  margin: 102px auto 90px auto ;
+}
+
+.ad-slider {
+  width: 200px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20px;
+}
+
+.ad-slider img {
+  max-height: 70px;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+.slick-slide {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+/* company ads slider end */
+
+/* call center blue bg fixed start */
+.call-center-section {
+  background: url(../img/common/call-center-bg.jpg) no-repeat;
+  background-size: contain;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.call-center-section.service-call-center {
+  background: url(../img/common/service-callcenter-bg.jpg) no-repeat;
+  background-size: contain;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.call-center-img {
+  width: 80px;
+  height: 80px;
+}
+
+.call-center {
+  max-width: 1320px;
+  width: 100%;
+  padding: 74px 20px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.call-center-h3 {
+  color: #ffffff;
+}
+
+.call-center-label {
+  font-size: 28px;
+  font-weight: 400;
+  font-family: 'Ubuntu';
+  margin: 50px 0 30px 0;
+}
+
+.call-center-no {
+  font-family: "Ubuntu";
+  font-size: 48px;
+  font-weight: 700;
+}
+
+/* call center blue bg fixed end */
