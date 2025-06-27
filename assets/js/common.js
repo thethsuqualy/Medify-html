@@ -52,4 +52,13 @@ $(function () {
       },
     ],
   });
+
+  $(document).ready(function () {
+    $(".top-slider").slick({
+      dots: true,
+      arrows: true,
+      autoplay: true,
+      autoplaySpeed: 3000,
+    });
+  });
 });

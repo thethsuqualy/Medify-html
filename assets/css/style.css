@@ -1,7 +1,37 @@
 @charset "utf-8";
-/* ===============================
-Top Page
-=============================== */
+/*Top Page Start */
+.top-mv-slider{
+    background: url(../img/top/top-slider-bg-3.jpg) no-repeat;
+    background-size: cover;
+    height: 80vh;
+    background-position: center;
+    max-width: 100%;
+}
+.top-slider-content{
+    max-width: 800px;
+    width: 100%;
+}
+.top-slider-h2{
+    font-family: 'Ubuntu';
+    font-size: 72px;
+    font-weight: 600;
+    color: #0a3380;
+}
+.top-h2-span{
+    color: #54ced4;
+}
+.top-slider-p{
+    font-family: 'Nunito';
+    font-size: 18px;
+    font-weight: 400;
+    color: #0a3380;
+    line-height: 1.5;
+    max-width: 600px;
+}
+.top-mv-slider.slick-slide{
+}
+/*Top Page End */
+
 
 /* About us start */
 .aboutus-header {
