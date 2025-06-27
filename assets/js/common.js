@@ -55,9 +55,9 @@ $(function () {
 
   $(document).ready(function () {
     $(".top-slider").slick({
-      dots: true,
+      dots: false,
       arrows: true,
-      autoplay: true,
+      autoplay: false,
       autoplaySpeed: 3000,
     });
   });
