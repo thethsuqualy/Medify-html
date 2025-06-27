@@ -2111,20 +2111,24 @@ Top Page
     .faq-list {
         width: 100%;
     }
-    .faq-answer{
+
+    .faq-answer {
         padding-top: 13px;
     }
 }
-@media screen and (max-width:768px){
-    .faq{
-        margin-bottom:45px;
+
+@media screen and (max-width:768px) {
+    .faq {
+        margin-bottom: 45px;
     }
 }
+
 @media screen and (max-width:670px) {
     .intro-ttl {
         font-size: 30px;
     }
-    .faq-second-section{
+
+    .faq-second-section {
         padding: 20px;
     }
 }
@@ -2138,84 +2142,278 @@ Top Page
 
 /* Blog single Start */
 .blogsingle-section {
-      background-color: #f2f2f4;
-      background-image: url("./assets/img/singleblog/blogsingle-mv.jpg"); /* Replace if needed */
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: bottom center;
-      height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 80px 20px 88px;
-      text-align: center;
-    }
+    background-color: #f2f2f4;
+    background-image: url("../img/singleblog/blogsingle-mv.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px 88px;
+    text-align: center;
+}
 
-    .inner-blogsingle {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      max-width: 1000px;
-    }
+.inner-blogsingle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+}
 
-    .blogsingle-header {
-      font-family: "Ubuntu", sans-serif;
-      font-size: 42px;
-      font-weight: 700;
-      margin: 20px 0;
-      color: #0a3380;
-    }
+.blogsingle-header {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    margin: 20px 0;
+    color: #0a3380;
+}
 
-    .breadcrumb-nav {
-      white-space: nowrap;
-      margin-top: 10px;
-    }
+.breadcrumb-nav {
+    white-space: nowrap;
+    margin-top: 10px;
+}
 
-    .blogsingle-breadcrumb {
-      display: flex;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      gap: 5px;
-      font-size: 16px;
-      align-items: center;
-      justify-content: center;
-    }
+.blogsingle-breadcrumb {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 5px;
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+}
 
-    .item {
-      opacity: 0.8;
-      font-weight: 400;
-    }
+.bs-breadcrumb-item {
+    opacity: 0.8;
+    font-weight: 400;
+}
 
-    .item + .items::before {
-      content: ">";
-      padding: 0 6px;
-      color: #54ced4;
-    }
+.bs-breadcrumb-item+.bs-breadcrumb-items::before {
+    content: ">";
+    padding: 0 6px;
+    color: #54ced4;
+}
 
-    .items::after {
-      content: ">";
-      padding: 0 6px;
-      color: #54ced4;
-    }
+.bs-breadcrumb-items::after {
+    content: ">";
+    padding: 0 6px;
+    color: #54ced4;
+}
 
-    .item a {
-      text-decoration: none;
-      color: #0a3380;
-      font-weight: 700;
-    }
-    .items{
-       color: #0a3380; 
-       font-weight: 700;
-       opacity: 0.8;
-    }
+.bs-breadcrumb-item a {
+    text-decoration: none;
+    color: #0a3380;
+    font-weight: 700;
+}
 
-    .item.active {
-      font-weight: 700;
-      color: #0a3380;
-      opacity: 1;
-    }
+.bs-breadcrumb-items {
+    color: #0a3380;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+.bs-breadcrumb-item.active {
+    font-weight: 700;
+    color: #0a3380;
+    opacity: 1;
+}
+
+.blog-single-doctor img {
+    width: 870px;
+    height: 483px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.beauty {
+    display: flex;
+    gap: 34px;
+    padding: 40px 0 30px;
+    font-family: "Nunito";
+    font-size: 14px;
+    font-weight: 800;
+    color: #aeb6c2;
+}
+
+.beauty-box {
+    z-index: 1;
+    color: #2ea6f7;
+    background-color: #ffffff;
+    width: 90px;
+    height: 35px;
+    position: absolute;
+    top: 61%;
+    left: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1px;
+    box-shadow: 7px 5px 15px 0px rgba(0, 0, 0, 0.09);
+    border-radius: 5px;
+}
+
+.developer {
+    position: relative;
+    display: flex;
+    gap: 8px;
+
+}
+
+.bydeveloper {
+    font-family: "Nunito";
+    font-size: 14px;
+    font-weight: 800;
+    color: #aeb6c2;
+}
+
+.blog-single-date {
+    position: relative;
+}
+
+.developer::before {
+    content: "";
+    position: absolute;
+    left: 136px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 5px;
+    background-color: #2ea6f7;
+    border-radius: 50%;
+}
+
+.developer::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 74px;
+    transform: translateX(-50%);
+    width: 75%;
+    height: 1.4px;
+    margin-bottom: -1px;
+    background-color: #aeb6c2;
+}
+
+.blog-single-date::after {
+    content: "";
+    position: absolute;
+    left: 151px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 5px;
+    background-color: #2ea6f7;
+    border-radius: 50%;
+}
+
+.blog-single h2 {
+    font-family: "Ubuntu";
+    font-size: 36px;
+    color: #0a3380;
+    font-weight: 700;
+}
+
+.blog-single p {
+    font-family: "Nunito";
+    font-size: 16px;
+    color: #3b4964;
+    font-weight: 500;
+}
+
+.blog-single strong {
+    font-family: "Nunito";
+    font-size: 16px;
+    color: #2ea6f7;
+    font-weight: 500;
+}
+
+.blog-single u {
+    font-family: "Nunito";
+    font-size: 16px;
+    color: #3b4964;
+    font-weight: 500;
+}
+
+.blog-single h3 {
+    font-family: "Ubuntu";
+    font-size: 24px;
+    color: #0a3380;
+    font-weight: 700;
+}
+
+.blog-single span {
+    font-family: "Nunito";
+    font-size: 16px;
+    color: #0a3380;
+    font-weight: 700;
+}
+
+.blog-single ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.blog-single li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+  font-family: "Nunito";
+  font-size: 16px;
+  color: #3b4964;
+  font-weight: 500;
+}
+
+.blog-single li::before {
+  content: "+";
+  position: absolute;
+  left: 0;
+  color: #2ea6f7; /* You can change the color */
+  font-weight: bold;
+}
+.blog-single img{
+    width: 870px;
+    height: 500%;
+}
+.blog-single blockquote{
+  position: relative;
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #0a3380;
+  border-left: 4px solid #54ced4;
+  padding-left: 40px;
+  margin: 30px 0;
+  line-height: 1.6;
+  left: 30px;
+}
+
+.blog-single blockquote::after {
+  content: "❝";
+  font-family: "Flaticon";
+  font-size: 22px;
+  font-weight: 400;
+  position: absolute;
+  left: 10px;
+  top: 0;
+  font-size: 32px;
+  color: #54ced4;
+  font-family: serif;
+  left: -30px;
+}
+
+.specialist {
+    display: flex;
+}
+
+.experience-doctors {
+    width: 342px;
+    height: 326px;
+}
 
 /* Blog single End */
 
