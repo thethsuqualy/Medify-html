@@ -1109,7 +1109,7 @@ Background Color
 /* company ads slider start */
 .logo-slider {
   max-width: 1280px;
-  margin: 102px auto 90px auto ;
+  margin: 102px auto 90px auto;
 }
 
 .ad-slider {
@@ -1133,6 +1133,7 @@ Background Color
   align-items: center;
   justify-content: center;
 }
+
 /* company ads slider end */
 
 /* call center blue bg fixed start */
@@ -1186,14 +1187,282 @@ Background Color
 
 /* call center blue bg fixed end */
 
-/* side bar start */
+/* sidebar start */
 .widget-banner {
   background-image: url("../img/common/widget-banner.jpg");
-  background-size: cover;      
-  background-position: center; 
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   width: 270px;
   height: 314px;
   border-radius: 15px;
+  margin: 0 auto;
 }
+
+.blog-single-sidebar {
+  width: calc(100% - 965px);
+  padding: 30px 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.online-app {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  padding: 8px 20px;
+}
+
+.app-wrapper {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-color: white;
+}
+
+.base-img {
+  opacity: 1;
+  z-index: 1;
+}
+
+.float-img {
+  opacity: 0;
+  transform: translateY(0);
+  z-index: 2;
+}
+
+.marry-name {
+  font-family: "Ubuntu";
+  font-weight: 700;
+  font-size: 26px;
+  color: #0a3380;
+  text-align: center;
+}
+
+.author {
+  font-family: "Nunito";
+  color: #3B4964;
+  font-size: 17px;
+  line-height: 30px;
+  padding-bottom: 24px;
+  padding-top: 20px;
+  max-width: 269px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  font-weight: 500;
+}
+
+.marrylee-img {
+  width: 155px;
+  margin: 0 auto;
+}
+
+.categories {
+  font-family: "Ubuntu";
+  font-size: 17px;
+  color: #0a3380;
+  font-weight: 700;
+  padding-top: 40px;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.categories-wrapper {
+  position: relative;
+}
+
+.categories::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 159px;
+  width: 22px;
+  height: 3px;
+  background-color: #FF9e21;
+}
+
+.category-item {
+  display: flex;
+  margin-bottom: 22px;
+  font-size: 14px;
+}
+
+.category::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  top: 57%;
+  left: -18px;
+  margin-top: -2.5px;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  background: #aeb6c2;
+}
+
+.dash-line {
+  flex: 1;
+  display: block;
+  height: 1px;
+  padding: 0;
+  background: #e5e5e5;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 12px;
+}
+
+.category {
+  position: relative;
+  z-index: 1;
+  background-color: #fff;
+  padding: 0 2px;
+  font-size: 19px;
+  font-weight: 500;
+  font-family: "Ubuntu";
+  color: #0A3380;
+  cursor: pointer;
+}
+
+.category:hover {
+  color: #2ea6f7;
+}
+
+.category:hover::before {
+  background: #2ea6f7;
+}
+
+.category:hover~.page-number {
+  color: #2ea6f7;
+}
+
+.page-number {
+  position: relative;
+  z-index: 1;
+  padding: 0 2px;
+  font-family: "Nunito";
+  color: #aeb6c2;
+  font-size: 17px;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+.category-list {
+  max-width: 266px;
+  margin: 0 auto;
+  padding-left: 21px;
+}
+
+.gallery-wrapper {
+  position: relative;
+}
+
+.gallery {
+  font-family: "Ubuntu";
+  font-size: 18px;
+  color: #0a3380;
+  font-weight: 700;
+  padding-top: 30px;
+  text-align: center;
+  padding-bottom: 42px;
+}
+
+.gallery::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 66px;
+  width: 22px;
+  height: 3px;
+  background-color: #FF9e21;
+}
+
+.gallery-img {
+  width: 77px;
+  border-radius: 10px;
+}
+
+.gallery-gp {
+  display: flex;
+  gap: 11px;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin: 0 auto;
+  padding-bottom: 13px;
+}
+
+.widget-banner-wrapper {
+  margin-top: 60px;
+}
+
+.emergemcy-service {
+  font-family: "Ubuntu";
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: 400;
+  line-height: 36px;
+  margin-bottom: 20px;
+  padding: 0 15px;
+  text-align: center;
+  max-width: 262px;
+}
+
+.emergency-number {
+  font-family: "Ubuntu";
+  color: #ffffff;
+  font-size: 24px;
+  margin-bottom: 32px;
+  font-weight: 700;
+  line-height: 30px;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+}
+
+.widget {
+  padding-top: 53px;
+  padding-bottom: 46px;
+}
+
+.emergency-call {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 143px;
+  height: 46px;
+  font-weight: 700;
+  color: #2ea6f7;
+  border: none;
+  transition: all 0.45s ease;
+  font-size: 16px;
+  font-family: "Ubuntu";
+  background: #fff;
+  border-radius: 5px;
+
+}
+
+.emergencycall-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+
 /* side bar end */
