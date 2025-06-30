@@ -2,23 +2,52 @@
 
 /*Top Page Start */
 .top-mv-slider {
-    background: url(../img/top/top-slider-bg-3.jpg) no-repeat;
+    background: url(../img/top/top-slider-bg-1-Copy.jpg) no-repeat;
     background-size: cover;
-    height: 80vh;
     background-position: center;
-    max-width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.top-mv-two {
+    background: url(../img/top/top-slider-bg-2-Copy.jpg) no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.top-mv-three {
+    background: url(../img/top/top-slider-bg-3-Copy.jpg) no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.top-slider {
+    overflow: hidden;
+    position: relative;
 }
 
 .top-slider-content {
-    max-width: 800px;
+    max-width: 700px;
     width: 100%;
+    position: absolute;
+    left: 60px;
+    bottom: 420px;
+}
+
+.top-slider-two {
+    max-width: 660px;
+    position: absolute;
+    left: auto;
+    right: 0;
 }
 
 .top-slider-h2 {
+    max-width: 680px;
     font-family: 'Ubuntu';
     font-size: 72px;
     font-weight: 600;
     color: #0a3380;
+    line-height: 1.1;
 }
 
 .top-h2-span {
@@ -32,8 +61,32 @@
     color: #0a3380;
     line-height: 1.5;
     max-width: 600px;
+    line-height: 1.7;
+    margin-top: 20px;
 }
 
+.top-slider-btn{
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.top-slider-btn img{
+    width: 30px;
+    height: 30px;
+}
+.top-slider-btn.next{
+    position: absolute;
+    top: 50%;
+    left: 0px;
+}
+.top-slider-btn.prev{
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
 /*Top Page End */
 
 
@@ -2566,8 +2619,8 @@
     justify-content: center;
     align-items: center;
     background-color: #f7f7f7;
-    border-radius: 3px;
-    border: 1px solid #f7f7f7;
+    border-radius: 5px;
+    box-shadow: 7px 5px 15px 0px rgba(0, 0, 0, 0.09);
 }
 
 .blog-single div:hover {
