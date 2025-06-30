@@ -94,7 +94,7 @@
 .top-benefit {
     background: url(../img/top/top-benefit-bg.jpg) no-repeat;
     background-size: cover;
-    padding: 92px 0 150px 0;
+    padding: 92px 0 160px 0;
 }
 
 .top-benefit-h3 {
@@ -138,9 +138,9 @@
 }
 
 .top-benefit-right {
-    max-width: calc(100% - 670px);
+    max-width: calc(100% - 645px);
     line-height: 1.7;
-    margin-top: 33px;
+    margin-top: 40px;
 }
 
 .benefit {
@@ -169,14 +169,15 @@
     max-width: 1320px;
     padding: 0 20px;
     margin: 0 auto;
-    justify-content: space-between;
     position: relative;
     top: -100px;
+    gap: 30px;
 }
 
 .benefit-card {
     max-width: 400px;
-    position: relative;
+    /* position: relative; */
+
 }
 
 .benefit-card-label {
@@ -189,12 +190,10 @@
     color: #0a3380;
     background-color: #ffffff;
     box-shadow: 8px 9px 35px rgba(49, 49, 49, 0.08);
-    transition: 0.4s;
-    position: absolute;
-    bottom: -32px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
+    margin: -30px auto 0 auto;
     width: 100%;
+    z-index: 100;
 }
 
 .quality-therapy-label {
@@ -268,7 +267,8 @@
     background-size: cover;
     padding: 90px 0;
 }
-.inner-care-amenitie{
+
+.inner-care-amenitie {
     max-width: 1320px;
     padding: 0 20px;
     margin: 0 auto;
@@ -280,28 +280,90 @@
     background-color: #ffffff;
     border-radius: 15px;
 }
-.care-a-content.about-me-care{
+
+.care-a-content.about-me-care {
     padding: 60px 30px;
     border-radius: 15px;
     margin: 0 20px 0 auto;
 }
-@media screen and (max-width: 1025px){
-    .care-a-content.about-me-care{
-        margin: 0 auto;
+
+@media screen and (max-width: 1170px) {
+    .top-benefit-left {
+        max-width: 500px;
+        padding: 10px;
+    }
+
+    .top-benefit-right {
+        max-width: calc(100% - 545px);
+        line-height: 1.7;
+        margin-top: 40px;
+    }
+    .about-me-left{
+        max-width: 520px;
     }
 }
-@media screen and (max-width: 768px){
-     .care-amenitie{
+
+@media screen and (max-width: 1025px) {
+    .care-a-content.about-me-care {
+        margin: 0 auto;
+    }
+
+    .benefit-card--wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        row-gap: 30px;
+    }
+
+    .top-benefit-flex {
+        display: flex;
+        flex-direction: column;
+        gap: 33px;
+    }
+
+    .top-benefit-left {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .top-benefit-right {
+        max-width: 100%;
+        margin-top: 0;
+    }
+    .about-me-flex{
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+    .about-me-img{
+        max-width: 100%;
+        margin: 0 auto;
+
+    }
+    .about-me-left{
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .care-amenitie {
         background: url(../img/top/why-choose\ -\ Copy.jpg) no-repeat;
         background-size: cover;
         background-position: center;
     }
+
+    .top-benefit-h3 {
+        font-size: 32px;
+    }
 }
-@media screen and (max-width: 455px){
-    .care-a-content.about-me-care{
+
+@media screen and (max-width: 455px) {
+    .care-a-content.about-me-care {
         padding: 40px 20px;
     }
-    .care-a-h3.history-header{
+
+    .care-a-h3.history-header {
         font-size: 30px;
     }
 }
