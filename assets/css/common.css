@@ -1108,7 +1108,7 @@ Background Color
 
 /* company ads slider start */
 .logo-slider {
-  margin: 102px 0 90px 0 ;
+  margin: 102px 0 90px 0;
 }
 
 .ad-slider {
@@ -1132,6 +1132,7 @@ Background Color
   align-items: center;
   justify-content: center;
 }
+
 /* company ads slider end */
 
 /* call center blue bg fixed start */
@@ -1183,22 +1184,27 @@ Background Color
   font-size: 48px;
   font-weight: 700;
 }
-@media screen and (max-width: 768px){
-  .call-center-label{
+
+@media screen and (max-width: 768px) {
+  .call-center-label {
     font-size: 22px;
   }
-  .call-center-no{
+
+  .call-center-no {
     font-size: 35px;
   }
 }
-@media screen and (max-width: 380px){
-  .call-center-label{
+
+@media screen and (max-width: 380px) {
+  .call-center-label {
     font-size: 22px;
   }
-  .call-center-no{
+
+  .call-center-no {
     font-size: 30px;
   }
-  .call-center{
+
+  .call-center {
     padding: 74px 10px;
   }
 }
@@ -1208,11 +1214,12 @@ Background Color
 /* side bar start */
 .widget-banner {
   background-image: url("../img/common/widget-banner.jpg");
-  background-size: cover;      
-  background-position: center; 
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   width: 270px;
   height: 314px;
   border-radius: 15px;
 }
+
 /* side bar end */
