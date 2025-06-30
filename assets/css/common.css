@@ -1108,8 +1108,7 @@ Background Color
 
 /* company ads slider start */
 .logo-slider {
-  max-width: 1280px;
-  margin: 102px auto 90px auto ;
+  margin: 102px 0 90px 0 ;
 }
 
 .ad-slider {
@@ -1138,16 +1137,16 @@ Background Color
 /* call center blue bg fixed start */
 .call-center-section {
   background: url(../img/common/call-center-bg.jpg) no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center center;
-  background-attachment: fixed;
+  width: 100%;
 }
 
 .call-center-section.service-call-center {
   background: url(../img/common/service-callcenter-bg.jpg) no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center center;
-  background-attachment: fixed;
+  width: 100%;
 }
 
 .call-center-img {
@@ -1176,12 +1175,32 @@ Background Color
   font-weight: 400;
   font-family: 'Ubuntu';
   margin: 50px 0 30px 0;
+  line-height: 1.5;
 }
 
 .call-center-no {
   font-family: "Ubuntu";
   font-size: 48px;
   font-weight: 700;
+}
+@media screen and (max-width: 768px){
+  .call-center-label{
+    font-size: 22px;
+  }
+  .call-center-no{
+    font-size: 35px;
+  }
+}
+@media screen and (max-width: 380px){
+  .call-center-label{
+    font-size: 22px;
+  }
+  .call-center-no{
+    font-size: 30px;
+  }
+  .call-center{
+    padding: 74px 10px;
+  }
 }
 
 /* call center blue bg fixed end */
