@@ -31,7 +31,7 @@
     width: 100%;
     position: absolute;
     left: 60px;
-    bottom: 420px;
+    bottom: 350px;
 }
 
 .top-slider-two {
@@ -65,7 +65,7 @@
     margin-top: 20px;
 }
 
-.top-slider-btn{
+.top-slider-btn {
     width: 50px;
     height: 50px;
     background-color: #ffffff;
@@ -73,20 +73,239 @@
     align-items: center;
     justify-content: center;
 }
-.top-slider-btn img{
+
+.top-slider-btn img {
     width: 30px;
     height: 30px;
 }
-.top-slider-btn.next{
+
+.top-slider-btn.next {
     position: absolute;
     top: 50%;
     left: 0px;
 }
-.top-slider-btn.prev{
+
+.top-slider-btn.prev {
     position: absolute;
     top: 50%;
     right: 0;
 }
+
+.top-benefit {
+    background: url(../img/top/top-benefit-bg.jpg) no-repeat;
+    background-size: cover;
+    padding: 92px 0 150px 0;
+}
+
+.top-benefit-h3 {
+    font-family: 'Ubuntu';
+    font-size: 42px;
+    color: #ffffff;
+    font-weight: 700;
+    margin: 20px 0;
+    line-height: 1.4;
+}
+
+.top-benefit-p {
+    font-family: 'Nunito';
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.top-benefit-p.strong {
+    font-weight: 700;
+}
+
+.top-sign-img {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    margin-top: 40px;
+}
+
+.top-benefit-flex {
+    display: flex;
+    max-width: 1320px;
+    padding: 0 20px;
+    margin: 0 auto;
+    gap: 50px;
+}
+
+.top-benefit-left {
+    max-width: 600px;
+    padding: 10px;
+}
+
+.top-benefit-right {
+    max-width: calc(100% - 670px);
+    line-height: 1.7;
+    margin-top: 33px;
+}
+
+.benefit {
+    position: relative;
+    font-family: 'Ubuntu';
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 700;
+    max-width: 95px;
+}
+
+.benefit-label::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 10px;
+    height: 3px;
+    border-radius: 2px;
+    top: 50%;
+    right: 0;
+    background-color: #ffffff;
+}
+
+.benefit-card--wrapper {
+    display: flex;
+    max-width: 1320px;
+    padding: 0 20px;
+    margin: 0 auto;
+    justify-content: space-between;
+    position: relative;
+    top: -100px;
+}
+
+.benefit-card {
+    max-width: 400px;
+    position: relative;
+}
+
+.benefit-card-label {
+    max-width: 250px;
+    font-family: 'Ubuntu';
+    font-weight: 700;
+    font-size: 24px;
+    padding: 18px 33px 18px 33px;
+    border-radius: 10px 10px 10px 10px;
+    color: #0a3380;
+    background-color: #ffffff;
+    box-shadow: 8px 9px 35px rgba(49, 49, 49, 0.08);
+    transition: 0.4s;
+    position: absolute;
+    bottom: -32px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+.quality-therapy-label {
+    max-width: 270px;
+}
+
+.laboratory-test-label {
+    max-width: 270px;
+}
+
+.premium-care-img {
+    border-radius: 20px;
+}
+
+.about-me {
+    position: relative;
+    color: #ff9e21;
+    max-width: 100px;
+    font-size: 14px;
+    font-family: 'Ubuntu';
+    font-weight: 700;
+}
+
+.about-me-h3.history-header {
+    max-width: 450px;
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+.about-me-label::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 10px;
+    height: 3px;
+    border-radius: 2px;
+    top: 50%;
+    right: 0px;
+    margin-top: -2px;
+    background-color: #ff9e21;
+}
+
+.about-me-flex {
+    display: flex;
+    max-width: 1320px;
+    padding: 0 20px;
+    margin: 110px auto;
+}
+
+.about-me-left {
+    max-width: 575px;
+    width: 100%;
+    margin: 25px auto 0 auto;
+
+}
+
+.about-me-p {
+    font-family: 'Nunito';
+    font-size: 16px;
+    font-weight: 400;
+    color: #3b4964;
+    line-height: 1.7;
+}
+
+.about-me-p.first {
+    margin-bottom: 20px;
+}
+
+.care-amenitie {
+    background: url(../img/top/why-choose.jpg) no-repeat;
+    background-size: cover;
+    padding: 90px 0;
+}
+.inner-care-amenitie{
+    max-width: 1320px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.about-me-care {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 60px 50px;
+    background-color: #ffffff;
+    border-radius: 15px;
+}
+.care-a-content.about-me-care{
+    padding: 60px 30px;
+    border-radius: 15px;
+    margin: 0 20px 0 auto;
+}
+@media screen and (max-width: 1025px){
+    .care-a-content.about-me-care{
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 768px){
+     .care-amenitie{
+        background: url(../img/top/why-choose\ -\ Copy.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
+@media screen and (max-width: 455px){
+    .care-a-content.about-me-care{
+        padding: 40px 20px;
+    }
+    .care-a-h3.history-header{
+        font-size: 30px;
+    }
+}
+
 /*Top Page End */
 
 
@@ -601,12 +820,12 @@
     color: #ff9e21;
     position: relative;
     max-width: 140px;
-    /* padding: 0 20px; */
     font-size: 14px;
     font-family: 'Ubuntu';
+    font-weight: 700;
 }
 
-.our-mission span::after {
+.our-mission-label::after {
     content: "";
     position: absolute;
     z-index: 1;
@@ -766,6 +985,9 @@
     position: relative;
 }
 
+/* .care-a-h3{
+    margin: 20px 0 40px 0;
+} */
 .care-a-content {
     max-width: calc(100% - 670px);
     margin-top: 75px;
@@ -786,7 +1008,7 @@
     color: #ccd0de;
     font-size: 18px;
     display: flex;
-    margin-bottom: 22px;
+    margin-bottom: 30px;
     padding: 5px 43px 20px 0;
 }
 
@@ -796,16 +1018,17 @@
     width: 100%;
     text-align: center;
     cursor: pointer;
+    font-weight: 700;
 }
 
 .lower-carea-h4::before {
     content: "";
     position: absolute;
     z-index: 1;
-    height: 4px;
+    height: 3px;
     width: 0;
     left: 0;
-    top: 35px;
+    top: 40px;
     transition: width 0.1s;
     background-color: #ff9e21;
 }
@@ -879,6 +1102,10 @@
         display: flex;
         flex-direction: column;
         gap: 50px;
+    }
+
+    .lower-carea {
+        justify-content: space-between;
     }
 
     .mission-img {
@@ -2588,17 +2815,6 @@
 .blog-single-leftside {
     max-width: 965px;
     width: 100%;
-    padding: 30px;
-}
-
-.blog-single-wrapper {
-    max-width: 1280px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin: 0 auto;
-    padding-top: 53px;
 }
 
 .blog-single div {
