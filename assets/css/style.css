@@ -286,10 +286,12 @@
     border-radius: 15px;
     margin: 0 20px 0 auto;
 }
-
+/* 
 @media screen and (max-width: 1025px) {
-    .care-a-content.about-me-care {}
-}
+    .care-a-content.about-me-care {
+
+    }
+} */
 
 @media screen and (max-width: 1170px) {
     .top-benefit-left {

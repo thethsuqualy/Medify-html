@@ -661,9 +661,10 @@ Background Color
   .access-map {
     width: 570px;
   }
+
   .footer {
     padding: 30px 20px 20px;
-}
+  }
 }
 
 @media screen and (max-width: 738px) {
@@ -883,16 +884,18 @@ Background Color
   text-align: center;
   padding: 20px 0px 22px;
 }
-.top-adv-title{
+
+.top-adv-title {
   font-family: "Ubuntu";
   font-size: 42px;
   color: #ffffff;
   font-weight: 700;
 }
+
 .top-content {
   font-family: "Nunito";
   font-size: 16px;
-  color:#ffffff;
+  color: #ffffff;
 }
 
 .top-content-cover {
@@ -1212,8 +1215,10 @@ Background Color
   .adv-services-header {
     font-size: 30px;
   }
+
   .top-adv-title {
-    font-size: 32px;}
+    font-size: 32px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -1278,8 +1283,44 @@ Background Color
 /* faq support center end */
 
 /* company ads slider start */
-.logo-slider {
+/* .logo-slider {
   margin: 102px 0 90px 0;
+  overflow: hidden;
+}
+
+.ad-slider {
+  width: 200px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+.ad-slider img {
+  max-height: 70px;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+.slick-slide {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+} */
+
+.logo-slider-wrapper {
+  overflow: hidden;
+  width: 100%;
+  background: #fff;
+  margin: 102px 0 90px 0;
+}
+
+.logo-slider-track {
+  display: flex;
+  width: max-content;
+  animation: scrollLogos 20s linear infinite;
 }
 
 .ad-slider {
@@ -1294,14 +1335,18 @@ Background Color
 .ad-slider img {
   max-height: 70px;
   max-width: 100%;
-  width: auto;
-  height: auto;
+  object-fit: contain;
 }
 
-.slick-slide {
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
+/* Animation */
+@keyframes scrollLogos {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* company ads slider end */

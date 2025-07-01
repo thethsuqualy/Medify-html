@@ -65,33 +65,36 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Submenu toggle
-  //   if (submenuToggle && submenu && submenuArrow) {
-  //     submenuToggle.addEventListener("click", () => {
-  //       if (submenu.style.display === "block") {
-  //         submenu.style.display = "none";
-  //       } else {
-  //         submenu.style.display = "block";
-  //       }
-  //       submenuArrow.classList.toggle("rotate");
-  //     });
-  //   }
-  // }, 2000);
- if (submenuArrow && submenu) {
-    submenuArrow.addEventListener("click", (e) => {
-      e.stopPropagation(); // Prevent triggering other click events
-      submenu.style.display = submenu.style.display === "block" ? "none" : "block";
-      submenuArrow.classList.toggle("rotate");
-    });
-  }
-}, 2000);
+    //   if (submenuToggle && submenu && submenuArrow) {
+    //     submenuToggle.addEventListener("click", () => {
+    //       if (submenu.style.display === "block") {
+    //         submenu.style.display = "none";
+    //       } else {
+    //         submenu.style.display = "block";
+    //       }
+    //       submenuArrow.classList.toggle("rotate");
+    //     });
+    //   }
+    // }, 2000);
+    if (submenuArrow && submenu) {
+      submenuArrow.addEventListener("click", (e) => {
+        e.stopPropagation(); // Prevent triggering other click events
+        submenu.style.display =
+          submenu.style.display === "block" ? "none" : "block";
+        submenuArrow.classList.toggle("rotate");
+      });
+    }
+  }, 2000);
   //humburger end
 });
 
 // Your jQuery code goes here
+// ads slider start
 $(function () {
   $(".logo-slider").slick({
     slidesToShow: 6,
     slidesToScroll: 1,
+    infinite: true,
     autoplay: true,
     autoplaySpeed: 0,
     speed: 3000,
@@ -99,6 +102,7 @@ $(function () {
     arrows: false,
     dots: false,
     pauseOnHover: false,
+    variableWidth: true,
     responsive: [
       {
         breakpoint: 1160,
@@ -114,13 +118,17 @@ $(function () {
       },
     ],
   });
+  // ads slider end
 
+  // top slider start
   $(document).ready(function () {
     $(".top-slider").slick({
       dots: false,
+      infinite: true,
       arrows: true,
       autoplay: false,
       autoplaySpeed: 3000,
     });
   });
+  // top slider end
 });
