@@ -661,6 +661,9 @@ Background Color
   .access-map {
     width: 570px;
   }
+  .footer {
+    padding: 30px 20px 20px;
+}
 }
 
 @media screen and (max-width: 738px) {
