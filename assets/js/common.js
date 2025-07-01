@@ -192,6 +192,8 @@ $(function () {
       dots: false,
       infinite: true,
       arrows: true,
+      prevArrow: '.next',
+      nextArrow: '.prev',
       autoplay: false,
       autoplaySpeed: 3000,
     });
