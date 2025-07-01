@@ -417,9 +417,10 @@ Background Color
 
 /* start footer */
 .footer {
-  max-width: 1280px;
+  max-width: 1320px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .footer-wrapper {
@@ -841,6 +842,74 @@ Background Color
 /* for sp footer end  */
 
 /* advanced services start */
+/* top start */
+.top-adv-services {
+  font-weight: 700;
+  color: #ffffff;
+  position: relative;
+  max-width: fit-content;
+  font-size: 14px;
+  text-align: center;
+  font-family: "Ubuntu";
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.top-adv-services::before,
+.top-adv-services::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 15px;
+  height: 2px;
+  border-radius: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ffffff;
+}
+
+.top-adv-services::before {
+  left: 0;
+}
+
+.top-adv-services::after {
+  right: 0;
+}
+
+.top-adv-services-header {
+  text-align: center;
+  padding: 20px 0px 22px;
+}
+.top-adv-title{
+  font-family: "Ubuntu";
+  font-size: 42px;
+  color: #ffffff;
+  font-weight: 700;
+}
+.top-content {
+  font-family: "Nunito";
+  font-size: 16px;
+  color:#ffffff;
+}
+
+.top-content-cover {
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+  line-height: 2;
+  margin: 0 auto;
+}
+
+.top-adv-service-wrapper {
+  background-image: url("../img/common/top-adv-bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  padding-top: 20px;
+  height: auto;
+  padding-bottom: 20px;
+}
+
+/* top end */
 .adv-services {
   font-weight: 700;
   color: #ff9e21;
@@ -969,6 +1038,21 @@ Background Color
   padding: 18px 0px 10px;
 }
 
+.top-number {
+  font-family: "Ubuntu";
+  font-size: 36px;
+  font-weight: 700;
+  color: #ff9e21;
+  padding: 18px 0px 10px;
+}
+
+.top-number::after {
+  content: "+";
+  font-weight: bold;
+  color: #ff9e21;
+  margin-left: -8px;
+}
+
 .number::after {
   content: "+";
   font-weight: bold;
@@ -1013,6 +1097,14 @@ Background Color
   font-size: 14px;
   font-weight: 500;
   color: #ffffff;
+  margin-top: 8px;
+}
+
+.top-counter-h3 {
+  font-family: "Ubuntu";
+  font-size: 14px;
+  font-weight: 500;
+  color: #0A3380;
   margin-top: 8px;
 }
 
@@ -1117,6 +1209,8 @@ Background Color
   .adv-services-header {
     font-size: 30px;
   }
+  .top-adv-title {
+    font-size: 32px;}
 }
 
 @media screen and (max-width: 767px) {
@@ -1172,6 +1266,10 @@ Background Color
 
 .counter-wrapper {
   background-color: #54ced4;
+}
+
+.top-counter-wrapper {
+  background-color: #f9f9f9;
 }
 
 /* faq support center end */
@@ -1293,7 +1391,6 @@ Background Color
   margin: 0 auto;
 }
 
-<<<<<<< HEAD
 .blog-single-sidebar {
   width: calc(100% - 965px);
   padding: 30px 10px;
@@ -1560,6 +1657,4 @@ Background Color
 }
 
 
-=======
->>>>>>> fc41077cb4afd2fd12d2cc6b97f34a4bab94acba
 /* side bar end */
