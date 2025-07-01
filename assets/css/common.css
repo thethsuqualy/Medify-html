@@ -835,7 +835,7 @@ Background Color
   }
 }
 
-@media screen and (max-width: 368px) {
+@media screen and (max-width: 372px) {
   .access-map {
     width: 100%;
     max-width: 2000px;
