@@ -63,28 +63,48 @@ document.addEventListener("DOMContentLoaded", () => {
         if (hamburger) hamburger.classList.remove("active");
       });
     }
-
-    // Submenu toggle
-  //   if (submenuToggle && submenu && submenuArrow) {
-  //     submenuToggle.addEventListener("click", () => {
-  //       if (submenu.style.display === "block") {
-  //         submenu.style.display = "none";
-  //       } else {
-  //         submenu.style.display = "block";
-  //       }
-  //       submenuArrow.classList.toggle("rotate");
-  //     });
-  //   }
-  // }, 2000);
- if (submenuArrow && submenu) {
-    submenuArrow.addEventListener("click", (e) => {
-      e.stopPropagation(); // Prevent triggering other click events
-      submenu.style.display = submenu.style.display === "block" ? "none" : "block";
-      submenuArrow.classList.toggle("rotate");
-    });
-  }
-}, 2000);
+    if (submenuArrow && submenu) {
+      submenuArrow.addEventListener("click", (e) => {
+        e.stopPropagation(); // Prevent triggering other click events
+        submenu.style.display =
+          submenu.style.display === "block" ? "none" : "block";
+        submenuArrow.classList.toggle("rotate");
+      });
+    }
+  }, 2000);
   //humburger end
+
+
+  //faq start
+  document.querySelectorAll('.faq-question').forEach(question => {
+  question.addEventListener('click', () => {
+    const item = question.parentElement;
+    const answer = item.querySelector('.faq-answer');
+    const isActive = item.classList.contains('active');
+
+    // Close all
+    document.querySelectorAll('.faq-item').forEach(el => {
+      el.classList.remove('active');
+      el.querySelector('.faq-answer').style.maxHeight = null;
+    });
+
+    // Open clicked
+    if (!isActive) {
+      item.classList.add('active');
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+    }
+  });
+});
+  //faq end
+
+  //counter setup start faq
+  $(document).ready(function () {
+            $('.number span').counterUp({
+                delay: 10,
+                time: 3000
+            });
+        });
+  //counter setup end faq
 });
 
 // Your jQuery code goes here
