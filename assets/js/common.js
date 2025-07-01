@@ -74,83 +74,73 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 2000);
   //humburger end
 
-
   //faq start
-  document.querySelectorAll('.faq-question').forEach(question => {
-  question.addEventListener('click', () => {
-    const item = question.parentElement;
-    const answer = item.querySelector('.faq-answer');
-    const isActive = item.classList.contains('active');
+  document.querySelectorAll(".faq-question").forEach((question) => {
+    question.addEventListener("click", () => {
+      const item = question.parentElement;
+      const answer = item.querySelector(".faq-answer");
+      const isActive = item.classList.contains("active");
 
-    // Close all
-    document.querySelectorAll('.faq-item').forEach(el => {
-      el.classList.remove('active');
-      el.querySelector('.faq-answer').style.maxHeight = null;
+      // Close all
+      document.querySelectorAll(".faq-item").forEach((el) => {
+        el.classList.remove("active");
+        el.querySelector(".faq-answer").style.maxHeight = null;
+      });
+
+      // Open clicked
+      if (!isActive) {
+        item.classList.add("active");
+        answer.style.maxHeight = answer.scrollHeight + "px";
+      }
     });
-
-    // Open clicked
-    if (!isActive) {
-      item.classList.add('active');
-      answer.style.maxHeight = answer.scrollHeight + 'px';
-    }
   });
-});
   //faq end
 
-  //counter setup start faq
-  $(document).ready(function () {
-            $('.number span').counterUp({
-                delay: 10,
-                time: 3000
-            });
-        });
-  //counter setup end faq
-
   //blog single start
-   document.querySelectorAll(".app-wrapper").forEach((wrapper) => {
-        const baseImg = wrapper.querySelector(".base-img");
-        const floatImg = wrapper.querySelector(".float-img");
+  document.querySelectorAll(".app-wrapper").forEach((wrapper) => {
+    const baseImg = wrapper.querySelector(".base-img");
+    const floatImg = wrapper.querySelector(".float-img");
 
-        let currentY = 0;
-        let targetY = 0;
-        let opacity = 0;
-        let targetOpacity = 0;
-        let animationFrame;
-        let easing = 0.1;
+    let currentY = 0;
+    let targetY = 0;
+    let opacity = 0;
+    let targetOpacity = 0;
+    let animationFrame;
+    let easing = 0.1;
 
-        function animate() {
-          currentY += (targetY - currentY) * easing;
-          opacity += (targetOpacity - opacity) * easing;
+    function animate() {
+      currentY += (targetY - currentY) * easing;
+      opacity += (targetOpacity - opacity) * easing;
 
-          floatImg.style.transform = `translateY(${currentY}px)`;
-          floatImg.style.opacity = opacity;
+      floatImg.style.transform = `translateY(${currentY}px)`;
+      floatImg.style.opacity = opacity;
 
-          if (
-            Math.abs(currentY - targetY) > 0.1 ||
-            Math.abs(opacity - targetOpacity) > 0.01
-          ) {
-            animationFrame = requestAnimationFrame(animate);
-          }
-        }
+      if (
+        Math.abs(currentY - targetY) > 0.1 ||
+        Math.abs(opacity - targetOpacity) > 0.01
+      ) {
+        animationFrame = requestAnimationFrame(animate);
+      }
+    }
 
-        wrapper.addEventListener("mouseenter", () => {
-          baseImg.style.opacity = "0";
-          targetY = -7;
-          targetOpacity = 1;
-          easing = 0.05;
-          cancelAnimationFrame(animationFrame);
-          animate();
-        });
+    wrapper.addEventListener("mouseenter", () => {
+      baseImg.style.opacity = "0";
+      targetY = -7;
+      targetOpacity = 1;
+      easing = 0.05;
+      cancelAnimationFrame(animationFrame);
+      animate();
+    });
 
-        wrapper.addEventListener("mouseleave", () => {
-          baseImg.style.opacity = "1";
-          targetY = 0;
-          targetOpacity = 0;
-          easing = 0.05;
-          cancelAnimationFrame(animationFrame);
-          animate();
-        });
-      });
+    wrapper.addEventListener("mouseleave", () => {
+      baseImg.style.opacity = "1";
+      targetY = 0;
+      targetOpacity = 0;
+      easing = 0.05;
+      cancelAnimationFrame(animationFrame);
+      animate();
+    });
+  });
   //blog singel end
 });
 
@@ -198,5 +188,25 @@ $(function () {
       autoplaySpeed: 3000,
     });
   });
+<<<<<<< HEAD
   // top slider end
+=======
+  //top counter setup start
+  $(document).ready(function () {
+    $(".top-number span").counterUp({
+      delay: 10,
+      time: 3000,
+    });
+  });
+  //top counter setup end
+
+  //counter setup start faq
+  $(document).ready(function () {
+    $(".number span").counterUp({
+      delay: 10,
+      time: 3000,
+    });
+  });
+  //counter setup end faq
+>>>>>>> tzpw
 });
