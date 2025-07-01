@@ -188,9 +188,7 @@ $(function () {
       autoplaySpeed: 3000,
     });
   });
-<<<<<<< HEAD
   // top slider end
-=======
   //top counter setup start
   $(document).ready(function () {
     $(".top-number span").counterUp({
@@ -208,5 +206,4 @@ $(function () {
     });
   });
   //counter setup end faq
->>>>>>> tzpw
 });
