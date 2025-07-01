@@ -105,6 +105,53 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
   //counter setup end faq
+
+  //blog single start
+   document.querySelectorAll(".app-wrapper").forEach((wrapper) => {
+        const baseImg = wrapper.querySelector(".base-img");
+        const floatImg = wrapper.querySelector(".float-img");
+
+        let currentY = 0;
+        let targetY = 0;
+        let opacity = 0;
+        let targetOpacity = 0;
+        let animationFrame;
+        let easing = 0.1;
+
+        function animate() {
+          currentY += (targetY - currentY) * easing;
+          opacity += (targetOpacity - opacity) * easing;
+
+          floatImg.style.transform = `translateY(${currentY}px)`;
+          floatImg.style.opacity = opacity;
+
+          if (
+            Math.abs(currentY - targetY) > 0.1 ||
+            Math.abs(opacity - targetOpacity) > 0.01
+          ) {
+            animationFrame = requestAnimationFrame(animate);
+          }
+        }
+
+        wrapper.addEventListener("mouseenter", () => {
+          baseImg.style.opacity = "0";
+          targetY = -7;
+          targetOpacity = 1;
+          easing = 0.05;
+          cancelAnimationFrame(animationFrame);
+          animate();
+        });
+
+        wrapper.addEventListener("mouseleave", () => {
+          baseImg.style.opacity = "1";
+          targetY = 0;
+          targetOpacity = 0;
+          easing = 0.05;
+          cancelAnimationFrame(animationFrame);
+          animate();
+        });
+      });
+  //blog singel end
 });
 
 // Your jQuery code goes here
