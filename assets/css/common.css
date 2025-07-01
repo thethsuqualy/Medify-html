@@ -1,8 +1,10 @@
 @charset "utf-8";
+
 html {
   text-rendering: optimizeLegibility !important;
   scroll-behavior: smooth;
 }
+
 body {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
@@ -13,79 +15,100 @@ body {
   background: transparent;
   text-rendering: optimizeLegibility;
 }
+
 .pc {
   display: block;
 }
+
 .sp {
   display: none;
 }
+
 .tel {
   pointer-events: none;
 }
+
 @media screen and (max-width: 768px) {
   .pc {
     display: none;
   }
+
   .sp {
     display: block;
   }
+
   .tel {
     pointer-events: auto;
   }
 }
+
 /* ===============================
 Text align
 =============================== */
 .txt-left {
   text-align: left;
 }
+
 .txt-center {
   text-align: center;
 }
+
 .txt-right {
   text-align: right;
 }
+
 @media screen and (max-width: 768px) {
   .txt-left-sp {
     text-align: left;
   }
+
   .txt-center-sp {
     text-align: center;
   }
+
   .txt-right-sp {
     text-align: right;
   }
 }
+
 /* ===============================
 Color
 =============================== */
 .main-color {
   color: #000;
 }
+
 .sub-color {
   color: #24140e;
 }
+
 .b-color {
   color: #000;
 }
+
 .w-color {
   color: #fff;
 }
+
 /* ===============================
 Background Color
 =============================== */
 .bg-main {
   background: #900;
 }
+
 .bg-sub {
-  /* background: #000; */
+  background: #000;
 }
+
 .bg-b {
   background: #000;
 }
+
 .bg-w {
   background: #fff;
 }
+
 .bg-gray {
   background: #f1f1f1;
 }
@@ -93,5 +116,1593 @@ Background Color
 /* ===============================
 
 =============================== */
-@media screen and (max-width: 768px) {
+/* start header */
+.header {
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+  background: #ffffff;
 }
+
+.clinic-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.clinic-logo-img {
+  width: 171px;
+  height: 50px;
+}
+
+.clinic-logo-sp-img {
+  width: 171px;
+  height: 50px;
+  display: none;
+}
+
+.menu {
+  display: flex;
+  gap: 55px;
+  font-family: "Ubuntu";
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.menu-item {
+  position: relative;
+  top: 20px;
+}
+
+.menu a {
+  color: #0a3380;
+  text-decoration: none;
+  font-family: "Ubuntu";
+  font-size: 16px;
+  font-weight: 500;
+  padding-bottom: 29px;
+  border-radius: 3px;
+  border-bottom: 4px solid transparent;
+  transition: border-color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.menu a:hover {
+  border-bottom-color: #2ea6f7;
+}
+
+.menu-item-plus {
+  display: inline-block;
+  position: relative;
+  width: 12px;
+  height: 12px;
+}
+
+.menu-item-plus::before,
+.menu-item-plus::after {
+  content: "";
+  position: absolute;
+  background-color: #0a3380;
+  border-radius: 1px;
+}
+
+.menu-item-plus::before {
+  width: 8px;
+  height: 2px;
+  top: 50%;
+  left: 2px;
+  transform: translateY(-50%);
+}
+
+.menu-item-plus::after {
+  width: 2px;
+  height: 8px;
+  top: 2px;
+  left: 5px;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 280px;
+}
+
+.submenu a {
+  display: block;
+  padding: 22px 20px;
+  color: #0a3380;
+  text-decoration: none;
+  font-size: 15px;
+  border-bottom: 0.5px solid #f1efef;
+}
+
+.submenu a:last-child {
+  border-bottom: unset;
+}
+
+.submenu a:first-child:hover {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.submenu a:hover {
+  background-color: #299cff;
+  color: white;
+}
+
+.submenu a:last-child:hover {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.menu-item:hover .submenu {
+  display: block;
+}
+
+.menu-item:hover>a {
+  border-bottom-color: #2ea6f7;
+}
+
+.hamburger-menu {
+  cursor: pointer;
+  display: none;
+  width: 60px;
+  height: 50px;
+  position: relative;
+}
+
+.bar {
+  position: absolute;
+  width: 25px;
+  height: 1.5px;
+  background-color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
+.first-bar {
+  top: 16px;
+}
+
+.second-bar {
+  top: 24px;
+}
+
+.third-bar {
+  bottom: 16px;
+}
+
+.hamburger-menu.active .first-bar {
+  transform: rotate(45deg);
+  top: 24px;
+}
+
+.hamburger-menu.active .second-bar {
+  opacity: 0;
+}
+
+.hamburger-menu.active .third-bar {
+  transform: rotate(-45deg);
+  bottom: 23px;
+}
+
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -416px;
+  max-width: 401px;
+  width: 100%;
+  height: 100%;
+  background-color: #1e1e1e;
+  color: white;
+  z-index: 999;
+  transition: left 0.3s ease;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.sidebar-nav a {
+  display: block;
+  padding: 15px 0;
+  text-decoration: none;
+  color: white;
+
+  font-size: 16px;
+  font-family: "Ubuntu";
+}
+
+.sidebar-group {
+  position: relative;
+}
+
+.has-submenu {
+  cursor: pointer;
+  display: block;
+  padding: 12px 0;
+  font-size: 16px;
+  font-family: "Ubuntu";
+}
+
+.sidebar-submenu {
+  display: none;
+  padding-left: 15px;
+}
+
+.submenu-arrow {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(319deg);
+  transition: transform 0.3s ease;
+  position: absolute;
+  right: 9px;
+}
+
+.submenu-arrow.rotate {
+  transform: rotate(403deg);
+}
+
+.sidebar-submenu a {
+  font-size: 16px;
+  font-family: "NUnito";
+  border: none;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar-overlay.active {
+  display: block;
+}
+
+.close-btn {
+  font-size: 26px;
+  cursor: pointer;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .header {
+    background: rgba(49, 49, 49, 1);
+  }
+
+  .clinic-logo-sp-img {
+    display: block;
+  }
+
+  .clinic-logo-img {
+    display: none;
+  }
+
+}
+
+/* end header */
+
+/* start footer */
+.footer {
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-wrap: wrap;
+  margin-top: 70px;
+}
+
+.our-contacts-ttl {
+  font-family: "Ubuntu";
+  font-size: 20px;
+  font-weight: 700;
+  color: #0a3380;
+  margin-bottom: 20px;
+}
+
+.our-contacts {
+  max-width: 270px;
+  width: 100%;
+  padding: 10px;
+}
+
+.location {
+  width: 23px;
+  height: 23px;
+}
+
+.contact {
+  width: 23px;
+  height: 23px;
+}
+
+.content {
+  font-family: "Nunito";
+  font-size: 16px;
+  color: #3b4964;
+  line-height: 1.2;
+}
+
+.clock {
+  width: 23px;
+  height: 23px;
+}
+
+.our-location {
+  display: flex;
+  gap: 20px;
+  max-width: 400px;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.our-phone {
+  display: flex;
+  gap: 20px;
+  max-width: 400px;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.our-opening-clock {
+  display: flex;
+  gap: 20px;
+  max-width: 400px;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.open-hour-ttl {
+  font-family: "Ubuntu";
+  font-size: 20px;
+  font-weight: 700;
+  color: #0a3380;
+  margin-bottom: 20px;
+}
+
+.time {
+  font-family: "Nunito";
+  font-size: 16px;
+  color: #54ced4;
+  white-space: nowrap;
+}
+
+.day {
+  font-family: "Nunito";
+  font-size: 16px;
+  color: #3b4964;
+  white-space: nowrap;
+}
+
+.time::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  flex: 1;
+  order: 2;
+  transform: translateY(1px);
+}
+
+.open-hours {
+  max-width: 304px;
+  width: 100%;
+  padding: 10px;
+}
+
+.day-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 18px 0;
+}
+
+.line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #e5e5e5;
+}
+
+.access-map {
+  width: 566px;
+  height: 264px;
+  border: 0;
+  display: block;
+}
+
+.below-footer-section {
+  text-align: center;
+  padding: 23px 0px 15px;
+  font-family: "Nunito";
+  font-size: 16px;
+  font-weight: 500;
+  color: #aeb6c2;
+  margin-top: 70px;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* end footer */
+/* for sp footer start  */
+@media screen and (max-width: 1177px) {
+  .footer-wrapper {
+    display: flex;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-areas:
+      "contacts hours"
+      "map map";
+    grid-template-columns: 400px 400px;
+    gap: 0;
+    max-width: 800px;
+    width: 100%;
+  }
+
+  .our-contacts {
+    grid-area: contacts;
+    width: 100%;
+  }
+
+  .open-hours {
+    grid-area: hours;
+    width: 100%;
+  }
+
+  .map-section {
+    grid-area: map;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .access-map {
+    width: 100%;
+    max-width: 800px;
+    height: 264px;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .footer-wrapper {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .open-hours {
+    max-width: 425px;
+  }
+
+  .our-contacts {
+    max-width: 503px;
+  }
+
+  .map-section {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .map-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* padding: 0 20px; */
+    box-sizing: border-box;
+  }
+
+  .access-map {
+    width: 900px;
+    height: 300px;
+    border: 0;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 862px) {
+  .access-map {
+    width: 650px;
+  }
+
+  .open-hours {
+    max-width: 340px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer-wrapper {
+    flex-direction: column;
+    margin: 0 90px;
+  }
+
+  .open-hours {
+    max-width: 550px;
+  }
+
+  .access-map {
+    width: 570px;
+  }
+
+  .footer {
+    padding: 30px 20px 20px;
+  }
+}
+
+@media screen and (max-width: 738px) {
+  .access-map {
+    width: 620px;
+    padding: 10px;
+  }
+
+  .open-hours {
+    max-width: 620px;
+  }
+
+  .footer-wrapper {
+    margin: 0 55px;
+  }
+}
+
+@media screen and (max-width: 738px) {
+  .access-map {
+    width: 580px;
+  }
+
+  .open-hours {
+    max-width: 580px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .access-map {
+    width: 550px;
+  }
+
+  .open-hours {
+    max-width: 550px;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .access-map {
+    width: 530px;
+  }
+
+  .open-hours {
+    max-width: 530px;
+  }
+}
+
+@media screen and (max-width: 634px) {
+  .access-map {
+    width: 500px;
+  }
+
+  .open-hours {
+    max-width: 500px;
+  }
+}
+
+@media screen and (max-width: 608px) {
+  .access-map {
+    width: 470px;
+  }
+
+  .open-hours {
+    max-width: 470px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .access-map {
+    width: 450px;
+  }
+
+  .open-hours {
+    max-width: 450px;
+  }
+}
+
+@media screen and (max-width: 541px) {
+  .access-map {
+    width: 430px;
+  }
+
+  .open-hours {
+    max-width: 430px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .access-map {
+    width: 400px;
+  }
+
+  .open-hours {
+    max-width: 400px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .access-map {
+    width: 430px;
+  }
+
+  .open-hours {
+    max-width: 430px;
+  }
+
+  .footer-wrapper {
+    margin: 0 20px;
+  }
+}
+
+@media screen and (max-width: 478px) {
+  .access-map {
+    width: 410px;
+  }
+
+  .open-hours {
+    max-width: 410px;
+  }
+}
+
+@media screen and (max-width: 478px) {
+  .access-map {
+    width: 395px;
+  }
+
+  .open-hours {
+    max-width: 395px;
+  }
+}
+
+@media screen and (max-width: 433px) {
+  .access-map {
+    width: 385px;
+  }
+
+  .open-hours {
+    max-width: 385px;
+  }
+}
+
+@media screen and (max-width: 419px) {
+  .access-map {
+    width: 375px;
+  }
+
+  .open-hours {
+    max-width: 375px;
+  }
+}
+
+@media screen and (max-width: 412px) {
+  .access-map {
+    width: 360px;
+  }
+
+  .open-hours {
+    max-width: 360px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .access-map {
+    width: 345px;
+  }
+
+  .open-hours {
+    max-width: 345px;
+  }
+}
+
+@media screen and (max-width: 368px) {
+  .access-map {
+    width: 100%;
+    max-width: 2000px;
+  }
+}
+
+/* for sp footer end  */
+
+/* advanced services start */
+/* top start */
+.top-adv-services {
+  font-weight: 700;
+  color: #ffffff;
+  position: relative;
+  max-width: fit-content;
+  font-size: 14px;
+  text-align: center;
+  font-family: "Ubuntu";
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.top-adv-services::before,
+.top-adv-services::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 15px;
+  height: 2px;
+  border-radius: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ffffff;
+}
+
+.top-adv-services::before {
+  left: 0;
+}
+
+.top-adv-services::after {
+  right: 0;
+}
+
+.top-adv-services-header {
+  text-align: center;
+  padding: 20px 0px 22px;
+}
+
+.top-adv-title {
+  font-family: "Ubuntu";
+  font-size: 42px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.top-content {
+  font-family: "Nunito";
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.top-content-cover {
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+  line-height: 2;
+  margin: 0 auto;
+}
+
+.top-adv-service-wrapper {
+  background-image: url("../img/common/top-adv-bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  padding-top: 20px;
+  height: auto;
+  padding-bottom: 20px;
+}
+
+/* top end */
+.adv-services {
+  font-weight: 700;
+  color: #ff9e21;
+  position: relative;
+  max-width: fit-content;
+  font-size: 14px;
+  text-align: center;
+  font-family: "Ubuntu";
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.adv-services::before,
+.adv-services::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 15px;
+  height: 2px;
+  border-radius: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ff9e21;
+}
+
+.adv-services::before {
+  left: 0;
+}
+
+.adv-services::after {
+  right: 0;
+}
+
+.adv-services-header {
+  font-family: "Ubuntu";
+  font-size: 42px;
+  color: #0a3380;
+  font-weight: 700;
+  text-align: center;
+  padding: 20px 0px 22px;
+}
+
+.adv-services-content {
+  font-family: "Nunito";
+  font-size: 16px;
+  color: #3b4964;
+  font-weight: 500;
+  text-align: center;
+  max-width: 824px;
+  padding: 10px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.adv-services-cover {
+  padding: 10px;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.family-care-img,
+.pediatrics-care-img,
+.adv-care-img {
+  width: 55px;
+  height: 55px;
+  margin-top: 20px;
+}
+
+.pediatrics-care-ttl,
+.adv-care-ttl,
+.family-care-ttl {
+  font-family: "Ubuntu";
+  font-size: 24px;
+  color: #0a3380;
+  font-weight: 500;
+  margin: 30px 0px 10px;
+}
+
+.adv-care-content,
+.pediatrics-care-content,
+.family-care-content {
+  font-family: "Nunito";
+  font-size: 16px;
+  color: #3b4964;
+  font-weight: 400;
+  max-width: 300px;
+  width: 100%;
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.adv-services-card {
+  max-width: 407px;
+  width: 100%;
+  padding: 36px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  gap: 10px;
+  box-shadow: 10px 8px 35px rgba(49, 49, 49, 0.08);
+}
+
+.adv-services-card-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto 70px;
+  padding: 20px;
+  gap: 49px;
+}
+
+.number {
+  font-family: "Ubuntu";
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  padding: 18px 0px 10px;
+}
+
+.top-number {
+  font-family: "Ubuntu";
+  font-size: 36px;
+  font-weight: 700;
+  color: #ff9e21;
+  padding: 18px 0px 10px;
+}
+
+.top-number::after {
+  content: "+";
+  font-weight: bold;
+  color: #ff9e21;
+  margin-left: -8px;
+}
+
+.number::after {
+  content: "+";
+  font-weight: bold;
+  color: #ffffff;
+  margin-left: -8px;
+}
+
+.counter {
+  display: flex;
+  max-width: 1280px;
+  width: 100%;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 70px;
+}
+
+.counter-cover {
+  background-color: #2ea6f7;
+}
+
+.heartbeat-img {
+  width: 50px;
+}
+
+.pharmacy-img {
+  width: 46px;
+}
+
+.prescription-img {
+  width: 48px;
+}
+
+.counter-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.counter-h3 {
+  font-family: "Ubuntu";
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-top: 8px;
+}
+
+.top-counter-h3 {
+  font-family: "Ubuntu";
+  font-size: 14px;
+  font-weight: 500;
+  color: #0A3380;
+  margin-top: 8px;
+}
+
+.counter-icon-wrapper {
+  position: relative;
+}
+
+.counter-icon-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -16px;
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/common/counter-bg-2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.counter-icon-wrapper img {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  z-index: 1;
+  display: block;
+}
+
+.counter-pharmacy-wrapper {
+  position: relative;
+}
+
+.counter-pharmacy-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 18px;
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/common/counter-bg-2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.counter-pharmacy-wrapper img {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  z-index: 1;
+  display: block;
+}
+
+@media screen and (max-width: 1025px) {
+  .adv-services-card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    gap: 30px;
+    justify-items: center;
+  }
+
+  .adv-services-card-wrapper .adv-services-card:nth-child(3) {
+    grid-column: 1 / 3;
+    justify-self: center;
+  }
+}
+
+@media screen and (max-width: 925px) {
+  .adv-services-card {
+    max-width: 357px;
+  }
+
+  .adv-services-card-wrapper {
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .adv-services-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .adv-services-card {
+    max-width: 627px;
+  }
+
+  .pediatrics-care-content,
+  .adv-care-content,
+  .family-care-content {
+    max-width: 563px;
+    width: 100%;
+  }
+
+  .adv-services-header {
+    font-size: 30px;
+  }
+
+  .top-adv-title {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .adv-services-content {
+    max-width: 626px;
+  }
+}
+
+@media screen and (max-width: 664px) {
+
+  .pediatrics-care-content,
+  .adv-care-content,
+  .family-care-content {
+    max-width: 431px;
+    width: 100%;
+  }
+
+  .adv-services-card {
+    max-width: 510px;
+  }
+}
+
+/* advanced services end */
+
+/* faq support center start */
+.adv-services-cover.above {
+  margin: 80px auto 0px;
+}
+
+.counter-icons-wrapper {
+  position: relative;
+}
+
+.counter-icons-wrapper img {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  z-index: 1;
+  display: block;
+}
+
+.counter-pharmacies-wrapper {
+  position: relative;
+}
+
+.counter-pharmacies-wrapper img {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  z-index: 1;
+  display: block;
+}
+
+.counter-wrapper {
+  background-color: #54ced4;
+}
+
+.top-counter-wrapper {
+  background-color: #f9f9f9;
+}
+
+/* faq support center end */
+
+/* company ads slider start */
+/* .logo-slider {
+  margin: 102px 0 90px 0;
+  overflow: hidden;
+}
+
+.ad-slider {
+  width: 200px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+.ad-slider img {
+  max-height: 70px;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+.slick-slide {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+} */
+
+.logo-slider-wrapper {
+  overflow: hidden;
+  width: 100%;
+  background: #fff;
+  margin: 102px 0 90px 0;
+}
+
+.logo-slider-track {
+  display: flex;
+  width: max-content;
+  animation: scrollLogos 20s linear infinite;
+}
+
+.ad-slider {
+  width: 200px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20px;
+}
+
+.ad-slider img {
+  max-height: 70px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Animation */
+@keyframes scrollLogos {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* company ads slider end */
+
+/* call center blue bg fixed start */
+.call-center-section {
+  background: url(../img/common/call-center-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+}
+
+.call-center-section.service-call-center {
+  background: url(../img/common/service-callcenter-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+}
+
+.call-center-img {
+  width: 80px;
+  height: 80px;
+}
+
+.call-center {
+  max-width: 1320px;
+  width: 100%;
+  padding: 74px 20px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.call-center-h3 {
+  color: #ffffff;
+}
+
+.call-center-label {
+  font-size: 28px;
+  font-weight: 400;
+  font-family: 'Ubuntu';
+  margin: 50px 0 30px 0;
+  line-height: 1.5;
+}
+
+.call-center-no {
+  font-family: "Ubuntu";
+  font-size: 48px;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+  .call-center-label {
+    font-size: 22px;
+  }
+
+  .call-center-no {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .call-center-label {
+    font-size: 22px;
+  }
+
+  .call-center-no {
+    font-size: 30px;
+  }
+
+  .call-center {
+    padding: 74px 10px;
+  }
+}
+
+/* call center blue bg fixed end */
+
+/* sidebar start */
+.widget-banner {
+  background-image: url("../img/common/widget-banner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 270px;
+  height: 314px;
+  border-radius: 15px;
+  margin: 0 auto;
+}
+
+.blog-single-sidebar {
+  width: calc(100% - 965px);
+  padding: 30px 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.online-app {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  padding: 8px 20px;
+}
+
+.app-wrapper {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-color: white;
+}
+
+.base-img {
+  opacity: 1;
+  z-index: 1;
+}
+
+.float-img {
+  opacity: 0;
+  transform: translateY(0);
+  z-index: 2;
+}
+
+.marry-name {
+  font-family: "Ubuntu";
+  font-weight: 700;
+  font-size: 26px;
+  color: #0a3380;
+  text-align: center;
+}
+
+.author {
+  font-family: "Nunito";
+  color: #3B4964;
+  font-size: 17px;
+  line-height: 30px;
+  padding-bottom: 24px;
+  padding-top: 20px;
+  max-width: 269px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  font-weight: 500;
+}
+
+.marrylee-img {
+  width: 155px;
+  margin: 0 auto;
+}
+
+.categories {
+  font-family: "Ubuntu";
+  font-size: 17px;
+  color: #0a3380;
+  font-weight: 700;
+  padding-top: 40px;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.categories-wrapper {
+  position: relative;
+}
+
+.categories::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 159px;
+  width: 22px;
+  height: 3px;
+  background-color: #FF9e21;
+}
+
+.category-item {
+  display: flex;
+  margin-bottom: 22px;
+  font-size: 14px;
+}
+
+.category::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  top: 57%;
+  left: -18px;
+  margin-top: -2.5px;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  background: #aeb6c2;
+}
+
+.dash-line {
+  flex: 1;
+  display: block;
+  height: 1px;
+  padding: 0;
+  background: #e5e5e5;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 12px;
+}
+
+.category {
+  position: relative;
+  z-index: 1;
+  background-color: #fff;
+  padding: 0 2px;
+  font-size: 19px;
+  font-weight: 500;
+  font-family: "Ubuntu";
+  color: #0A3380;
+  cursor: pointer;
+}
+
+.category:hover {
+  color: #2ea6f7;
+}
+
+.category:hover::before {
+  background: #2ea6f7;
+}
+
+.category:hover~.page-number {
+  color: #2ea6f7;
+}
+
+.page-number {
+  position: relative;
+  z-index: 1;
+  padding: 0 2px;
+  font-family: "Nunito";
+  color: #aeb6c2;
+  font-size: 17px;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+.category-list {
+  max-width: 266px;
+  margin: 0 auto;
+  padding-left: 21px;
+}
+
+.gallery-wrapper {
+  position: relative;
+}
+
+.gallery {
+  font-family: "Ubuntu";
+  font-size: 18px;
+  color: #0a3380;
+  font-weight: 700;
+  padding-top: 30px;
+  text-align: center;
+  padding-bottom: 42px;
+}
+
+.gallery::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 66px;
+  width: 22px;
+  height: 3px;
+  background-color: #FF9e21;
+}
+
+.gallery-img {
+  width: 77px;
+  border-radius: 10px;
+}
+
+.gallery-gp {
+  display: flex;
+  gap: 11px;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin: 0 auto;
+  padding-bottom: 13px;
+}
+
+.widget-banner-wrapper {
+  margin-top: 60px;
+}
+
+.emergemcy-service {
+  font-family: "Ubuntu";
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: 400;
+  line-height: 36px;
+  margin-bottom: 20px;
+  padding: 0 15px;
+  text-align: center;
+  max-width: 262px;
+}
+
+.emergency-number {
+  font-family: "Ubuntu";
+  color: #ffffff;
+  font-size: 24px;
+  margin-bottom: 32px;
+  font-weight: 700;
+  line-height: 30px;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+}
+
+.widget {
+  padding-top: 53px;
+  padding-bottom: 46px;
+}
+
+.emergency-call {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 143px;
+  height: 46px;
+  font-weight: 700;
+  color: #2ea6f7;
+  border: none;
+  transition: all 0.45s ease;
+  font-size: 16px;
+  font-family: "Ubuntu";
+  background: #fff;
+  border-radius: 5px;
+
+}
+
+.emergencycall-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+
+/* side bar end */
