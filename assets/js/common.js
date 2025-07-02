@@ -181,11 +181,17 @@ $(function () {
           slidesToShow: 2,
         },
       },
+      {
+        breakpoint: 375,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
     ],
   });
   // ads slider end
 
-  // top slider start
+// top slider start
   $(document).ready(function () {
     $(".top-slider").slick({
       slidesToShow: 1,
@@ -195,10 +201,10 @@ $(function () {
       arrows: true,
       prevArrow: ".next",
       nextArrow: ".prev",
-      autoplay: false,
+      autoplay: true,
       autoplaySpeed: 2000,
       speed: 600,
-      cssEase: "ease", 
+      cssEase: "ease",
       dots: false,
        responsive: [
       {
