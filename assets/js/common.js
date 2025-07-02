@@ -206,4 +206,53 @@ $(function () {
     });
   });
   //counter setup end faq
+  $(".wlslider").each(function () {
+      const $slider = $(this);
+      const slideCount = $slider.children().length;
+
+      if (slideCount < 2) return;
+
+      $slider.slick({
+        autoplay: false,
+        arrows: true,
+        dots: false,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        pauseOnHover: false,
+        adaptiveHeight: true,
+        speed: 1500,   
+        fade: true,              
+        cssEase: 'ease-in-out',   
+        prevArrow: $('.custom-prev'), 
+        nextArrow: $('.custom-next'),
+      });
+    });
+  
+  //blog2column slider image start
+  //  $(function () {
+  //   $(".wlslider").each(function () {
+  //     const $slider = $(this);
+  //     const slideCount = $slider.children().length;
+
+  //     if (slideCount < 2) return;
+
+  //     $slider.slick({
+  //       autoplay: false,
+  //       arrows: true,
+  //       dots: false,
+  //       infinite: true,
+  //       slidesToShow: 1,
+  //       slidesToScroll: 1,
+  //       pauseOnHover: false,
+  //       adaptiveHeight: true,
+  //       speed: 1500,   
+  //       fade: true,              
+  //       cssEase: 'ease-in-out',   
+  //       prevArrow: $('.custom-prev'), 
+  //       nextArrow: $('.custom-next'),
+  //     });
+  //   });
+  // });
+  //blog2column slider image end
 });

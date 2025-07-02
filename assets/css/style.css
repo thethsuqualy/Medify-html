@@ -577,9 +577,11 @@
     margin-bottom: 20px;
     line-height: 1.6;
 }
-.our-feature-wrapper{
-   background-color: #f9f9f9;
+
+.our-feature-wrapper {
+    background-color: #f9f9f9;
 }
+
 .our-feature-cover {
     padding: 10px;
     max-width: 900px;
@@ -2575,6 +2577,170 @@
 /* FAQ End */
 
 /* Blog 2column Start */
+.blog2column-header {
+    font-family: "Ubuntu";
+    font-size: 42px;
+    color: #0a3380;
+    font-weight: 700;
+    margin: 20px 0;
+    max-width: 800px;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.blog2column-section {
+    font-family: "Nunito";
+}
+
+.blog2column {
+    background-image: url(../img/blog2column/blog-2column-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-color: #f2f2f4;
+    height: 300px;
+    margin-bottom: 90px;
+    padding: 80px 0px 88px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blog2column-h2 {
+    margin: 0;
+}
+
+.inner-blog2column {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* start slider */
+.blog2column-siderbar-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1280px;
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.slider-card {
+    max-width: 420px;
+}
+
+.slider-card-wrapper {
+    max-width: 965px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 27px 0;
+    padding-top: 30px;
+}
+
+.slider-wrapper {
+    position: relative;
+}
+
+.badge {
+    z-index: 1;
+    color: #2ea6f7;
+    background-color: #ffffff;
+    padding: 10px 11px;
+    position: absolute;
+    top: 31px;
+    left: 31px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 7px 5px 15px 0px rgba(0, 0, 0, 0.09);
+    border-radius: 5px;
+}
+
+.wlslider img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+}
+
+.custom-prev,
+.custom-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background-color: rgba(0, 188, 212, 0.8);
+    color: white;
+    font-size: 24px;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.custom-prev {
+    left: 10px;
+}
+
+.custom-next {
+    right: 10px;
+}
+
+.slick-slide {
+    opacity: 0 !important;
+    transition: opacity 1.5s ease-in-out !important;
+    transform: scale(1, 1);
+}
+
+.slick-slide.slick-current {
+    opacity: 1 !important;
+    transform: scale(1, 1);
+}
+
+
+
+
+.post-info {
+    padding: 16px;
+}
+
+.post-date {
+    font-family: "Nunito";
+    font-size: 14px;
+    color: #aeb6c2;
+}
+
+.post-title {
+    font-family: "Ubuntu";
+    font-size: 24px;
+    color: #0A3380;
+    padding-top: 7px;
+    max-width: 441px;
+    width: 100%;
+    font-weight: 800;
+    line-height: 1.5;
+}
+
+/* end  slider*/
+@media screen and (max-width:354px) {
+    .breadcrumb {
+        margin-top: 8px;
+    }
+
+    .inner-blog2column {
+        padding-top: 48px;
+    }
+
+    .blog2column-header {
+        text-align: left;
+    }
+}
+
 /* Blog 2column End */
 
 /* Blog single Start */
