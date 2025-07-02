@@ -1283,33 +1283,6 @@ Background Color
 /* faq support center end */
 
 /* company ads slider start */
-/* .logo-slider {
-  margin: 102px 0 90px 0;
-  overflow: hidden;
-}
-
-.ad-slider {
-  width: 200px;
-  height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 10px;
-}
-
-.ad-slider img {
-  max-height: 70px;
-  max-width: 100%;
-  width: auto;
-  height: auto;
-}
-
-.slick-slide {
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-} */
-
 .logo-slider-wrapper {
   overflow: hidden;
   width: 100%;
@@ -1346,6 +1319,11 @@ Background Color
 
   100% {
     transform: translateX(-50%);
+  }
+}
+@media screen and (max-width: 768px){
+  .logo-slider-wrapper{
+    margin: 70px 0;
   }
 }
 
