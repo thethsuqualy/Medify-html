@@ -1321,8 +1321,9 @@ Background Color
     transform: translateX(-50%);
   }
 }
-@media screen and (max-width: 768px){
-  .logo-slider-wrapper{
+
+@media screen and (max-width: 768px) {
+  .logo-slider-wrapper {
     margin: 70px 0;
   }
 }
