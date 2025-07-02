@@ -415,7 +415,10 @@
     </footer>
 
     <!-- js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+<!-- ✅ Slick Carousel -->
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="/assets/js/jquery-3.7.1.min.js"></script>
     <script src="/assets/js/jquery.matchHeight.js"></script>
     <script src="/assets/slick/slick.min.js"></script>
@@ -446,6 +449,33 @@
     });
   });
 </script>  -->
+<!-- <script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const sliders = document.querySelectorAll(".wlslider");
+
+  sliders.forEach(function (slider) {
+    const slideCount = slider.children.length;
+
+    if (slideCount < 2) return;
+    $(slider).slick({
+      autoplay: false,
+      arrows: true,
+      dots: false,
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      pauseOnHover: false,
+      adaptiveHeight: true,
+      speed: 1500,
+      fade: true,
+      cssEase: "ease-in-out",
+      prevArrow: document.querySelector(".custom-prev") || undefined,
+      nextArrow: document.querySelector(".custom-next") || undefined,
+    });
+  });
+});
+
+</script> -->
 
   </body>
 </html>
