@@ -96,6 +96,15 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   //faq end
 
+  //counter setup start faq
+  $(document).ready(function () {
+    $(".number span").counterUp({
+      delay: 10,
+      time: 3000,
+    });
+  });
+  //counter setup end faq
+
   //blog single start
   document.querySelectorAll(".app-wrapper").forEach((wrapper) => {
     const baseImg = wrapper.querySelector(".base-img");
@@ -179,15 +188,29 @@ $(function () {
   // top slider start
   $(document).ready(function () {
     $(".top-slider").slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
       dots: false,
       infinite: true,
       arrows: true,
-      prevArrow: '.next',
-      nextArrow: '.prev',
+      prevArrow: ".next",
+      nextArrow: ".prev",
       autoplay: false,
-      autoplaySpeed: 3000,
-    });
+      autoplaySpeed: 2000,
+      speed: 600,
+      cssEase: "ease", 
+      dots: false,
+       responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+        },
+      },
+     
+    ],
   });
+    });
   // top slider end
   //top counter setup start
   $(document).ready(function () {

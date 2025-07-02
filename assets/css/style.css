@@ -2,21 +2,22 @@
 
 /*Top Page Start */
 .top-mv-slider {
-    background: url(../img/top/top-slider-bg-1-Copy.jpg) no-repeat;
+    background: url(../img/top/top-mv-bg-test.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     height: 100vh;
     position: relative;
+    z-index: 1000;
 }
 
 .top-mv-two {
-    background: url(../img/top/top-slider-bg-2-Copy.jpg) no-repeat;
+    background: url(../img/top/top-slider-bg-2.jpg) no-repeat;
     background-size: cover;
     position: relative;
 }
 
 .top-mv-three {
-    background: url(../img/top/top-slider-bg-3-Copy.jpg) no-repeat;
+    background: url(../img/top/top-slider-bg-3.jpg) no-repeat;
     background-size: cover;
     position: relative;
 }
@@ -27,7 +28,8 @@
 }
 
 .top-slider-content {
-    max-width: 700px;
+    max-width: 740px;
+    padding: 0 20px;
     width: 100%;
     position: absolute;
     top: 50%;
@@ -36,10 +38,13 @@
 }
 
 .top-slider-two {
-    max-width: 660px;
     position: absolute;
     left: auto;
     right: 100px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
 }
 
 .top-slider-h2 {
@@ -179,8 +184,6 @@
 
 .benefit-card {
     max-width: 400px;
-    /* position: relative; */
-
 }
 
 .benefit-card-label {
@@ -290,11 +293,25 @@
     margin: 0 20px 0 auto;
 }
 
-/* 
-@media screen and (max-width: 1025px) {
-    .care-a-content.about-me-care {
+@media screen and (max-width: 1300px) {
+    .top-mv-slider {
+        background: url(../img/top/top-slider-bg-mw1300.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .top-mv-two {
+        background: url(../img/top/top-slider-bg-2-mw1300.jpg) no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    .top-mv-three {
+        background: url(../img/top/top-slider-bg-3\ -\ Copy.jpg) no-repeat;
+        background-size: cover;
+        position: relative;
+    }
 }
-} */
 
 @media screen and (max-width: 1170px) {
     .top-benefit-left {
@@ -359,15 +376,148 @@
     }
 }
 
+@media screen and (max-width: 1000px) {
+    .top-mv-slider {
+        background: url(../img/top//top-slider-bg-mw1000.png) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .top-mv-two {
+        background: url(../img/top/top-slider-bg-2-mw1300.jpg) no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    .top-mv-three {
+        background: url(../img/top/top-slider-bg-3-mv1000.jpg) no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    .top-slider-content.top-slider-two {
+        left: auto;
+        right: 70px;
+    }
+
+    .top-slider-h2 {
+        max-width: 600px;
+        font-size: 52px;
+    }
+
+    .top-slider-btn.prev {
+        right: 30px;
+        top: 65%;
+    }
+
+    .top-slider-btn.next {
+        left: 30px;
+        top: 65%;
+    }
+
+    .top-slider-p {
+        max-width: 500px;
+    }
+
+    .top-slider-content {
+        left: 110px;
+    }
+}
+
 @media screen and (max-width: 768px) {
+    .top-mv-slider {
+        background: url(../img/top/top-slider-bg-mw768.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 500px;
+    }
+
+    .top-mv-two {
+        background: url(../img/top/top-slider-bg-2-mw768.jpg) no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    .top-mv-three {
+        background: url(../img/top/top-slider-bg-3-mw768.jpg) no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    .top-slider-content {
+        max-width: 540px;
+        padding: 0 20px;
+        width: 100%;
+        left: 0;
+    }
+
+    .top-slider-content.top-slider-two {
+        right: 10px;
+    }
+
+    .top-slider-btn.prev.slick-arrow {
+        display: none;
+    }
+
+    .top-slider-h2 {
+        font-size: 40px;
+    }
+
+    .top-slider-p {
+        font-size: 16px;
+    }
+
+    .top-slider-btn.prev {
+        display: none;
+    }
+
+    .top-slider-btn.next {
+        display: none;
+    }
+
     .care-amenitie {
-        background: url(../img/top/why-choose\ -\ Copy.jpg) no-repeat;
+        background: url(../img/top/why-choose-sp.jpg) no-repeat;
         background-size: cover;
         background-position: center;
     }
 
     .top-benefit-h3 {
         font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .top-mv-slider {
+        height: 400px;
+    }
+
+    .top-slider-p {
+        display: none;
+    }
+
+    .top-slider-h2 {
+        font-size: 30px;
+    }
+
+    .top-slider-content {
+        max-width: 500px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .top-slider-content.top-slider-two {
+        right: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .top-slider-h2 {
+        margin: 0 auto;
+        max-width: 500px;
+        width: 100%;
     }
 }
 
@@ -378,6 +528,26 @@
 
     .care-a-h3.history-header {
         font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .top-mv-slider {
+        background: url(../img/top/top-slider-bg-mw375.jpg) no-repeat;
+    }
+   
+    .top-mv-two {
+        background: url(../img/top/top-slider-bg-2-mw768.jpg) no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    .top-mv-three {
+        background: url(../img/top/top-slider-bg-3-mw768\ -\ Copy.jpg) no-repeat;
+    }
+
+    .top-slider-h2 {
+        font-size: 27px;
     }
 }
 
