@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>ページタイトル</title>
+    <title>blog2column</title>
     <meta name="description" content="ページの説明" />
     <meta name="format-detection" content="telephone=no" />
 
@@ -60,43 +60,7 @@
           </div>
         </div>
       </section>
-
-      <!-- <section>
-        <div class="wlslider" id="slider1">
-          <div class="slider-card">
-            <div class="blog2column-specialist">
-              <span class="box">Tip</span>
-              <img
-                src="./assets/img/blog2column/specialist.jpg"
-                alt="specialist"
-                class="blog2column-img"
-              />
-              <div class="blog-post">
-                <span class="blog2column-date"> August 5, 2019 </span>
-                <h3 class="blog-post-title">
-                  How to Choose the Specialist in Massage
-                </h3>
-              </div>
-            </div>
-          </div>
-          <div class="slider-card">
-            <div class="blog2column-specialist">
-              <span class="box">Tip</span>
-              <img
-                src="./assets/img/blog2column/specialist.jpg"
-                alt="specialist"
-                class="blog2column-img"
-              />
-              <div class="blog-post">
-                <span class="blog2column-date"> August 5, 2019 </span>
-                <h3 class="blog-post-title">
-                  How to Choose the Specialist in Massage
-                </h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
+      
       <section class="blog2column-siderbar-wrapper">
         <div class="slider-card-wrapper">
           <div class="slider-card">
@@ -105,7 +69,7 @@
               <div class="wlslider">
                 <div>
                   <img
-                    src="./assets/img/blog2column/specialist.jpg"
+                    src="./assets/img/common/specialist.jpg"
                     alt="Slide 1"
                   />
                 </div>
@@ -125,7 +89,7 @@
               <div class="wlslider">
                 <div>
                   <img
-                    src="./assets/img/blog2column/nursingcare.jpg"
+                    src="./assets/img/common/nursingcare.jpg"
                     alt="Slide 1"
                   />
                 </div>
@@ -145,7 +109,7 @@
               <div class="wlslider">
                 <div>
                   <img
-                    src="./assets/img/blog2column/boostrix.jpg"
+                    src="./assets/img/common/boostrix.jpg"
                     alt="Slide 1"
                   />
                 </div>
@@ -202,8 +166,12 @@
                   />
                 </div>
               </div>
-               <button class="custom-prev">&lt;</button>
-  <button class="custom-next">&gt;</button>
+              <button class="custom-prev">
+                <img src="./assets/img/blog2column/prev-arrow.png" />
+              </button>
+              <button class="custom-next">
+                <img src="./assets/img/blog2column/next-arrow.png" />
+              </button>
             </div>
             <div class="post-info">
               <span class="post-date">AUGUST 5, 2019</span>
@@ -415,67 +383,11 @@
     </footer>
 
     <!-- js -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<!-- ✅ Slick Carousel -->
-<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="/assets/js/jquery-3.7.1.min.js"></script>
     <script src="/assets/js/jquery.matchHeight.js"></script>
     <script src="/assets/slick/slick.min.js"></script>
     <script src="/assets/js/template-part.js"></script>
-<!-- <script>
-  $(function () {
-    $(".wlslider").each(function () {
-      const $slider = $(this);
-      const slideCount = $slider.children().length;
-
-      if (slideCount < 2) return;
-
-      $slider.slick({
-        autoplay: false,
-        arrows: true,
-        dots: false,
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        pauseOnHover: false,
-        adaptiveHeight: true,
-        speed: 1500,   
-        fade: true,              
-        cssEase: 'ease-in-out',   
-        prevArrow: $('.custom-prev'), 
-        nextArrow: $('.custom-next'),
-      });
-    });
-  });
-</script>  -->
-<!-- <script>
-  document.addEventListener("DOMContentLoaded", function () {
-  const sliders = document.querySelectorAll(".wlslider");
-
-  sliders.forEach(function (slider) {
-    const slideCount = slider.children.length;
-
-    if (slideCount < 2) return;
-    $(slider).slick({
-      autoplay: false,
-      arrows: true,
-      dots: false,
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      pauseOnHover: false,
-      adaptiveHeight: true,
-      speed: 1500,
-      fade: true,
-      cssEase: "ease-in-out",
-      prevArrow: document.querySelector(".custom-prev") || undefined,
-      nextArrow: document.querySelector(".custom-next") || undefined,
-    });
-  });
-});
-
-</script> -->
-
+    <script src="./assets/js/common.js"></script>
   </body>
 </html>
