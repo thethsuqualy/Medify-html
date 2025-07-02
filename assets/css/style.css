@@ -301,6 +301,85 @@
     margin: 0 20px 0 auto;
 }
 
+/* top our team card start */
+.slider-ourteam-card {
+    max-width: 370px;
+}
+
+.top-wlslider {
+    max-width: 370px;
+}
+
+.slider-ourteam-card {
+    max-width: 390px;
+}
+
+.top-wlslider {
+    max-width: 390px;
+}
+
+.top-our-team {
+    display: flex;
+    max-width: 1280px;
+    width: 100%;
+    justify-content: center;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 30px 20px 20px;
+}
+
+.top-wlslider-img {
+    border-radius: 15px;
+}
+
+.top-our-team-service {
+    font-weight: 800;
+    color: #ff9e21;
+    position: relative;
+    max-width: fit-content;
+    font-size: 14px;
+    text-align: center;
+    font-family: "Ubuntu";
+    margin: 0 auto;
+    padding: 19px 27px 0;
+}
+
+.top-our-team-service::before,
+.top-our-team-service::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 12px;
+    height: 3px;
+    border-radius: 2px;
+    top: 27px;
+    transform: translateY(-50%);
+    background-color: #ff9e21;
+}
+
+.top-our-team-service::before {
+    left: 0;
+}
+
+.top-our-team-service::after {
+    right: 0;
+}
+
+.top-ourteam-title {
+    font-family: "Ubuntu";
+    font-size: 42px;
+    color: #0a3380;
+    font-weight: 700;
+}
+
+.top-ourteam-content {
+    padding-bottom: 10px;
+    font-family: "Nunito";
+    font-size: 16px;
+    color: #3b4964;
+}
+
+/* top our team card end */
 @media screen and (max-width: 1300px) {
     .top-mv-slider {
         background: url(../img/top/top-slider-bg-mw1300.jpg) no-repeat;
@@ -318,6 +397,27 @@
         background: url(../img/top/top-slider-bg-3\ -\ Copy.jpg) no-repeat;
         background-size: cover;
         position: relative;
+    }
+}
+
+/* top our team sp */
+@media screen and (max-width:1246px) {
+    .top-wlslider {
+        max-width: 370px;
+    }
+
+    .slider-ourteam-card {
+        max-width: 370px;
+    }
+}
+
+@media screen and (max-width:1187px) {
+    .top-wlslider {
+        max-width: 350px;
+    }
+
+    .slider-ourteam-card {
+        max-width: 350px;
     }
 }
 
@@ -382,6 +482,27 @@
     }
 }
 
+/* top our team start */
+@media screen and (max-width:1121px) {
+    .top-wlslider {
+        max-width: 330px;
+    }
+
+    .slider-ourteam-card {
+        max-width: 330px;
+    }
+}
+
+@media screen and (max-width:1054px) {
+    .top-wlslider {
+        max-width: 300px;
+    }
+
+    .slider-ourteam-card {
+        max-width: 300px;
+    }
+}
+
 @media screen and (max-width: 1000px) {
     .top-mv-slider {
         background: url(../img/top//top-slider-bg-mw1000.png) no-repeat;
@@ -427,6 +548,26 @@
 
     .top-slider-content {
         left: 110px;
+    }
+}
+
+/* top our team sp */
+@media screen and (max-width:968px) {
+    .top-our-team {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: unset;
+        margin: 0 auto;
+        max-width: 660px;
+    }
+
+    .top-our-team>*:last-child {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .top-content-cover {
+        padding: 10px;
     }
 }
 
@@ -497,6 +638,24 @@
     }
 }
 
+/* top our team sp */
+@media screen and (max-width:660px) {
+    .top-our-team {
+        flex-direction: column;
+        max-width: 500px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slider-ourteam-card {
+        max-width: 400px;
+    }
+
+    .top-wlslider {
+        max-width: 400px;
+    }
+}
+
 @media screen and (max-width: 600px) {
     .top-mv-slider {
         height: 400px;
@@ -532,6 +691,7 @@
     }
 }
 
+
 @media screen and (max-width: 455px) {
     .care-a-content.about-me-care {
         padding: 40px 20px;
@@ -539,6 +699,17 @@
 
     .care-a-h3.history-header {
         font-size: 30px;
+    }
+}
+
+/* top our team sp */
+@media screen and (max-width:446px) {
+    .slider-ourteam-card {
+        max-width: 350px;
+    }
+
+    .top-wlslider {
+        max-width: 350px;
     }
 }
 
@@ -577,6 +748,25 @@
 
     .top-benefit-h3 {
         font-size: 28px;
+    }
+}
+
+/* top our team sp */
+@media screen and (max-width:372px) {
+    .slider-ourteam-card {
+        max-width: 274px;
+    }
+
+    .top-wlslider {
+        max-width: 274px;
+    }
+
+    .top-our-team-service {
+        padding: 0px 27px 0;
+    }
+
+    .top-our-team-service::before, .top-our-team-service::after {
+        top: 7px;
     }
 }
 
@@ -2445,7 +2635,8 @@
     .doctor-skill-img {
         margin: 0;
     }
-    .doctor-skill{
+
+    .doctor-skill {
         padding: 0;
     }
 
@@ -2542,7 +2733,8 @@
     .our-team-container {
         padding: 50px 20px 129px 20px;
     }
-    .doctor-skill{
+
+    .doctor-skill {
         margin: 40px 0 0 0;
     }
 }
