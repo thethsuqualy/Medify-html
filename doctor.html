@@ -45,7 +45,7 @@
                     <h2 class="doctor-h2 doctor-header">Doctors</h2>
                     <div class="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="/">Home</a></li>
+                            <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Doctors</li>
                         </ol>
                     </div>
@@ -341,8 +341,9 @@
                     </h3>
                 </div>
                 <div class="consultancy-right">
-                    <input type="text" placeholder="Your Name *" class="doctor-textbox">
-                    <input type="text" placeholder="Your Email *" class="doctor-textbox">
+                    <input type="text" placeholder="Your Name *" class="doctor-textbox" onfocus="this.placeholder=''" onblur="this.placeholder='Your Name *'">
+                    <input type="text" placeholder="Your Email *" class="doctor-textbox" onfocus="this.placeholder=''" onblur="this.placeholder='Your Email *'">
+
                     <a href="#" class="doctor-btn">Get It Now</a>
                 </div>
 

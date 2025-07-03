@@ -103,11 +103,11 @@
                         <h3 class="write-us-h3 history-header">Get in Touch</h3>
                         <div class="contact-textbox-group">
                             <div class="contact-textbox-flex">
-                                <input type="text" placeholder="Your Name *" class="contact-textbox name">
-                                <input type="text" placeholder="Your Email *" class="contact-textbox email">
+                                <input type="text" placeholder="Your Name *" class="contact-textbox name" onfocus="this.placeholder=''" onblur="this.placeholder='Your Name *'" >
+                                <input type="text" placeholder="Your Email *" class="contact-textbox email" onfocus="this.placeholder=''" onblur="this.placeholder='Your Email *'">
                             </div>
-                            <input type="text" placeholder="Web Site" class="contact-textbox website">
-                            <textarea name="" id="" placeholder="Message..." class="contact-textarea"></textarea>
+                            <input type="text" placeholder="Web Site" class="contact-textbox website" onfocus="this.placeholder=''" onblur="this.placeholder='Web Site *'">
+                            <textarea name="" id="" placeholder="Message..." class="contact-textarea" onfocus="this.placeholder=''" onblur="this.placeholder='Message... *'"></textarea>
                             <a href="#" class="contact-btn">Send A Message</a>
                         </div>
                     </div>

@@ -836,7 +836,7 @@ Background Color
   }
 }
 
-@media screen and (max-width: 368px) {
+@media screen and (max-width: 372px) {
   .access-map {
     width: 100%;
     max-width: 2000px;
@@ -1321,8 +1321,9 @@ Background Color
     transform: translateX(-50%);
   }
 }
-@media screen and (max-width: 768px){
-  .logo-slider-wrapper{
+
+@media screen and (max-width: 768px) {
+  .logo-slider-wrapper {
     margin: 70px 0;
   }
 }
@@ -1484,7 +1485,7 @@ Background Color
 }
 
 .marrylee-img {
-  width: 155px;
+  width: 210px;
   margin: 0 auto;
 }
 

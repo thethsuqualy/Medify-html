@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Slick Slider Conditional Arrows</title>
+
+  <!-- Slick CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f4f6f8;
+    }
+
+    .slider-card {
+      max-width: 500px;
+      margin: 0 auto 40px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+    }
+
+    .slider-wrapper {
+      position: relative;
+    }
+
+    .badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background-color: #e6f2ff;
+      color: #007bff;
+      font-size: 12px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-weight: bold;
+      z-index: 10;
+    }
+
+    .wlslider img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .slick-prev, .slick-next {
+      z-index: 10;
+      width: 32px;
+      height: 32px;
+      background-color: rgba(0, 188, 212, 0.8);
+      border-radius: 50%;
+    }
+
+    .slick-prev {
+      left: 10px;
+    }
+
+    .slick-next {
+      right: 10px;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: #fff;
+      font-size: 20px;
+      line-height: 32px;
+    }
+
+    .post-info {
+      padding: 16px;
+    }
+
+    .post-date {
+      font-size: 13px;
+      color: #999;
+      margin-bottom: 8px;
+    }
+
+    .post-title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #1a2b4c;
+      margin-bottom: 10px;
+    }
+
+    .read-more {
+      color: #00bcd4;
+      font-size: 14px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .read-more::after {
+      content: " ›";
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Card with 1 image (no slider) -->
+  <div class="slider-card">
+    <div class="slider-wrapper">
+      <span class="badge">HEALTH</span>
+      <div class="wlslider">
+        <div><img src="./assets/img/blog2column/boostrix.jpg" alt="Slide 1" /></div>
+      </div>
+    </div>
+    <div class="post-info">
+      <span class="post-date">AUGUST 5, 2019</span>
+      <h3 class="post-title">10 Tips For Being A Terrific Traveling Physician</h3>
+      <a href="#" class="read-more">Read More</a>
+    </div>
+  </div>
+
+  <!-- Card with 3 images (slider enabled) -->
+  <div class="slider-card">
+    <div class="slider-wrapper">
+      <span class="badge">HEALTH</span>
+      <div class="wlslider">
+        <div><img src="./assets/img/blog2column/boostrix.jpg" alt="Slide 1" /></div>
+        <div><img src="./assets/img/blog2column/boostrix.jpg" alt="Slide 2" /></div>
+        <div><img src="./assets/img/blog2column/chid-insomnia.jpg" alt="Slide 3" /></div>
+      </div>
+    </div>
+    <div class="post-info">
+      <span class="post-date">AUGUST 5, 2019</span>
+      <h3 class="post-title">10 Tips For Being A Terrific Traveling Physician</h3>
+      <a href="#" class="read-more">Read More</a>
+    </div>
+  </div>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Slick JS -->
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <script>
+    $(function () {
+      $(".wlslider").each(function () {
+        const $slider = $(this);
+        const slideCount = $slider.children().length;
+
+        if (slideCount < 2) return; // Only 1 image – no slider
+
+        $slider.slick({
+          autoplay: true,
+          autoplaySpeed: 2500,
+          arrows: true,
+          dots: false,
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          pauseOnHover: false,
+          adaptiveHeight: true
+        });
+      });
+    });
+  </script>
+</body>
+</html>
