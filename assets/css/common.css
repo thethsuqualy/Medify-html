@@ -316,7 +316,7 @@ Background Color
   color: white;
   z-index: 999;
   transition: left 0.3s ease;
-  padding: 20px;
+  padding: 30px 42px 20px 30px;
   overflow-y: auto;
 }
 
@@ -329,12 +329,97 @@ Background Color
 
 .sidebar-nav a {
   display: block;
-  padding: 15px 0;
+  padding: 15px 0 19px;
   text-decoration: none;
   color: white;
-
   font-size: 16px;
   font-family: "Ubuntu";
+}
+
+.sidebar-link {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.sidebar-link.active {
+  color: #2196f3;
+}
+
+.sidebar-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  height: 5px;
+  background-color: #2196f3;
+  border-radius: 2.5px 2.5px 0 0;
+}
+
+.parent-link {
+  position: relative;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+}
+
+.has-submenu.active .parent-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 48px;
+  height: 5px;
+  background-color: #2196f3;
+  border-radius: 2.5px 2.5px 0 0;
+}
+
+
+.sidebar-link:nth-child(1).active::after {
+  width: 48px;
+}
+
+.sidebar-link:nth-child(3).active::after {
+  width: 38px;
+}
+
+.sidebar-link:nth-child(4).active::after {
+  width: 71px;
+}
+
+.sidebar-submenu a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  /* padding: 8px 0; */
+}
+
+.sidebar-submenu a.active {
+  color: #2196f3;
+  font-weight: bold;
+}
+
+.has-submenu .parent-link {
+  color: white;
+}
+
+.has-submenu.active .parent-link {
+  color: #2196f3;
+}
+
+.submenu-arrow {
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: rotate(319deg);
+  transition: transform 0.3s ease;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+}
+
+.submenu-arrow.active {
+  border-color: #2196f3;
 }
 
 .sidebar-group {
@@ -344,7 +429,7 @@ Background Color
 .has-submenu {
   cursor: pointer;
   display: block;
-  padding: 12px 0;
+  /* padding: 12px 0; */
   font-size: 16px;
   font-family: "Ubuntu";
 }
@@ -364,10 +449,12 @@ Background Color
   transition: transform 0.3s ease;
   position: absolute;
   right: 9px;
+  top:18px;
 }
 
 .submenu-arrow.rotate {
   transform: rotate(403deg);
+  top:17px;
 }
 
 .sidebar-submenu a {
@@ -776,7 +863,7 @@ Background Color
   }
 }
 
-@media screen and (max-width: 478px) {
+/* @media screen and (max-width: 478px) {
   .access-map {
     width: 410px;
   }
@@ -784,11 +871,12 @@ Background Color
   .open-hours {
     max-width: 410px;
   }
-}
+} */
 
 @media screen and (max-width: 478px) {
   .access-map {
     width: 395px;
+    padding: 10px 20px 0px 0px;
   }
 
   .open-hours {
@@ -836,10 +924,28 @@ Background Color
   }
 }
 
+@media screen and (max-width:381px) {
+  .map-wrapper {
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width:375px) {
+  .access-map {
+    padding-right: 0px;
+  }
+}
+
 @media screen and (max-width: 372px) {
   .access-map {
     width: 100%;
     max-width: 2000px;
+  }
+}
+
+@media screen and (max-width:334px) {
+  .open-hours {
+    padding: 0;
   }
 }
 
@@ -1036,7 +1142,7 @@ Background Color
   gap: 49px;
 }
 
-.number {
+.num {
   font-family: "Ubuntu";
   font-size: 36px;
   font-weight: 700;
@@ -1059,7 +1165,7 @@ Background Color
   margin-left: -8px;
 }
 
-.number::after {
+.num::after {
   content: "+";
   font-weight: bold;
   color: #ffffff;
