@@ -1,6 +1,6 @@
 // Your JavaScript code goes here
 document.addEventListener("DOMContentLoaded", () => {
-  //service start
+  //history start
   document.querySelectorAll(".lower-carea-h4").forEach(function (el) {
     el.addEventListener("click", function () {
       document.querySelectorAll(".lower-carea-h4").forEach(function (item) {
@@ -9,7 +9,9 @@ document.addEventListener("DOMContentLoaded", () => {
       el.classList.add("active");
     });
   });
+// history end
 
+// service start
   document.querySelectorAll(".pricing-btn").forEach(function (btn) {
     btn.addEventListener("click", function (e) {
       e.preventDefault();
