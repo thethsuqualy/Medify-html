@@ -1472,6 +1472,36 @@
     padding: 10px;
 }
 
+.carea-img2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.care-a {
+    color: #ff9e21;
+    font-size: 14px;
+    font-family: 'Ubuntu';
+    font-weight: 700;
+    position: relative;
+    max-width: 175px;
+}
+
+.care-a::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 10px;
+    height: 3px;
+    border-radius: 2px;
+    top: 50%;
+    right: 15px;
+    margin-top: -2px;
+    background-color: #ff9e21;
+}
+
+/* common carea start */
+
 .carea-lower-content p {
     font-family: 'Nunito';
     color: #3b4964;
@@ -1519,33 +1549,30 @@
     color: #0a3380;
 }
 
-.carea-img2 {
-    position: absolute;
-    top: 0;
-    right: 0;
+.lower-carea-panel {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+  max-height: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background-color: #ffffff;
 }
 
-.care-a {
-    color: #ff9e21;
-    font-size: 14px;
-    font-family: 'Ubuntu';
-    font-weight: 700;
-    position: relative;
-    max-width: 175px;
+.lower-carea-panel.active {
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 1000px;
+  pointer-events: auto;
 }
 
-.care-a::after {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    width: 10px;
-    height: 3px;
-    border-radius: 2px;
-    top: 50%;
-    right: 15px;
-    margin-top: -2px;
-    background-color: #ff9e21;
+.lower-carea-panel.fade-out {
+  opacity: 0;
+  transform: translateY(50px);
+  pointer-events: none;
 }
+
+/* common carea end */
 
 @media screen and (max-width: 1200px) {
     .mission-img {

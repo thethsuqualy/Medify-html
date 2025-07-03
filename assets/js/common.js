@@ -1,14 +1,40 @@
 // Your JavaScript code goes here
 document.addEventListener("DOMContentLoaded", () => {
   //history start
-  document.querySelectorAll(".lower-carea-h4").forEach(function (el) {
-    el.addEventListener("click", function () {
-      document.querySelectorAll(".lower-carea-h4").forEach(function (item) {
-        item.classList.remove("active");
-      });
-      el.classList.add("active");
-    });
+  // document.querySelectorAll(".lower-carea-h4").forEach(function (el) {
+  //   el.addEventListener("click", function () {
+  //     document.querySelectorAll(".lower-carea-h4").forEach(function (item) {
+  //       item.classList.remove("active");
+  //     });
+  //     el.classList.add("active");
+  //   });
+  // });
+  //  const tabs = document.querySelectorAll(".lower-carea-h4");
+  //   const panels = document.querySelectorAll(".lower-carea-panel");
+  //   let currentIndex = 0;
+
+
+const headings = document.querySelectorAll(".lower-carea-h4");
+const panels = document.querySelectorAll(".lower-carea-panel");
+
+headings.forEach((heading) => {
+  heading.addEventListener("click", function () {
+    const targetId = this.getAttribute("data-target");
+    const targetPanel = document.getElementById(targetId);
+
+    if (this.classList.contains("active")) return;
+
+    // Remove active from all
+    headings.forEach(h => h.classList.remove("active"));
+    panels.forEach(p => p.classList.remove("active"));
+
+    // Activate selected
+    this.classList.add("active");
+    targetPanel.classList.add("active");
   });
+});
+
+
 // history end
 
 // service start
