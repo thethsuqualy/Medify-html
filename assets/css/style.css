@@ -188,6 +188,8 @@
 
 .benefit-card {
     max-width: 400px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 .benefit-card-label {
@@ -204,6 +206,11 @@
     margin: -30px auto 0 auto;
     width: 100%;
     z-index: 100;
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover .benefit-card-label {
+    transform: translateY(-60px);
 }
 
 .quality-therapy-label {
@@ -255,13 +262,32 @@
     max-width: 1320px;
     padding: 0 20px;
     margin: 110px auto;
+    overflow: hidden;
+}
+
+.about-me-img {
+    opacity: 0;
+    transform: translateX(-200px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.about-me-img.animate-in {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .about-me-left {
     max-width: 575px;
     width: 100%;
     margin: 25px auto 0 auto;
+    opacity: 0;
+    transform: translateX(200px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
 
+.about-me-left.animate-in {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .about-me-p {
@@ -690,7 +716,6 @@
         width: 100%;
     }
 }
-
 
 @media screen and (max-width: 455px) {
     .care-a-content.about-me-care {
@@ -1550,26 +1575,26 @@
 }
 
 .lower-carea-panel {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.9s ease, transform 0.9s ease;
-  max-height: 0;
-  overflow: hidden;
-  pointer-events: none;
-  background-color: #ffffff;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+    max-height: 0;
+    overflow: hidden;
+    pointer-events: none;
+    background-color: #ffffff;
 }
 
 .lower-carea-panel.active {
-  opacity: 1;
-  transform: translateY(0);
-  max-height: 1000px;
-  pointer-events: auto;
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 1000px;
+    pointer-events: auto;
 }
 
 .lower-carea-panel.fade-out {
-  opacity: 0;
-  transform: translateY(50px);
-  pointer-events: none;
+    opacity: 0;
+    transform: translateY(50px);
+    pointer-events: none;
 }
 
 /* common carea end */

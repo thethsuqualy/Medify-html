@@ -1,43 +1,97 @@
 // Your JavaScript code goes here
 document.addEventListener("DOMContentLoaded", () => {
-  //history start
-  // document.querySelectorAll(".lower-carea-h4").forEach(function (el) {
-  //   el.addEventListener("click", function () {
-  //     document.querySelectorAll(".lower-carea-h4").forEach(function (item) {
-  //       item.classList.remove("active");
-  //     });
-  //     el.classList.add("active");
-  //   });
-  // });
-  //  const tabs = document.querySelectorAll(".lower-carea-h4");
-  //   const panels = document.querySelectorAll(".lower-carea-panel");
-  //   let currentIndex = 0;
+  // top-to-btn start
 
+  // const btn = document.querySelector(".top-to-btn");
+  // window.onscroll = () => {
+  //   if (scrollY > 200) {
+  //     btn.classList.remove("nottop");
+  //   } else {
+  //     btn.classList.add("nottop");
+  //   }
+  // };
+  // btn.onclick = () => scrollTo({ top: 0, behavior: "smooth" });
 
-const headings = document.querySelectorAll(".lower-carea-h4");
-const panels = document.querySelectorAll(".lower-carea-panel");
+  const btn = document.querySelector(".top-to-btn");
 
-headings.forEach((heading) => {
-  heading.addEventListener("click", function () {
-    const targetId = this.getAttribute("data-target");
-    const targetPanel = document.getElementById(targetId);
-
-    if (this.classList.contains("active")) return;
-
-    // Remove active from all
-    headings.forEach(h => h.classList.remove("active"));
-    panels.forEach(p => p.classList.remove("active"));
-
-    // Activate selected
-    this.classList.add("active");
-    targetPanel.classList.add("active");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 200) {
+      btn.classList.add("show"); // slide in
+    } else {
+      btn.classList.remove("show"); // slide out
+    }
   });
-});
 
+  btn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 
-// history end
+  // top-to-btn
 
-// service start
+  // top care&amentities start
+  // const target = document.querySelector(".care-a-content.about-me-care");
+
+  // if (target) {
+  //   const observer = new IntersectionObserver(
+  //     (entries, observer) => {
+  //       entries.forEach((entry) => {
+  //         if (entry.isIntersecting) {
+  //           entry.target.classList.add("animate-in");
+  //           observer.unobserve(entry.target); // remove this line if you want repeated animation
+  //         }
+  //       });
+  //     },
+  //     {
+  //       threshold: 0.1, // start animation when 20% is visible
+  //     }
+  //   );
+  //   observer.observe(target);
+  // }
+  // top care&amentities end
+
+  // top about me start
+  const targets = document.querySelectorAll(".about-me-img, .about-me-left");
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate-in");
+          observer.unobserve(entry.target); // Remove for repeat animation
+        }
+      });
+    },
+    {
+      threshold: 0.2,
+    }
+  );
+
+  targets.forEach((el) => observer.observe(el));
+  // top about me end
+
+  //carea top and history start
+  const headings = document.querySelectorAll(".lower-carea-h4");
+  const panels = document.querySelectorAll(".lower-carea-panel");
+
+  headings.forEach((heading) => {
+    heading.addEventListener("click", function () {
+      const targetId = this.getAttribute("data-target");
+      const targetPanel = document.getElementById(targetId);
+
+      if (this.classList.contains("active")) return;
+
+      // Remove active from all
+      headings.forEach((h) => h.classList.remove("active"));
+      panels.forEach((p) => p.classList.remove("active"));
+
+      // Activate selected
+      this.classList.add("active");
+      targetPanel.classList.add("active");
+    });
+  });
+  // carea top and history end
+
+  // service start
   document.querySelectorAll(".pricing-btn").forEach(function (btn) {
     btn.addEventListener("click", function (e) {
       e.preventDefault();
@@ -219,7 +273,7 @@ $(function () {
   });
   // ads slider end
 
-// top slider start
+  // top slider start
   $(document).ready(function () {
     $(".top-slider").slick({
       slidesToShow: 1,
@@ -234,17 +288,18 @@ $(function () {
       speed: 600,
       cssEase: "ease",
       dots: false,
-       responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          arrows: false,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+            prevArrow: false,
+            nextArrow: false,
+          },
         },
-      },
-     
-    ],
-  });
+      ],
     });
+  });
   // top slider end
   //top counter setup start
   $(document).ready(function () {
@@ -292,4 +347,3 @@ $(function () {
 
   //blog2column slider end
 });
-
