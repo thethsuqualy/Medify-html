@@ -117,6 +117,11 @@ Background Color
 
 =============================== */
 /* start header */
+.no-scroll {
+  overflow: hidden !important;
+  height: 100vh;
+}
+
 .header {
   max-width: 1320px;
   width: 100%;
@@ -449,12 +454,12 @@ Background Color
   transition: transform 0.3s ease;
   position: absolute;
   right: 9px;
-  top:18px;
+  top: 18px;
 }
 
 .submenu-arrow.rotate {
   transform: rotate(403deg);
-  top:17px;
+  top: 17px;
 }
 
 .sidebar-submenu a {
@@ -633,6 +638,7 @@ Background Color
   height: 264px;
   border: 0;
   display: block;
+  border-radius: 20px;
 }
 
 .below-footer-section {

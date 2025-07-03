@@ -28,71 +28,86 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //hamburger start
 
-setTimeout(function () {
-  const hamburger = document.getElementById("hamburger");
-  const sidebar = document.getElementById("sidebar");
-  const overlay = document.getElementById("sidebarOverlay");
-  const closeBtn = document.getElementById("closeSidebar");
-  const submenuArrow = document.getElementById("submenuArrow");
-  const submenu = document.getElementById("submenu");
-  const submenuToggle = document.getElementById("submenuToggle");
-  const sidebarLinks = document.querySelectorAll(".sidebar-link, .submenu-link");
+  setTimeout(function () {
+    const hamburger = document.getElementById("hamburger");
+    const sidebar = document.getElementById("sidebar");
+    const overlay = document.getElementById("sidebarOverlay");
+    const closeBtn = document.getElementById("closeSidebar");
+    const submenuArrow = document.getElementById("submenuArrow");
+    const submenu = document.getElementById("submenu");
+    const submenuToggle = document.getElementById("submenuToggle");
+    const sidebarLinks = document.querySelectorAll(
+      ".sidebar-link, .submenu-link"
+    );
 
-  // Hamburger toggle
-  if (hamburger) {
-    hamburger.addEventListener("click", () => {
-      hamburger.classList.toggle("active");
-      sidebar?.classList.toggle("active");
-      overlay?.classList.toggle("active");
-    });
-  }
+    // Hamburger toggle
+    if (hamburger) {
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        sidebar?.classList.toggle("active");
+        overlay?.classList.toggle("active");
 
-  // Close sidebar
-  if (closeBtn) {
-    closeBtn.addEventListener("click", () => {
-      sidebar?.classList.remove("active");
-      overlay?.classList.remove("active");
-      hamburger?.classList.remove("active");
-    });
-  }
-
-  // Overlay click
-  if (overlay) {
-    overlay.addEventListener("click", () => {
-      sidebar?.classList.remove("active");
-      overlay.classList.remove("active");
-      hamburger?.classList.remove("active");
-    });
-  }
-
-  // Submenu toggle
-  if (submenuArrow && submenu) {
-    submenuArrow.addEventListener("click", (e) => {
-      e.stopPropagation();
-      submenu.style.display = submenu.style.display === "block" ? "none" : "block";
-      submenuArrow.classList.toggle("rotate");
-    });
-  }
-
-  // Highlight current page link and parent submenu
-  const currentPath = window.location.pathname.split("/").pop();
-
-  sidebarLinks.forEach(link => {
-    const linkPath = link.getAttribute("href");
-    if (linkPath === currentPath || (linkPath === "index.html" && currentPath === "")) {
-      link.classList.add("active");
-
-      // If it's a submenu link, also highlight the parent menu
-      if (link.classList.contains("submenu-link")) {
-        submenuToggle.classList.add("active");
-        submenuArrow.classList.add("active");
-      }
-    } else {
-      link.classList.remove("active");
+        // Toggle body scroll
+        document.body.classList.toggle("no-scroll");
+      });
     }
-  });
 
-}, 2000);
+    // Close sidebar
+    if (closeBtn) {
+      closeBtn.addEventListener("click", () => {
+        sidebar?.classList.remove("active");
+        overlay?.classList.remove("active");
+        hamburger?.classList.remove("active");
+
+        // Remove no-scroll
+        document.body.classList.remove("no-scroll");
+      });
+    }
+
+    // Overlay click
+    if (overlay) {
+      overlay.addEventListener("click", () => {
+        sidebar?.classList.remove("active");
+        overlay.classList.remove("active");
+        hamburger?.classList.remove("active");
+
+        // Remove no-scroll
+        document.body.classList.remove("no-scroll");
+      });
+    }
+
+    // Submenu toggle
+    if (submenuArrow && submenu) {
+      submenuArrow.addEventListener("click", (e) => {
+        e.stopPropagation();
+        submenu.style.display =
+          submenu.style.display === "block" ? "none" : "block";
+        submenuArrow.classList.toggle("rotate");
+      });
+    }
+
+    // Highlight current page link and parent submenu
+    const currentPath = window.location.pathname.split("/").pop();
+
+    sidebarLinks.forEach((link) => {
+      const linkPath = link.getAttribute("href");
+      if (
+        linkPath === currentPath ||
+        (linkPath === "index.html" && currentPath === "")
+      ) {
+        link.classList.add("active");
+
+        // If it's a submenu link, also highlight the parent menu
+        if (link.classList.contains("submenu-link")) {
+          submenuToggle.classList.add("active");
+          submenuArrow.classList.add("active");
+        }
+      } else {
+        link.classList.remove("active");
+      }
+    });
+  }, 2000);
+
   //humburger end
 
   //faq start
@@ -212,7 +227,7 @@ $(function () {
   });
   // ads slider end
 
-// top slider start
+  // top slider start
   $(document).ready(function () {
     $(".top-slider").slick({
       slidesToShow: 1,
@@ -227,17 +242,16 @@ $(function () {
       speed: 600,
       cssEase: "ease",
       dots: false,
-       responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          arrows: false,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+          },
         },
-      },
-     
-    ],
-  });
+      ],
     });
+  });
   // top slider end
   //top counter setup start
   $(document).ready(function () {
@@ -285,4 +299,3 @@ $(function () {
 
   //blog2column slider end
 });
-

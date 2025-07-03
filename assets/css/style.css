@@ -3140,7 +3140,13 @@
     font-weight: 800;
     line-height: 1.6;
 }
-
+.sidebar-sticky{
+    position: sticky;
+    top:0;
+    bottom: 0;
+    z-index: 1;
+    
+}
 @media screen and (max-width:1230px) {
     .wlslider img {
         max-width: 400px;
