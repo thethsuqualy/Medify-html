@@ -5,18 +5,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const elemPos = $(elem).offset().top;
     const scroll = $(window).scrollTop();
     const windowHeight = $(window).height();
-    return scroll >= elemPos - windowHeight;
+    return scroll >= elemPos - windowHeight + 110;
   }
 
   setTimeout(function () {
     // top-to-btn start
-    const topBtn = document.querySelector(".top-to-btn");
+    const topBtn = document.querySelector(".top-btn-container");
     const footer = document.querySelector("footer");
 
     if (!topBtn || !footer) return;
 
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 200) {
+      if (window.scrollY > 300) {
         topBtn.classList.remove("hide");
       } else {
         topBtn.classList.add("hide");

@@ -1155,6 +1155,7 @@ Background Color
   color: #ffffff;
   padding: 18px 0px 10px;
 }
+
 /* 
 .top-number {
   font-family: "Ubuntu";
@@ -1399,12 +1400,14 @@ Background Color
   color: #ff9e21;
   padding: 18px 0px 10px;
 }
+
 .top-counter-wrapper .num::after {
   content: "+";
   font-weight: bold;
   color: #ff9e21;
   margin-left: -8px;
 }
+
 /* faq support center end */
 
 /* company ads slider start */
@@ -1812,6 +1815,16 @@ Background Color
 /* side bar end */
 
 /* top-to-btn start */
+.top-btn-container {
+  width: fit-content;
+  margin-left: auto;
+  position: fixed;
+  z-index: 2;
+  right: 0px;
+  bottom: 10px;
+  transition: bottom 0.5s ease;
+}
+
 .top-to-btn {
   width: 50px;
   height: 50px;
@@ -1820,23 +1833,19 @@ Background Color
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed;
-  right: 30px;
-  bottom: 10px;
+  margin-right: 20px;
+  margin-top: -70px;
   cursor: pointer;
- transition: transform 0.5s ease, opacity 0.3s ease;
-  opacity: 1;
-}
-
-.top-to-btn.hide {
-  opacity: 0;
-}
-
-.top-to-btn.footer-above {
   position: relative;
-  right: 30px;
+}
+
+.top-btn-container.hide {
+  bottom: -70px;
+}
+
+.top-btn-container.footer-above {
+  position: static;
   margin-left: auto;
-  top: 0px;
 }
 
 .top-to-btn-img {
