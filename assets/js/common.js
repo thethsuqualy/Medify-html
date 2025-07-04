@@ -206,7 +206,7 @@ document.querySelectorAll(".app-wrapper").forEach((wrapper) => {
   });
 });
 //blog singel end
-
+})
 // Your jQuery code goes here
 // ads slider start
 $(function () {
