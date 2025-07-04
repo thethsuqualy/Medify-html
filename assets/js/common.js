@@ -1,9 +1,7 @@
 // Your JavaScript code goes here
-// top-to-btn
-
-// top care&amentities start
-
-// top care&amentities end
+ document.addEventListener("DOMContentLoaded", () => {
+// top-to-btn start
+// top-to-btn end
 
 // top about me start
 // top about me end
@@ -30,22 +28,22 @@ headings.forEach((heading) => {
 });
 // carea top and history end
 
-// service start
-document.querySelectorAll(".pricing-btn").forEach(function (btn) {
-  btn.addEventListener("click", function (e) {
-    e.preventDefault();
 
-    // Remove active class from all footers
-    document.querySelectorAll(".pricing_footer").forEach(function (footer) {
-      footer.classList.remove("active");
+// doctor start
+  const message = document.querySelector(".consultancy-right-lower");
+  const toggleButtons = document.querySelectorAll(".doctor-btn, .contact-btn");
+
+  toggleButtons.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      message.classList.toggle("show");
     });
-
-    // Add active class to the clicked button's footer
-    const footer = btn.closest(".pricing_footer");
-    footer.classList.add("active");
   });
-});
-//service end
+
+
+
+
+// doctor end
 
 //hamburger start
 
@@ -116,6 +114,8 @@ document.querySelectorAll(".faq-question").forEach((question) => {
   });
 });
 //faq end
+ });
+
 
 //counter setup start faq
 $(document).ready(function () {
