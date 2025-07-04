@@ -1817,33 +1817,34 @@ Background Color
   width: 40px;
   height: 40px;
   background-size: contain;
-  position: sticky;
+  position: fixed;
   bottom: 40px;
+  right: 30px;
   cursor: pointer;
-  right: 20px;
-  display: block;
   border-radius: 5px;
-  z-index: 3;
-  margin-left: auto;
-  display: flex;
+  z-index: 30;
+  margin:0px 30px 0 auto;
+  display: block;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transform: translateX(20px);
-  transition: opacity 0.1s ease, transform 0.5s ease;
+  justify-content: center; */
+  /* transform: translateX(20px);
+  transition: opacity 0.1s ease, transform 0.5s ease; */
 }
-
+.top-to-btn.nottop{
+  display: none;
+}
 .top-to-btn-img {
   height: 18px;
-  animation: floatUpDown 2s ease-in-out infinite;
+  /* animation: floatUpDown 2s ease-in-out infinite; */
 }
 
-.top-to-btn.show {
+ /* .top-to-btn.show {
   opacity: 1;
   transform: translateX(0);
-}
+}  */
 
-@keyframes floatUpDown {
+ /* @keyframes floatUpDown {
   0% {
     transform: translateY(0);
   }
@@ -1855,6 +1856,6 @@ Background Color
   100% {
     transform: translateY(0);
   }
-}
+}  */
 
 /* top-to-btn end */
