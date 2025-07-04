@@ -214,15 +214,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   //faq end
 
-  //counter setup start faq
-  $(document).ready(function () {
-    $(".number span").counterUp({
-      delay: 10,
-      time: 3000,
-    });
-  });
-  //counter setup end faq
-
   //blog single start
   document.querySelectorAll(".app-wrapper").forEach((wrapper) => {
     const baseImg = wrapper.querySelector(".base-img");
@@ -337,21 +328,16 @@ $(function () {
     });
   });
   // top slider end
-  //top counter setup start
-  $(document).ready(function () {
-    $(".top-number span").counterUp({
-      delay: 10,
-      time: 3000,
-    });
-  });
-  //top counter setup end
 
   //counter setup start faq
   $(document).ready(function () {
-    $(".num span").counterUp({
+    const numEle = $(".num span");
+    if(numEle) {
+      $(".num span").counterUp({
       delay: 10,
       time: 3000,
     });
+    }
   });
   //counter setup end faq
 

@@ -1391,7 +1391,9 @@ Background Color
 .top-counter-wrapper {
   background-color: #f9f9f9;
 }
-
+.top-counter-wrapper .num {
+  color: #ff9e21;
+}
 /* faq support center end */
 
 /* company ads slider start */
