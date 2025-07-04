@@ -1,35 +1,48 @@
 // Your JavaScript code goes here
- document.addEventListener("DOMContentLoaded", () => {
-// top-to-btn start
-// top-to-btn end
+document.addEventListener("DOMContentLoaded", () => {
 
-// top about me start
-// top about me end
+  // top-to-btn start
+    // const topBtn = document.querySelector(".top-to-btn");
 
-//carea top and history start
-const headings = document.querySelectorAll(".lower-carea-h4");
-const panels = document.querySelectorAll(".lower-carea-panel");
+    // window.addEventListener("scroll", () => {
+    //   if (window.scrollY > 200) {
+    //     topBtn.classList.remove("hide");
+    //   } else {
+    //     topBtn.classList.add("hide");
+    //   }
+    // });
 
-headings.forEach((heading) => {
-  heading.addEventListener("click", function () {
-    const targetId = this.getAttribute("data-target");
-    const targetPanel = document.getElementById(targetId);
+    // topBtn.addEventListener("click", () => {window.scrollTo({top: 0,behavior: "smooth",});
+    // });
 
-    if (this.classList.contains("active")) return;
+  // top-to-btn end
 
-    // Remove active from all
-    headings.forEach((h) => h.classList.remove("active"));
-    panels.forEach((p) => p.classList.remove("active"));
+  // top about me start
+  // top about me end
 
-    // Activate selected
-    this.classList.add("active");
-    targetPanel.classList.add("active");
+  //carea top and history start
+  const headings = document.querySelectorAll(".lower-carea-h4");
+  const panels = document.querySelectorAll(".lower-carea-panel");
+
+  headings.forEach((heading) => {
+    heading.addEventListener("click", function () {
+      const targetId = this.getAttribute("data-target");
+      const targetPanel = document.getElementById(targetId);
+
+      if (this.classList.contains("active")) return;
+
+      // Remove active from all
+      headings.forEach((h) => h.classList.remove("active"));
+      panels.forEach((p) => p.classList.remove("active"));
+
+      // Activate selected
+      this.classList.add("active");
+      targetPanel.classList.add("active");
+    });
   });
-});
-// carea top and history end
+  // carea top and history end
 
-
-// doctor start
+  // doctor start
   const message = document.querySelector(".consultancy-right-lower");
   const toggleButtons = document.querySelectorAll(".doctor-btn, .contact-btn");
 
@@ -39,83 +52,78 @@ headings.forEach((heading) => {
       message.classList.toggle("show");
     });
   });
+  // doctor end
 
+  //hamburger start
 
+  setTimeout(function () {
+    const hamburger = document.getElementById("hamburger");
+    const sidebar = document.getElementById("sidebar");
+    const overlay = document.getElementById("sidebarOverlay");
+    const closeBtn = document.getElementById("closeSidebar");
+    const submenuToggle = document.getElementById("submenuToggle");
+    const submenu = document.getElementById("submenu");
+    const submenuArrow = document.getElementById("submenuArrow");
 
-
-// doctor end
-
-//hamburger start
-
-setTimeout(function () {
-  const hamburger = document.getElementById("hamburger");
-  const sidebar = document.getElementById("sidebar");
-  const overlay = document.getElementById("sidebarOverlay");
-  const closeBtn = document.getElementById("closeSidebar");
-  const submenuToggle = document.getElementById("submenuToggle");
-  const submenu = document.getElementById("submenu");
-  const submenuArrow = document.getElementById("submenuArrow");
-
-  // Hamburger menu click
-  if (hamburger) {
-    hamburger.addEventListener("click", () => {
-      hamburger.classList.toggle("active");
-      if (sidebar) sidebar.classList.toggle("active");
-      if (overlay) overlay.classList.toggle("active");
-    });
-  }
-
-  // Close button click
-  if (closeBtn) {
-    closeBtn.addEventListener("click", () => {
-      if (sidebar) sidebar.classList.remove("active");
-      if (overlay) overlay.classList.remove("active");
-      if (hamburger) hamburger.classList.remove("active");
-    });
-  }
-
-  // Overlay click
-  if (overlay) {
-    overlay.addEventListener("click", () => {
-      if (sidebar) sidebar.classList.remove("active");
-      overlay.classList.remove("active");
-      if (hamburger) hamburger.classList.remove("active");
-    });
-  }
-  if (submenuArrow && submenu) {
-    submenuArrow.addEventListener("click", (e) => {
-      e.stopPropagation(); // Prevent triggering other click events
-      submenu.style.display =
-        submenu.style.display === "block" ? "none" : "block";
-      submenuArrow.classList.toggle("rotate");
-    });
-  }
-}, 2000);
-//humburger end
-
-//faq start
-document.querySelectorAll(".faq-question").forEach((question) => {
-  question.addEventListener("click", () => {
-    const item = question.parentElement;
-    const answer = item.querySelector(".faq-answer");
-    const isActive = item.classList.contains("active");
-
-    // Close all
-    document.querySelectorAll(".faq-item").forEach((el) => {
-      el.classList.remove("active");
-      el.querySelector(".faq-answer").style.maxHeight = null;
-    });
-
-    // Open clicked
-    if (!isActive) {
-      item.classList.add("active");
-      answer.style.maxHeight = answer.scrollHeight + "px";
+    // Hamburger menu click
+    if (hamburger) {
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        if (sidebar) sidebar.classList.toggle("active");
+        if (overlay) overlay.classList.toggle("active");
+      });
     }
-  });
-});
-//faq end
- });
 
+    // Close button click
+    if (closeBtn) {
+      closeBtn.addEventListener("click", () => {
+        if (sidebar) sidebar.classList.remove("active");
+        if (overlay) overlay.classList.remove("active");
+        if (hamburger) hamburger.classList.remove("active");
+      });
+    }
+
+    // Overlay click
+    if (overlay) {
+      overlay.addEventListener("click", () => {
+        if (sidebar) sidebar.classList.remove("active");
+        overlay.classList.remove("active");
+        if (hamburger) hamburger.classList.remove("active");
+      });
+    }
+    if (submenuArrow && submenu) {
+      submenuArrow.addEventListener("click", (e) => {
+        e.stopPropagation(); // Prevent triggering other click events
+        submenu.style.display =
+          submenu.style.display === "block" ? "none" : "block";
+        submenuArrow.classList.toggle("rotate");
+      });
+    }
+  }, 2000);
+  //humburger end
+
+  //faq start
+  document.querySelectorAll(".faq-question").forEach((question) => {
+    question.addEventListener("click", () => {
+      const item = question.parentElement;
+      const answer = item.querySelector(".faq-answer");
+      const isActive = item.classList.contains("active");
+
+      // Close all
+      document.querySelectorAll(".faq-item").forEach((el) => {
+        el.classList.remove("active");
+        el.querySelector(".faq-answer").style.maxHeight = null;
+      });
+
+      // Open clicked
+      if (!isActive) {
+        item.classList.add("active");
+        answer.style.maxHeight = answer.scrollHeight + "px";
+      }
+    });
+  });
+  //faq end
+});
 
 //counter setup start faq
 $(document).ready(function () {

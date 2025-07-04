@@ -7,7 +7,7 @@
     background-position: center;
     height: 100vh;
     position: relative;
-    z-index: 1000;
+    z-index: 100;
 }
 
 .top-mv-two {
@@ -78,6 +78,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 5px;
 }
 
 .top-slider-btn img {
@@ -4580,6 +4581,10 @@
 
     .contact-h3 {
         font-size: 30px;
+    }
+    .contact-btn{
+        max-width: 160px;
+        padding: 20px 10px;
     }
 }
 
