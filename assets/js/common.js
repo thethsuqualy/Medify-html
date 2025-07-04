@@ -1,21 +1,41 @@
 // Your JavaScript code goes here
 document.addEventListener("DOMContentLoaded", () => {
+  // jQuery helper function
+  function isVisableFromTop(elem) {
+    const elemPos = $(elem).offset().top;
+    const scroll = $(window).scrollTop();
+    const windowHeight = $(window).height();
+    return scroll >= elemPos - windowHeight;
+  }
 
-  // top-to-btn start
-    // const topBtn = document.querySelector(".top-to-btn");
+  setTimeout(function () {
+    // top-to-btn start
+    const topBtn = document.querySelector(".top-to-btn");
+    const footer = document.querySelector("footer");
 
-    // window.addEventListener("scroll", () => {
-    //   if (window.scrollY > 200) {
-    //     topBtn.classList.remove("hide");
-    //   } else {
-    //     topBtn.classList.add("hide");
-    //   }
-    // });
+    if (!topBtn || !footer) return;
 
-    // topBtn.addEventListener("click", () => {window.scrollTo({top: 0,behavior: "smooth",});
-    // });
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 200) {
+        topBtn.classList.remove("hide");
+      } else {
+        topBtn.classList.add("hide");
+      }
 
-  // top-to-btn end
+      // Add/remove 'footer-above' if footer is visible
+      if (isVisableFromTop($("footer"))) {
+        topBtn.classList.add("footer-above");
+      } else {
+        topBtn.classList.remove("footer-above");
+      }
+    });
+
+    topBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // top-to-btn end
+  }, 2000);
 
   // top about me start
   // top about me end
@@ -160,53 +180,53 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   //faq end
 
-//blog single start
-document.querySelectorAll(".app-wrapper").forEach((wrapper) => {
-  const baseImg = wrapper.querySelector(".base-img");
-  const floatImg = wrapper.querySelector(".float-img");
+  //blog single start
+  document.querySelectorAll(".app-wrapper").forEach((wrapper) => {
+    const baseImg = wrapper.querySelector(".base-img");
+    const floatImg = wrapper.querySelector(".float-img");
 
-  let currentY = 0;
-  let targetY = 0;
-  let opacity = 0;
-  let targetOpacity = 0;
-  let animationFrame;
-  let easing = 0.1;
+    let currentY = 0;
+    let targetY = 0;
+    let opacity = 0;
+    let targetOpacity = 0;
+    let animationFrame;
+    let easing = 0.1;
 
-  function animate() {
-    currentY += (targetY - currentY) * easing;
-    opacity += (targetOpacity - opacity) * easing;
+    function animate() {
+      currentY += (targetY - currentY) * easing;
+      opacity += (targetOpacity - opacity) * easing;
 
-    floatImg.style.transform = `translateY(${currentY}px)`;
-    floatImg.style.opacity = opacity;
+      floatImg.style.transform = `translateY(${currentY}px)`;
+      floatImg.style.opacity = opacity;
 
-    if (
-      Math.abs(currentY - targetY) > 0.1 ||
-      Math.abs(opacity - targetOpacity) > 0.01
-    ) {
-      animationFrame = requestAnimationFrame(animate);
+      if (
+        Math.abs(currentY - targetY) > 0.1 ||
+        Math.abs(opacity - targetOpacity) > 0.01
+      ) {
+        animationFrame = requestAnimationFrame(animate);
+      }
     }
-  }
 
-  wrapper.addEventListener("mouseenter", () => {
-    baseImg.style.opacity = "0";
-    targetY = -7;
-    targetOpacity = 1;
-    easing = 0.05;
-    cancelAnimationFrame(animationFrame);
-    animate();
-  });
+    wrapper.addEventListener("mouseenter", () => {
+      baseImg.style.opacity = "0";
+      targetY = -7;
+      targetOpacity = 1;
+      easing = 0.05;
+      cancelAnimationFrame(animationFrame);
+      animate();
+    });
 
-  wrapper.addEventListener("mouseleave", () => {
-    baseImg.style.opacity = "1";
-    targetY = 0;
-    targetOpacity = 0;
-    easing = 0.05;
-    cancelAnimationFrame(animationFrame);
-    animate();
+    wrapper.addEventListener("mouseleave", () => {
+      baseImg.style.opacity = "1";
+      targetY = 0;
+      targetOpacity = 0;
+      easing = 0.05;
+      cancelAnimationFrame(animationFrame);
+      animate();
+    });
   });
+  //blog singel end
 });
-//blog singel end
-})
 // Your jQuery code goes here
 // ads slider start
 $(function () {

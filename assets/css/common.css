@@ -1822,14 +1822,21 @@ Background Color
   justify-content: center;
   position: fixed;
   right: 30px;
-  bottom: 40px;
+  bottom: 10px;
   cursor: pointer;
-  transition: opacity 0.3s ease;
+ transition: transform 0.5s ease, opacity 0.3s ease;
   opacity: 1;
 }
 
 .top-to-btn.hide {
   opacity: 0;
+}
+
+.top-to-btn.footer-above {
+  position: relative;
+  right: 30px;
+  margin-left: auto;
+  top: 0px;
 }
 
 .top-to-btn-img {

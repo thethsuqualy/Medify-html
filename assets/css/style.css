@@ -1488,7 +1488,7 @@
     display: flex;
     max-width: 1320px;
     padding: 0 20px;
-    margin: 100px auto 86px auto;
+    margin: 100px auto;
 }
 
 .care-a-img {
@@ -1688,13 +1688,13 @@
         max-width: 100%;
         padding: 0;
     }
-
+/* 
     .care-a-wrapper {
         display: flex;
         max-width: 1320px;
         padding: 0 20px;
-        margin: 50px auto 43px auto;
-    }
+        margin: 50px auto;
+    } */
 
     .care-a-content {
         max-width: 100%;
@@ -1712,7 +1712,7 @@
         display: flex;
         max-width: 600px;
         padding: 0 20px;
-        margin: 50px auto 0 auto;
+        margin: 50px auto;
     }
 
     .mission {
