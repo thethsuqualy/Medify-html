@@ -1155,14 +1155,14 @@ Background Color
   color: #ffffff;
   padding: 18px 0px 10px;
 }
-
+/* 
 .top-number {
   font-family: "Ubuntu";
   font-size: 36px;
   font-weight: 700;
   color: #ff9e21;
   padding: 18px 0px 10px;
-}
+} */
 
 .top-number::after {
   content: "+";
@@ -1391,8 +1391,19 @@ Background Color
 .top-counter-wrapper {
   background-color: #f9f9f9;
 }
+
 .top-counter-wrapper .num {
+  font-family: "Ubuntu";
+  font-size: 36px;
+  font-weight: 700;
   color: #ff9e21;
+  padding: 18px 0px 10px;
+}
+.top-counter-wrapper .num::after {
+  content: "+";
+  font-weight: bold;
+  color: #ff9e21;
+  margin-left: -8px;
 }
 /* faq support center end */
 

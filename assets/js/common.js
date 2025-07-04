@@ -332,11 +332,11 @@ $(function () {
   //counter setup start faq
   $(document).ready(function () {
     const numEle = $(".num span");
-    if(numEle) {
+    if (numEle) {
       $(".num span").counterUp({
-      delay: 10,
-      time: 3000,
-    });
+        delay: 10,
+        time: 3000,
+      });
     }
   });
   //counter setup end faq
