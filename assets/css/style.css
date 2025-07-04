@@ -265,29 +265,10 @@
     overflow: hidden;
 }
 
-.about-me-img {
-    opacity: 0;
-    transform: translateX(-200px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.about-me-img.animate-in {
-    opacity: 1;
-    transform: translateX(0);
-}
-
 .about-me-left {
     max-width: 575px;
     width: 100%;
     margin: 25px auto 0 auto;
-    opacity: 0;
-    transform: translateX(200px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.about-me-left.animate-in {
-    opacity: 1;
-    transform: translateX(0);
 }
 
 .about-me-p {

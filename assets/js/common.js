@@ -1,72 +1,27 @@
 // Your JavaScript code goes here
-document.addEventListener("DOMContentLoaded", () => {
-  // top-to-btn start
+const btn = document.querySelector(".top-btn");
 
-  // const btn = document.querySelector(".top-to-btn");
-  // window.onscroll = () => {
-  //   if (scrollY > 200) {
-  //     btn.classList.remove("nottop");
-  //   } else {
-  //     btn.classList.add("nottop");
-  //   }
-  // };
-  // btn.onclick = () => scrollTo({ top: 0, behavior: "smooth" });
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 200) {
+    btn.classList.remove("nottop");
+  } else {
+    btn.classList.add("nottop");
+  }
+});
 
-  const btn = document.querySelector(".top-to-btn");
+btn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 200) {
-      btn.classList.add("show"); // slide in
-    } else {
-      btn.classList.remove("show"); // slide out
-    }
-  });
 
-  btn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
 
   // top-to-btn
 
   // top care&amentities start
-  // const target = document.querySelector(".care-a-content.about-me-care");
 
-  // if (target) {
-  //   const observer = new IntersectionObserver(
-  //     (entries, observer) => {
-  //       entries.forEach((entry) => {
-  //         if (entry.isIntersecting) {
-  //           entry.target.classList.add("animate-in");
-  //           observer.unobserve(entry.target); // remove this line if you want repeated animation
-  //         }
-  //       });
-  //     },
-  //     {
-  //       threshold: 0.1, // start animation when 20% is visible
-  //     }
-  //   );
-  //   observer.observe(target);
-  // }
   // top care&amentities end
 
   // top about me start
-  const targets = document.querySelectorAll(".about-me-img, .about-me-left");
-
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("animate-in");
-          observer.unobserve(entry.target); // Remove for repeat animation
-        }
-      });
-    },
-    {
-      threshold: 0.2,
-    }
-  );
-
-  targets.forEach((el) => observer.observe(el));
   // top about me end
 
   //carea top and history start
