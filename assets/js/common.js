@@ -1,53 +1,60 @@
 // Your JavaScript code goes here
-// top-to-btn
+document.addEventListener("DOMContentLoaded", () => {
 
-// top care&amentities start
+  // top-to-btn start
+    // const topBtn = document.querySelector(".top-to-btn");
 
-// top care&amentities end
+    // window.addEventListener("scroll", () => {
+    //   if (window.scrollY > 200) {
+    //     topBtn.classList.remove("hide");
+    //   } else {
+    //     topBtn.classList.add("hide");
+    //   }
+    // });
 
-// top about me start
-// top about me end
+    // topBtn.addEventListener("click", () => {window.scrollTo({top: 0,behavior: "smooth",});
+    // });
 
-//carea top and history start
-const headings = document.querySelectorAll(".lower-carea-h4");
-const panels = document.querySelectorAll(".lower-carea-panel");
+  // top-to-btn end
 
-headings.forEach((heading) => {
-  heading.addEventListener("click", function () {
-    const targetId = this.getAttribute("data-target");
-    const targetPanel = document.getElementById(targetId);
+  // top about me start
+  // top about me end
 
-    if (this.classList.contains("active")) return;
+  //carea top and history start
+  const headings = document.querySelectorAll(".lower-carea-h4");
+  const panels = document.querySelectorAll(".lower-carea-panel");
 
-    // Remove active from all
-    headings.forEach((h) => h.classList.remove("active"));
-    panels.forEach((p) => p.classList.remove("active"));
+  headings.forEach((heading) => {
+    heading.addEventListener("click", function () {
+      const targetId = this.getAttribute("data-target");
+      const targetPanel = document.getElementById(targetId);
 
-    // Activate selected
-    this.classList.add("active");
-    targetPanel.classList.add("active");
-  });
-});
-// carea top and history end
+      if (this.classList.contains("active")) return;
 
-// service start
-document.querySelectorAll(".pricing-btn").forEach(function (btn) {
-  btn.addEventListener("click", function (e) {
-    e.preventDefault();
+      // Remove active from all
+      headings.forEach((h) => h.classList.remove("active"));
+      panels.forEach((p) => p.classList.remove("active"));
 
-    // Remove active class from all footers
-    document.querySelectorAll(".pricing_footer").forEach(function (footer) {
-      footer.classList.remove("active");
+      // Activate selected
+      this.classList.add("active");
+      targetPanel.classList.add("active");
     });
-
-    // Add active class to the clicked button's footer
-    const footer = btn.closest(".pricing_footer");
-    footer.classList.add("active");
   });
-});
-//service end
+  // carea top and history end
 
-//hamburger start
+  // doctor start
+  const message = document.querySelector(".consultancy-right-lower");
+  const toggleButtons = document.querySelectorAll(".doctor-btn, .contact-btn");
+
+  toggleButtons.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      message.classList.toggle("show");
+    });
+  });
+  // doctor end
+
+  //hamburger start
 
   setTimeout(function () {
     const hamburger = document.getElementById("hamburger");
@@ -131,18 +138,18 @@ document.querySelectorAll(".pricing-btn").forEach(function (btn) {
 
   //humburger end
 
-//faq start
-document.querySelectorAll(".faq-question").forEach((question) => {
-  question.addEventListener("click", () => {
-    const item = question.parentElement;
-    const answer = item.querySelector(".faq-answer");
-    const isActive = item.classList.contains("active");
+  //faq start
+  document.querySelectorAll(".faq-question").forEach((question) => {
+    question.addEventListener("click", () => {
+      const item = question.parentElement;
+      const answer = item.querySelector(".faq-answer");
+      const isActive = item.classList.contains("active");
 
-    // Close all
-    document.querySelectorAll(".faq-item").forEach((el) => {
-      el.classList.remove("active");
-      el.querySelector(".faq-answer").style.maxHeight = null;
-    });
+      // Close all
+      document.querySelectorAll(".faq-item").forEach((el) => {
+        el.classList.remove("active");
+        el.querySelector(".faq-answer").style.maxHeight = null;
+      });
 
       // Open clicked
       if (!isActive) {
