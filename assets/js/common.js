@@ -1,194 +1,177 @@
 // Your JavaScript code goes here
-const btn = document.querySelector(".top-btn");
+// top-to-btn
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 200) {
-    btn.classList.remove("nottop");
-  } else {
-    btn.classList.add("nottop");
+// top care&amentities start
+
+// top care&amentities end
+
+// top about me start
+// top about me end
+
+//carea top and history start
+const headings = document.querySelectorAll(".lower-carea-h4");
+const panels = document.querySelectorAll(".lower-carea-panel");
+
+headings.forEach((heading) => {
+  heading.addEventListener("click", function () {
+    const targetId = this.getAttribute("data-target");
+    const targetPanel = document.getElementById(targetId);
+
+    if (this.classList.contains("active")) return;
+
+    // Remove active from all
+    headings.forEach((h) => h.classList.remove("active"));
+    panels.forEach((p) => p.classList.remove("active"));
+
+    // Activate selected
+    this.classList.add("active");
+    targetPanel.classList.add("active");
+  });
+});
+// carea top and history end
+
+// service start
+document.querySelectorAll(".pricing-btn").forEach(function (btn) {
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    // Remove active class from all footers
+    document.querySelectorAll(".pricing_footer").forEach(function (footer) {
+      footer.classList.remove("active");
+    });
+
+    // Add active class to the clicked button's footer
+    const footer = btn.closest(".pricing_footer");
+    footer.classList.add("active");
+  });
+});
+//service end
+
+//hamburger start
+
+setTimeout(function () {
+  const hamburger = document.getElementById("hamburger");
+  const sidebar = document.getElementById("sidebar");
+  const overlay = document.getElementById("sidebarOverlay");
+  const closeBtn = document.getElementById("closeSidebar");
+  const submenuToggle = document.getElementById("submenuToggle");
+  const submenu = document.getElementById("submenu");
+  const submenuArrow = document.getElementById("submenuArrow");
+
+  // Hamburger menu click
+  if (hamburger) {
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      if (sidebar) sidebar.classList.toggle("active");
+      if (overlay) overlay.classList.toggle("active");
+    });
   }
+
+  // Close button click
+  if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+      if (sidebar) sidebar.classList.remove("active");
+      if (overlay) overlay.classList.remove("active");
+      if (hamburger) hamburger.classList.remove("active");
+    });
+  }
+
+  // Overlay click
+  if (overlay) {
+    overlay.addEventListener("click", () => {
+      if (sidebar) sidebar.classList.remove("active");
+      overlay.classList.remove("active");
+      if (hamburger) hamburger.classList.remove("active");
+    });
+  }
+  if (submenuArrow && submenu) {
+    submenuArrow.addEventListener("click", (e) => {
+      e.stopPropagation(); // Prevent triggering other click events
+      submenu.style.display =
+        submenu.style.display === "block" ? "none" : "block";
+      submenuArrow.classList.toggle("rotate");
+    });
+  }
+}, 2000);
+//humburger end
+
+//faq start
+document.querySelectorAll(".faq-question").forEach((question) => {
+  question.addEventListener("click", () => {
+    const item = question.parentElement;
+    const answer = item.querySelector(".faq-answer");
+    const isActive = item.classList.contains("active");
+
+    // Close all
+    document.querySelectorAll(".faq-item").forEach((el) => {
+      el.classList.remove("active");
+      el.querySelector(".faq-answer").style.maxHeight = null;
+    });
+
+    // Open clicked
+    if (!isActive) {
+      item.classList.add("active");
+      answer.style.maxHeight = answer.scrollHeight + "px";
+    }
+  });
 });
+//faq end
 
-btn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
+//counter setup start faq
+$(document).ready(function () {
+  $(".number span").counterUp({
+    delay: 10,
+    time: 3000,
+  });
 });
+//counter setup end faq
 
+//blog single start
+document.querySelectorAll(".app-wrapper").forEach((wrapper) => {
+  const baseImg = wrapper.querySelector(".base-img");
+  const floatImg = wrapper.querySelector(".float-img");
 
+  let currentY = 0;
+  let targetY = 0;
+  let opacity = 0;
+  let targetOpacity = 0;
+  let animationFrame;
+  let easing = 0.1;
 
-  // top-to-btn
+  function animate() {
+    currentY += (targetY - currentY) * easing;
+    opacity += (targetOpacity - opacity) * easing;
 
-  // top care&amentities start
+    floatImg.style.transform = `translateY(${currentY}px)`;
+    floatImg.style.opacity = opacity;
 
-  // top care&amentities end
-
-  // top about me start
-  // top about me end
-
-  //carea top and history start
-  const headings = document.querySelectorAll(".lower-carea-h4");
-  const panels = document.querySelectorAll(".lower-carea-panel");
-
-  headings.forEach((heading) => {
-    heading.addEventListener("click", function () {
-      const targetId = this.getAttribute("data-target");
-      const targetPanel = document.getElementById(targetId);
-
-      if (this.classList.contains("active")) return;
-
-      // Remove active from all
-      headings.forEach((h) => h.classList.remove("active"));
-      panels.forEach((p) => p.classList.remove("active"));
-
-      // Activate selected
-      this.classList.add("active");
-      targetPanel.classList.add("active");
-    });
-  });
-  // carea top and history end
-
-  // service start
-  document.querySelectorAll(".pricing-btn").forEach(function (btn) {
-    btn.addEventListener("click", function (e) {
-      e.preventDefault();
-
-      // Remove active class from all footers
-      document.querySelectorAll(".pricing_footer").forEach(function (footer) {
-        footer.classList.remove("active");
-      });
-
-      // Add active class to the clicked button's footer
-      const footer = btn.closest(".pricing_footer");
-      footer.classList.add("active");
-    });
-  });
-  //service end
-
-  //hamburger start
-
-  setTimeout(function () {
-    const hamburger = document.getElementById("hamburger");
-    const sidebar = document.getElementById("sidebar");
-    const overlay = document.getElementById("sidebarOverlay");
-    const closeBtn = document.getElementById("closeSidebar");
-    const submenuToggle = document.getElementById("submenuToggle");
-    const submenu = document.getElementById("submenu");
-    const submenuArrow = document.getElementById("submenuArrow");
-
-    // Hamburger menu click
-    if (hamburger) {
-      hamburger.addEventListener("click", () => {
-        hamburger.classList.toggle("active");
-        if (sidebar) sidebar.classList.toggle("active");
-        if (overlay) overlay.classList.toggle("active");
-      });
+    if (
+      Math.abs(currentY - targetY) > 0.1 ||
+      Math.abs(opacity - targetOpacity) > 0.01
+    ) {
+      animationFrame = requestAnimationFrame(animate);
     }
+  }
 
-    // Close button click
-    if (closeBtn) {
-      closeBtn.addEventListener("click", () => {
-        if (sidebar) sidebar.classList.remove("active");
-        if (overlay) overlay.classList.remove("active");
-        if (hamburger) hamburger.classList.remove("active");
-      });
-    }
-
-    // Overlay click
-    if (overlay) {
-      overlay.addEventListener("click", () => {
-        if (sidebar) sidebar.classList.remove("active");
-        overlay.classList.remove("active");
-        if (hamburger) hamburger.classList.remove("active");
-      });
-    }
-    if (submenuArrow && submenu) {
-      submenuArrow.addEventListener("click", (e) => {
-        e.stopPropagation(); // Prevent triggering other click events
-        submenu.style.display =
-          submenu.style.display === "block" ? "none" : "block";
-        submenuArrow.classList.toggle("rotate");
-      });
-    }
-  }, 2000);
-  //humburger end
-
-  //faq start
-  document.querySelectorAll(".faq-question").forEach((question) => {
-    question.addEventListener("click", () => {
-      const item = question.parentElement;
-      const answer = item.querySelector(".faq-answer");
-      const isActive = item.classList.contains("active");
-
-      // Close all
-      document.querySelectorAll(".faq-item").forEach((el) => {
-        el.classList.remove("active");
-        el.querySelector(".faq-answer").style.maxHeight = null;
-      });
-
-      // Open clicked
-      if (!isActive) {
-        item.classList.add("active");
-        answer.style.maxHeight = answer.scrollHeight + "px";
-      }
-    });
+  wrapper.addEventListener("mouseenter", () => {
+    baseImg.style.opacity = "0";
+    targetY = -7;
+    targetOpacity = 1;
+    easing = 0.05;
+    cancelAnimationFrame(animationFrame);
+    animate();
   });
-  //faq end
 
-  //counter setup start faq
-  $(document).ready(function () {
-    $(".number span").counterUp({
-      delay: 10,
-      time: 3000,
-    });
+  wrapper.addEventListener("mouseleave", () => {
+    baseImg.style.opacity = "1";
+    targetY = 0;
+    targetOpacity = 0;
+    easing = 0.05;
+    cancelAnimationFrame(animationFrame);
+    animate();
   });
-  //counter setup end faq
-
-  //blog single start
-  document.querySelectorAll(".app-wrapper").forEach((wrapper) => {
-    const baseImg = wrapper.querySelector(".base-img");
-    const floatImg = wrapper.querySelector(".float-img");
-
-    let currentY = 0;
-    let targetY = 0;
-    let opacity = 0;
-    let targetOpacity = 0;
-    let animationFrame;
-    let easing = 0.1;
-
-    function animate() {
-      currentY += (targetY - currentY) * easing;
-      opacity += (targetOpacity - opacity) * easing;
-
-      floatImg.style.transform = `translateY(${currentY}px)`;
-      floatImg.style.opacity = opacity;
-
-      if (
-        Math.abs(currentY - targetY) > 0.1 ||
-        Math.abs(opacity - targetOpacity) > 0.01
-      ) {
-        animationFrame = requestAnimationFrame(animate);
-      }
-    }
-
-    wrapper.addEventListener("mouseenter", () => {
-      baseImg.style.opacity = "0";
-      targetY = -7;
-      targetOpacity = 1;
-      easing = 0.05;
-      cancelAnimationFrame(animationFrame);
-      animate();
-    });
-
-    wrapper.addEventListener("mouseleave", () => {
-      baseImg.style.opacity = "1";
-      targetY = 0;
-      targetOpacity = 0;
-      easing = 0.05;
-      cancelAnimationFrame(animationFrame);
-      animate();
-    });
-  });
-  //blog singel end
 });
+//blog singel end
 
 // Your jQuery code goes here
 // ads slider start
