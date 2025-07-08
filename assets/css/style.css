@@ -1058,6 +1058,11 @@
     text-align: left;
 }
 
+.aboutus-our-team-section {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+}
+
 @media screen and (max-width:1201px) {
     .stuff-team-wrapper {
         margin-left: 40px;
@@ -3693,10 +3698,12 @@
     font-size: 16px;
     cursor: pointer;
 }
-.bs-breadcrumb-items:hover{
+
+.bs-breadcrumb-items:hover {
     color: #0a3380;
     opacity: 1;
 }
+
 .bs-breadcrumb-item.active {
     font-weight: 700;
     color: #0a3380;
@@ -3760,9 +3767,11 @@
     font-weight: 800;
     color: #aeb6c2;
 }
-.bydeveloper:hover{
-    color:#2ea6f7;
+
+.bydeveloper:hover {
+    color: #2ea6f7;
 }
+
 .blog-single-date {
     position: relative;
 }
@@ -3790,9 +3799,11 @@
     margin-bottom: -1px;
     background-color: #aeb6c2;
 }
-.developer:hover::after{
-    background-color:#2ea6f7;
+
+.developer:hover::after {
+    background-color: #2ea6f7;
 }
+
 .blog-single-date::after {
     content: "";
     position: absolute;
