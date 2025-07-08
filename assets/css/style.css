@@ -25,6 +25,7 @@
 .top-slider {
     overflow: hidden;
     position: relative;
+    margin-top: 91px;
 }
 
 .top-slider-content {
@@ -1245,6 +1246,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 91px;
 }
 
 .history-h2 {
@@ -1851,6 +1853,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 91px;
 }
 
 .inner-service {
@@ -2288,6 +2291,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 91px;
 }
 
 .inner-doctor {
@@ -4460,6 +4464,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 91px;
 }
 
 .inner-contacts {
