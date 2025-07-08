@@ -955,7 +955,7 @@
     text-align: center;
     font-family: "Ubuntu";
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 21px;
 }
 
 .our-feature::before,
@@ -963,8 +963,8 @@
     content: "";
     position: absolute;
     z-index: 1;
-    width: 15px;
-    height: 2px;
+    width: 10px;
+    height: 3px;
     border-radius: 2px;
     top: 50%;
     transform: translateY(-50%);
@@ -1149,6 +1149,15 @@
 
     .aboutus {
         margin-bottom: 50px;
+    }
+
+    .circle-feature-section {
+        gap: 40px;
+        padding: 30px 20px 30px;
+    }
+
+    .our-feature-cover {
+        padding-top: 73px;
     }
 }
 
@@ -2418,7 +2427,6 @@
 
 /* flex end */
 .our-team-section {
-    background-color: #f9f9f9;
     border-bottom: 1px solid #e5e5e5;
 }
 
@@ -2917,7 +2925,7 @@
     height: 3px;
     border-radius: 2px;
     top: 47%;
-    left: 58px;
+    left: 64px;
     transform: translateY(-50%);
     background-color: #ff9e21;
 }
@@ -3087,6 +3095,10 @@
 @media screen and (max-width:768px) {
     .faq {
         margin-bottom: 45px;
+    }
+
+    .support-center.above {
+        padding-top: 81px;
     }
 }
 
@@ -3629,6 +3641,13 @@
 .bs-breadcrumb-item {
     opacity: 0.8;
     font-weight: 400;
+    font-family: "Nunito";
+    font-size: 16px;
+}
+
+.bs-breadcrumb-item:hover {
+    color: #0a3380;
+    opacity: 1;
 }
 
 .bs-breadcrumb-item+.bs-breadcrumb-items::before {
@@ -3647,14 +3666,22 @@
     text-decoration: none;
     color: #0a3380;
     font-weight: 700;
+    font-family: "Nunito";
+    font-size: 16px;
 }
 
 .bs-breadcrumb-items {
     color: #0a3380;
     font-weight: 700;
     opacity: 0.8;
+    font-family: "Nunito";
+    font-size: 16px;
+    cursor: pointer;
 }
-
+.bs-breadcrumb-items:hover{
+    color: #0a3380;
+    opacity: 1;
+}
 .bs-breadcrumb-item.active {
     font-weight: 700;
     color: #0a3380;
@@ -3680,7 +3707,7 @@
 .beauty {
     display: flex;
     gap: 34px;
-    padding: 40px 0 30px;
+    padding: 40px 0 10px;
     font-family: "Nunito";
     font-size: 14px;
     font-weight: 800;
@@ -3718,7 +3745,9 @@
     font-weight: 800;
     color: #aeb6c2;
 }
-
+.bydeveloper:hover{
+    color:#2ea6f7;
+}
 .blog-single-date {
     position: relative;
 }
@@ -3746,7 +3775,9 @@
     margin-bottom: -1px;
     background-color: #aeb6c2;
 }
-
+.developer:hover::after{
+    background-color:#2ea6f7;
+}
 .blog-single-date::after {
     content: "";
     position: absolute;
@@ -3794,7 +3825,7 @@
     color: #3b4964;
     font-weight: 500;
     line-height: 1.8;
-    margin-top: 20px;
+    margin-top: 12px;
     display: block;
     text-align: justify;
 }
@@ -3919,7 +3950,7 @@
     font-size: 14px;
     font-weight: 500;
     text-decoration: none;
-    width: 90px;
+    width: 103px;
     height: 35px;
     display: flex;
     justify-content: center;
