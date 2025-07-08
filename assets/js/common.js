@@ -278,7 +278,8 @@ $(function () {
       autoplay: true,
       autoplaySpeed: 2000,
       speed: 600,
-      cssEase: "ease",
+      fade: true,
+      cssEase: "ease-in-out",
       dots: false,
       responsive: [
         {
