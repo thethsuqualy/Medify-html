@@ -3109,7 +3109,6 @@
 .blog2column-slider-sidebar-wrapper {
     padding-bottom: 72px;
     border-bottom: 1px solid #e5e5e5;
-    margin-bottom: 90px;
 }
 
 .blog2column-header {
@@ -3181,6 +3180,7 @@
 
 .slider-wrapper {
     position: relative;
+    cursor: pointer;
 }
 
 .badge {
@@ -3655,7 +3655,6 @@
 .blogsingle-sidebar-wrapper {
     border-bottom: 1px solid #e5e5e5;
     padding-bottom: 84px;
-    margin-bottom: 81px;
 }
 
 
@@ -4780,7 +4779,6 @@
 .error-wrapper {
     padding-bottom: 72px;
     border-bottom: 1px solid #e5e5e5;
-    margin-bottom: 90px;
 }
 
 @media screen and (max-width:768px) {

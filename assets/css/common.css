@@ -138,6 +138,7 @@ Background Color
   z-index: 9999;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
+
 .hide-header .clinic-header {
   display: none;
 }
@@ -534,7 +535,7 @@ Background Color
   justify-content: space-between;
   align-items: start;
   flex-wrap: wrap;
-  margin-top: 70px;
+  margin-top: 100px;
 }
 
 .our-contacts-ttl {
@@ -579,6 +580,7 @@ Background Color
   max-width: 400px;
   width: 100%;
   padding-bottom: 20px;
+  cursor: pointer;
 }
 
 .our-phone {
@@ -587,6 +589,7 @@ Background Color
   max-width: 400px;
   width: 100%;
   padding-bottom: 20px;
+  cursor: pointer;
 }
 
 .our-opening-clock {
@@ -595,6 +598,7 @@ Background Color
   max-width: 400px;
   width: 100%;
   padding-bottom: 20px;
+  cursor: pointer;
 }
 
 .open-hour-ttl {
@@ -1826,7 +1830,12 @@ Background Color
   font-family: "Ubuntu";
   background: #fff;
   border-radius: 5px;
+  cursor: pointer;
+}
 
+.emergency-call:hover {
+  color: #ffffff;
+  background: #2ea6f7;
 }
 
 .emergencycall-wrapper {
