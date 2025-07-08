@@ -3269,6 +3269,11 @@
     width: 100%;
     font-weight: 800;
     line-height: 1.6;
+    cursor: pointer;
+}
+
+.post-title:hover {
+    color: #54ced4;
 }
 
 .sidebar-sticky {
