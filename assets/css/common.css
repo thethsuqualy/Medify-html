@@ -990,7 +990,7 @@ Background Color
   text-align: center;
   font-family: "Ubuntu";
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 21px;
 }
 
 .top-adv-services::before,
@@ -998,8 +998,8 @@ Background Color
   content: "";
   position: absolute;
   z-index: 1;
-  width: 15px;
-  height: 2px;
+  width: 10px;
+  height: 3px;
   border-radius: 2px;
   top: 50%;
   transform: translateY(-50%);
