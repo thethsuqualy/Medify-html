@@ -1142,6 +1142,15 @@
     .aboutus {
         margin-bottom: 50px;
     }
+
+    .our-feature-cover {
+        padding-top: 73px;
+    }
+
+    .circle-feature-section {
+
+        padding: 40px 20px 0px;
+    }
 }
 
 @media screen and (max-width: 539px) {
