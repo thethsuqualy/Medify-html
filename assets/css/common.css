@@ -129,6 +129,19 @@ Background Color
   background: #ffffff;
 }
 
+.header-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  z-index: 9999;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.hide-header .clinic-header {
+  display: none;
+}
+
 .clinic-header {
   display: flex;
   justify-content: space-between;
@@ -1092,6 +1105,13 @@ Background Color
   margin: 0 auto;
 }
 
+.top-our-media {
+  padding: 10px;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
 .family-care-img,
 .pediatrics-care-img,
 .adv-care-img {
@@ -1156,6 +1176,7 @@ Background Color
   color: #ffffff;
   padding: 18px 0px 10px;
 }
+
 /* 
 .top-number {
   font-family: "Ubuntu";
@@ -1361,6 +1382,10 @@ Background Color
   margin: 80px auto 0px;
 }
 
+.top-our-media.above {
+  padding-top: 102px;
+}
+
 .counter-icons-wrapper {
   position: relative;
 }
@@ -1400,12 +1425,14 @@ Background Color
   color: #ff9e21;
   padding: 18px 0px 10px;
 }
+
 .top-counter-wrapper .num::after {
   content: "+";
   font-weight: bold;
   color: #ff9e21;
   margin-left: -8px;
 }
+
 /* faq support center end */
 
 /* company ads slider start */

@@ -49,6 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Toggle body scroll
         document.body.classList.toggle("no-scroll");
+        document.body.classList.toggle("hide-header");
       });
     }
 
@@ -61,6 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Remove no-scroll
         document.body.classList.remove("no-scroll");
+         document.body.classList.remove("hide-header");
       });
     }
 
@@ -73,6 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Remove no-scroll
         document.body.classList.remove("no-scroll");
+         document.body.classList.remove("hide-header");
       });
     }
 
