@@ -64,7 +64,7 @@
 .top-slider-p {
     font-family: 'Nunito';
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 500;
     color: #0a3380;
     line-height: 1.5;
     max-width: 600px;
@@ -112,7 +112,7 @@
     font-size: 42px;
     color: #ffffff;
     font-weight: 700;
-    margin: 20px 0;
+    margin: 15px 0;
     line-height: 1.4;
 }
 
@@ -150,7 +150,7 @@
 .top-benefit-right {
     max-width: calc(100% - 645px);
     line-height: 1.7;
-    margin-top: 40px;
+    margin-top: 46px;
 }
 
 .benefit {
@@ -228,7 +228,7 @@
 }
 
 .top-counter {
-    margin-top: -70px;
+    margin-top: -55px;
 }
 
 .about-me {
@@ -463,7 +463,7 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        row-gap: 30px;
+        row-gap: 60px;
     }
 
     .top-benefit-flex {
@@ -647,6 +647,10 @@
         font-size: 32px;
     }
 
+    .top-counter {
+        margin-top: -95px;
+    }
+
     .about-me-flex {
         margin: 60px auto;
         gap: 30px;
@@ -713,6 +717,9 @@
 
     .care-a-h3.history-header {
         font-size: 30px;
+    }
+    .benefit-card-wrapper{
+        row-gap: 40px;
     }
 }
 
@@ -1280,6 +1287,10 @@
     color: #0a3380;
     opacity: 0.7;
     font-weight: 700;
+}
+
+.breadcrumb-item a:hover {
+    opacity: 1;
 }
 
 .breadcrumb-item.active {
