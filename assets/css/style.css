@@ -305,7 +305,7 @@
 }
 
 .care-a-content.about-me-care {
-    padding: 60px 30px;
+    padding: 60px 30px 60px 47px;
     border-radius: 15px;
     margin: 0 20px 0 auto;
 }
@@ -718,7 +718,8 @@
     .care-a-h3.history-header {
         font-size: 30px;
     }
-    .benefit-card-wrapper{
+
+    .benefit-card-wrapper {
         row-gap: 40px;
     }
 }
@@ -1391,7 +1392,7 @@
     font-size: 18px;
     line-height: 2;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .history-card-wrapper {
@@ -1472,6 +1473,7 @@
     margin: 0 auto;
     font-size: 14px;
     font-family: 'Ubuntu';
+    font-weight: 700;
 }
 
 .our-history-label::before {
@@ -2377,6 +2379,7 @@
 
 .our-skill-h3 {
     margin-bottom: 40px;
+    line-height: 1.4;
 }
 
 .content-bar {
@@ -2430,7 +2433,6 @@
 /* flex end */
 .our-team-section {
     background-color: #f9f9f9;
-    border-bottom: 1px solid #e5e5e5;
 }
 
 .our-team-container {
@@ -2447,6 +2449,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
+    padding-top: 30px;
 }
 
 .doctor-card {
@@ -4543,6 +4546,11 @@
     font-family: 'Nunito';
     color: #2ea6f7;
     font-weight: 900;
+    cursor: pointer;
+}
+
+.contact-icon-label:hover {
+    color: #000;
 }
 
 .contact-address {
@@ -4593,7 +4601,7 @@
 
 .right-contact {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    padding: 30px 50px;
+    padding: 35px 50px 30px 50px;
     border-radius: 15px;
     max-width: calc(100% - 440px);
     width: 100%;
