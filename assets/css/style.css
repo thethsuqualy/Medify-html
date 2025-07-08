@@ -387,6 +387,12 @@
     color: #3b4964;
 }
 
+.top-our-media-wrapper {
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 80px;
+    background-color: #f9f9f9;
+}
+
 /* top our team card end */
 @media screen and (max-width: 1300px) {
     .top-mv-slider {
@@ -798,6 +804,7 @@
 
 .aboutus-section {
     font-family: "Nunito";
+    margin-top: 91px;
 }
 
 .aboutus {
@@ -2833,6 +2840,7 @@
 
 .faq-section {
     font-family: "Nunito";
+    margin-top: 91px;
 }
 
 .faq {
@@ -3114,6 +3122,7 @@
 
 .blog2column-section {
     font-family: "Nunito";
+    margin-top: 91px;
 }
 
 .blog2column {
@@ -3563,6 +3572,7 @@
     justify-content: center;
     padding: 80px 20px 88px;
     text-align: center;
+    margin-top: 91px;
 }
 
 .inner-blogsingle {
@@ -4700,6 +4710,7 @@
 
 .error-section {
     font-family: "Nunito";
+    margin-top: 91px;
 }
 
 .error {
