@@ -1531,7 +1531,7 @@ Background Color
   font-size: 28px;
   font-weight: 400;
   font-family: 'Ubuntu';
-  margin: 50px 0 30px 0;
+  margin: 40px 0 20px 0;
   line-height: 1.5;
 }
 
@@ -1553,7 +1553,7 @@ Background Color
 
 @media screen and (max-width: 380px) {
   .call-center-label {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .call-center-no {
