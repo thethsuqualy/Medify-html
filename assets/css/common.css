@@ -763,6 +763,7 @@ Background Color
   .footer-wrapper {
     flex-direction: column;
     margin: 0 90px;
+    padding-top: 30px;
   }
 
   .open-hours {
@@ -1470,6 +1471,12 @@ Background Color
   max-height: 70px;
   max-width: 100%;
   object-fit: contain;
+}
+
+@media screen and (max-width:768px) {
+  .top-our-media.above {
+    padding-top: 42px;
+  }
 }
 
 /* Animation */
