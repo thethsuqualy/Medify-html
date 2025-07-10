@@ -305,7 +305,7 @@
 }
 
 .care-a-content.about-me-care {
-    padding: 60px 30px 60px 30px;
+    padding: 60px 25px 60px 30px;
     border-radius: 15px;
     margin: 0 20px 0 auto;
 }
@@ -658,6 +658,11 @@
 
     .top-our-media-wrapper {
         padding-bottom: 20px;
+    }
+
+    .about-me-h3.history-header {
+        font-size: 35px;
+        max-width: 100%;
     }
 }
 
@@ -1579,6 +1584,7 @@
     margin-bottom: 20px;
     line-height: 1.8;
     font-weight: 500;
+    text-align: justify;
 }
 
 .lower-carea {
@@ -1588,7 +1594,7 @@
     font-size: 18px;
     display: flex;
     margin-bottom: 30px;
-    padding: 5px 43px 20px 0;
+    padding: 5px 0px 20px 0;
 }
 
 .lower-carea-h4 {
