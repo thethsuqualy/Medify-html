@@ -1454,10 +1454,11 @@ Background Color
 .logo-slider-track {
   display: flex;
   width: max-content;
-  animation: scrollLogos 20s linear infinite;
+  /* animation: scrollLogos 290s linear infinite; */
 }
 
 .ad-slider {
+  flex: 0 0 auto;
   width: 200px;
   height: 70px;
   display: flex;
@@ -1466,22 +1467,27 @@ Background Color
   margin: 0 20px;
 }
 
+.ad-slider.slick-slide{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .ad-slider img {
   max-height: 70px;
-  max-width: 100%;
+  width: auto;
   object-fit: contain;
 }
 
 /* Animation */
-@keyframes scrollLogos {
+/* @keyframes scrollLogos {
   0% {
     transform: translateX(0);
   }
-
   100% {
     transform: translateX(-50%);
   }
-}
+} */
 
 @media screen and (max-width: 768px) {
   .logo-slider-wrapper {
