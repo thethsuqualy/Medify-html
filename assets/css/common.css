@@ -1455,7 +1455,6 @@ Background Color
 .logo-slider-track {
   display: flex;
   width: max-content;
-  /* animation: scrollLogos 290s linear infinite; */
 }
 
 .ad-slider {
@@ -1485,16 +1484,6 @@ Background Color
     padding-top: 42px;
   }
 }
-
-/* Animation */
-/* @keyframes scrollLogos {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-} */
 
 @media screen and (max-width: 768px) {
   .logo-slider-wrapper {
