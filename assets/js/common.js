@@ -233,7 +233,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // Your jQuery code goes here
 // ads slider start
 $(function () {
-  $(".logo-slider-track").slick({
+  $(".logo-slider").slick({
     slidesToShow: 6,
     slidesToScroll: 1,
     infinite: true,

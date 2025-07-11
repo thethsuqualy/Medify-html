@@ -3291,7 +3291,7 @@
 }
 
 .wlslider.slick-slide {
-    opacity: 0 ;
+    opacity: 0;
     transition: opacity 1.5s ease-in-out !important;
     transform: scale(1, 1);
 }
