@@ -3291,12 +3291,12 @@
 }
 
 .wlslider.slick-slide {
-    opacity: 0 !important;
+    opacity: 0 ;
     transition: opacity 1.5s ease-in-out !important;
     transform: scale(1, 1);
 }
 
-.wlslider .slick-slide.slick-current {
+.wlslider.slick-slide.slick-current {
     opacity: 1 !important;
     transform: scale(1, 1);
 }
