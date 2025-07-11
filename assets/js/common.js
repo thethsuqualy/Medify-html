@@ -223,11 +223,14 @@ document.addEventListener("DOMContentLoaded", () => {
       baseImg.style.opacity = "1";
       targetY = 0;
       targetOpacity = 0;
-      easing = 0.05;
+      easing = 0.07;
       cancelAnimationFrame(animationFrame);
       animate();
     });
   });
+
+
+
   //blog singel end
 });
 // Your jQuery code goes here
