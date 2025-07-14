@@ -263,6 +263,7 @@ $(function () {
       speed: 1000,
       fade: true,
       cssEase: "ease-in-out",
+      pauseOnHover:false,
       dots: false,
       responsive: [
         {
