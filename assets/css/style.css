@@ -196,10 +196,11 @@
 
 .benefit-card-label {
     max-width: 250px;
-    font-family: 'Ubuntu';
+    font-family: 'Ubuntu',sans-serif;
     font-weight: 700;
     font-size: 24px;
-    padding: 18px 33px 18px 33px;
+    padding: 18px 20px 18px 20px;
+    text-align: center;
     border-radius: 10px 10px 10px 10px;
     color: #0a3380;
     background-color: #ffffff;
