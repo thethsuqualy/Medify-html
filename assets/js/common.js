@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const elemPos = $(elem).offset().top;
     const scroll = $(window).scrollTop();
     const windowHeight = $(window).height();
-    return scroll >= elemPos - windowHeight + 110;
+    return scroll >= elemPos - windowHeight + 30;
   }
 
   setTimeout(function () {
