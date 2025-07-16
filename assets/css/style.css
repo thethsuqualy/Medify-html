@@ -661,6 +661,9 @@
         font-size: 35px;
         max-width: 100%;
     }
+      .top-our-media-wrapper {
+        padding-bottom: 50px;
+    }
 }
 
 /* top our team sp */
