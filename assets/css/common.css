@@ -451,7 +451,6 @@ Background Color
 .has-submenu {
   cursor: pointer;
   display: block;
-  /* padding: 12px 0; */
   font-size: 16px;
   font-family: "Ubuntu";
 }
@@ -485,18 +484,28 @@ Background Color
   border: none;
 }
 
-.sidebar.active {
-  left: 0;
-}
-
-.sidebar-overlay.active {
-  display: block;
-}
-
 .close-btn {
   font-size: 26px;
   cursor: pointer;
   color: #fff;
+}
+
+@media (min-width: 769px) {
+  .sidebar {
+    left: -416px !important;
+  }
+
+  .sidebar-overlay {
+    display: none !important;
+  }
+
+  .menu {
+    display: flex !important;
+  }
+
+  .hamburger-menu {
+    display: none !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -504,8 +513,16 @@ Background Color
     display: block;
   }
 
+  .sidebar.active {
+    left: 0;
+  }
+
   .menu {
     display: none;
+  }
+
+  .sidebar-overlay.active {
+    display: block;
   }
 
   .header {
@@ -519,8 +536,22 @@ Background Color
   .clinic-logo-img {
     display: none;
   }
-
 }
+
+/* @media (min-width: 769px) {
+  .sidebar {
+    left: -416px !important;
+  }
+  .sidebar-overlay {
+    display: none !important;
+  }
+  .menu {
+    display: flex !important;
+  }
+  .hamburger-menu {
+    display: none !important;
+  }
+} */
 
 /* end header */
 
@@ -1469,7 +1500,7 @@ Background Color
   margin: 0 20px;
 }
 
-.ad-slider.slick-slide{
+.ad-slider.slick-slide {
   display: flex;
   align-items: center;
   justify-content: center;

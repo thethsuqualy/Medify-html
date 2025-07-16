@@ -76,6 +76,91 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //hamburger start
 
+  // setTimeout(function () {
+  //   const hamburger = document.getElementById("hamburger");
+  //   const sidebar = document.getElementById("sidebar");
+  //   const overlay = document.getElementById("sidebarOverlay");
+  //   const closeBtn = document.getElementById("closeSidebar");
+  //   const submenuArrow = document.getElementById("submenuArrow");
+  //   const submenu = document.getElementById("submenu");
+  //   const submenuToggle = document.getElementById("submenuToggle");
+  //   const sidebarLinks = document.querySelectorAll(
+  //     ".sidebar-link, .submenu-link"
+  //   );
+
+  //   // Hamburger toggle
+  //   if (hamburger) {
+  //     hamburger.addEventListener("click", () => {
+  //       hamburger.classList.toggle("active");
+  //       sidebar?.classList.toggle("active");
+  //       overlay?.classList.toggle("active");
+
+  //       // Toggle body scroll
+  //       document.body.classList.toggle("no-scroll");
+  //       document.body.classList.toggle("hide-header");
+  //     });
+  //   }
+
+  //   // Close sidebar
+  //   if (closeBtn) {
+  //     closeBtn.addEventListener("click", () => {
+  //       sidebar?.classList.remove("active");
+  //       overlay?.classList.remove("active");
+  //       hamburger?.classList.remove("active");
+
+  //       // Remove no-scroll
+  //       document.body.classList.remove("no-scroll");
+  //       document.body.classList.remove("hide-header");
+  //     });
+  //   }
+
+  //   // Overlay click
+  //   if (overlay) {
+  //     overlay.addEventListener("click", () => {
+  //       sidebar?.classList.remove("active");
+  //       overlay.classList.remove("active");
+  //       hamburger?.classList.remove("active");
+
+  //       // Remove no-scroll
+  //       document.body.classList.remove("no-scroll");
+  //       document.body.classList.remove("hide-header");
+  //     });
+  //   }
+
+  //   if (submenuToggle && submenu && submenuArrow) {
+  //     submenuToggle.addEventListener("click", (e) => {
+  //       e.stopPropagation();
+  //       const isOpen = submenu.style.display === "block";
+
+  //       submenu.style.display = isOpen ? "none" : "block";
+  //       submenuToggle.classList.toggle("active", !isOpen);
+  //       submenuArrow.classList.toggle("rotate", !isOpen);
+  //     });
+  //   }
+
+  //   // Highlight current page link and parent submenu
+  //   const currentPath = window.location.pathname.split("/").pop();
+
+  //   sidebarLinks.forEach((link) => {
+  //     const linkPath = link.getAttribute("href");
+  //     if (
+  //       linkPath === currentPath ||
+  //       (linkPath === "index.html" && currentPath === "")
+  //     ) {
+  //       link.classList.add("active");
+
+  //       // If it's a submenu link, also highlight the parent menu
+  //       if (link.classList.contains("submenu-link")) {
+  //         submenuToggle.classList.add("active");
+  //         submenuArrow.classList.add("active");
+  //       }
+  //     } else {
+  //       link.classList.remove("active");
+  //     }
+  //   });
+    
+  // }, 2000);
+
   setTimeout(function () {
     const hamburger = document.getElementById("hamburger");
     const sidebar = document.getElementById("sidebar");
@@ -108,25 +193,24 @@ document.addEventListener("DOMContentLoaded", () => {
         overlay?.classList.remove("active");
         hamburger?.classList.remove("active");
 
-        // Remove no-scroll
         document.body.classList.remove("no-scroll");
         document.body.classList.remove("hide-header");
       });
     }
 
-    // Overlay click
+    // Overlay click closes sidebar
     if (overlay) {
       overlay.addEventListener("click", () => {
         sidebar?.classList.remove("active");
         overlay.classList.remove("active");
         hamburger?.classList.remove("active");
 
-        // Remove no-scroll
         document.body.classList.remove("no-scroll");
         document.body.classList.remove("hide-header");
       });
     }
 
+    // Submenu toggle
     if (submenuToggle && submenu && submenuArrow) {
       submenuToggle.addEventListener("click", (e) => {
         e.stopPropagation();
@@ -138,9 +222,8 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
-    // Highlight current page link and parent submenu
+    // Highlight current page link
     const currentPath = window.location.pathname.split("/").pop();
-
     sidebarLinks.forEach((link) => {
       const linkPath = link.getAttribute("href");
       if (
@@ -149,16 +232,32 @@ document.addEventListener("DOMContentLoaded", () => {
       ) {
         link.classList.add("active");
 
-        // If it's a submenu link, also highlight the parent menu
         if (link.classList.contains("submenu-link")) {
-          submenuToggle.classList.add("active");
-          submenuArrow.classList.add("active");
+          submenuToggle?.classList.add("active");
+          submenuArrow?.classList.add("active");
         }
       } else {
         link.classList.remove("active");
       }
     });
   }, 2000);
+
+  // ✅ Reset all mobile states when resizing to desktop
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 768) {
+      const hamburger = document.getElementById("hamburger");
+      const sidebar = document.getElementById("sidebar");
+      const overlay = document.getElementById("sidebarOverlay");
+
+      sidebar?.classList.remove("active");
+      overlay?.classList.remove("active");
+      hamburger?.classList.remove("active");
+
+      document.body.classList.remove("no-scroll");
+      document.body.classList.remove("hide-header");
+    }
+  });
+
 
   //humburger end
 
