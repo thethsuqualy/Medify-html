@@ -1814,7 +1814,7 @@
 
 @media screen and (max-width: 525px) {
     .mission-ul li:first-child::before {
-        margin-top: -33px;
+        margin-top: -36px;
     }
 
     .year {
@@ -1834,7 +1834,7 @@
 
 @media screen and (max-width: 428px) {
     .mission-ul li:nth-child(5)::before {
-        margin-top: -33px;
+        margin-top: -36px;
     }
 }
 
@@ -2266,7 +2266,7 @@
     .pricing {
         margin: 0 auto;
         background-color: #f9f9f9;
-        padding: 80px 20px 35px 20px;
+        padding: 80px 20px 65px 20px;
     }
 
     .service-icon-wrapper {
@@ -2840,7 +2840,7 @@
     }
 
     .consultancy-section {
-        margin: -90px auto 0 auto;
+        margin: -90px auto 45px auto;
     }
 
     .consultancy {
