@@ -382,6 +382,8 @@ Background Color
   display: inline-block;
   color: white;
   text-decoration: none;
+  display: flex;
+  padding: 15px 0 19px;
 }
 
 .has-submenu.active .parent-link::after {
