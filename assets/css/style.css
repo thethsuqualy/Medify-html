@@ -3252,7 +3252,9 @@
     font-family: "Nunito";
     font-weight: 700;
 }
-
+.choose-blog{
+    height:310px;
+}
 .wlslider img {
     max-width: 430px;
     height: auto;
