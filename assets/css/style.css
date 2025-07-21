@@ -50,7 +50,7 @@
 
 .top-slider-h2 {
     max-width: 680px;
-    font-family: 'Ubuntu';
+    font-family: "Ubuntu", sans-serif;
     font-size: 72px;
     font-weight: 600;
     color: #0a3380;
@@ -62,7 +62,7 @@
 }
 
 .top-slider-p {
-    font-family: 'Nunito';
+    font-family: "Nunito", sans-serif;
     font-size: 18px;
     font-weight: 500;
     color: #0a3380;
@@ -108,7 +108,7 @@
 }
 
 .top-benefit-h3 {
-    font-family: 'Ubuntu';
+    font-family: "Ubuntu", sans-serif;
     font-size: 42px;
     color: #ffffff;
     font-weight: 700;
@@ -117,7 +117,7 @@
 }
 
 .top-benefit-p {
-    font-family: 'Nunito';
+    font-family: "Nunito", sans-serif;
     font-size: 20px;
     color: #ffffff;
     font-weight: 400;
@@ -155,7 +155,7 @@
 
 .benefit {
     position: relative;
-    font-family: 'Ubuntu';
+    font-family: "Ubuntu", sans-serif;
     font-size: 14px;
     color: #ffffff;
     font-weight: 700;
@@ -196,7 +196,7 @@
 
 .benefit-card-label {
     max-width: 250px;
-    font-family: 'Ubuntu',sans-serif;
+    font-family: "Ubuntu", sans-serif;
     font-weight: 700;
     font-size: 24px;
     padding: 18px 20px 18px 20px;
@@ -237,7 +237,7 @@
     color: #ff9e21;
     max-width: 100px;
     font-size: 14px;
-    font-family: 'Ubuntu';
+    font-family: "Ubuntu", sans-serif;
     font-weight: 700;
 }
 
@@ -275,7 +275,7 @@
 }
 
 .about-me-p {
-    font-family: 'Nunito';
+    font-family: "Nunito", sans-serif;
     font-size: 16px;
     font-weight: 400;
     color: #3b4964;
@@ -349,7 +349,7 @@
     max-width: fit-content;
     font-size: 14px;
     text-align: center;
-    font-family: "Ubuntu";
+    font-family: "Nunito", sans-serif;
     margin: 0 auto;
     padding: 19px 27px 0;
 }
@@ -376,7 +376,7 @@
 }
 
 .top-ourteam-title {
-    font-family: "Ubuntu";
+    font-family: "Nunito", sans-serif;
     font-size: 42px;
     color: #0a3380;
     font-weight: 700;
@@ -384,7 +384,7 @@
 
 .top-ourteam-content {
     padding-bottom: 10px;
-    font-family: "Nunito";
+    font-family: "Nunito", sans-serif;
     font-size: 16px;
     color: #3b4964;
 }
@@ -813,7 +813,7 @@
 
 /* About us start */
 .aboutus-header {
-    font-family: "Ubuntu";
+    font-family: "Nunito", sans-serif;
     font-size: 42px;
     color: #0a3380;
     font-weight: 700;
@@ -821,7 +821,7 @@
 }
 
 .aboutus-section {
-    font-family: "Nunito";
+    font-family: "Nunito", sans-serif;
     margin-top: 91px;
 }
 
@@ -902,7 +902,7 @@
 }
 
 .feature-item h4 {
-    font-family: "Ubuntu";
+    font-family: "Nunito", sans-serif;
     font-size: 14px;
     font-weight: 700;
     margin-bottom: 14px;
@@ -918,7 +918,7 @@
 }
 
 .feature-item p {
-    font-family: "Nunito";
+    font-family: "Nunito", sans-serif;
     font-size: 16px;
     font-weight: 500;
     color: #3B4964;
@@ -970,7 +970,7 @@
     max-width: fit-content;
     font-size: 14px;
     text-align: center;
-    font-family: "Ubuntu";
+    font-family: "Nunito", sans-serif;
     margin: 0 auto;
     padding: 0 21px;
 }
@@ -997,7 +997,7 @@
 }
 
 .our-feature-header {
-    font-family: "Ubuntu";
+    font-family: "Nunito", sans-serif;
     font-size: 42px;
     color: #0a3380;
     font-weight: 700;
@@ -1006,7 +1006,7 @@
 }
 
 .our-feature-content {
-    font-family: "Nunito";
+    font-family: "Nunito", sans-serif;
     font-size: 16px;
     color: #3b4964;
     font-weight: 500;
@@ -1040,7 +1040,7 @@
     position: relative;
     max-width: 200px;
     font-size: 14px;
-    font-family: 'Ubuntu';
+    font-family: "Ubuntu", sans-serif;
     font-weight: 700;
 
 }
@@ -1059,7 +1059,7 @@
 }
 
 .stuff-header {
-    font-family: 'Ubuntu';
+    font-family: "Ubuntu", sans-serif;
     font-size: 42px;
     color: #0a3380;
     font-weight: 700;
@@ -1252,7 +1252,7 @@
 
 /* Our History */
 .history-header {
-    font-family: 'Ubuntu';
+    font-family: "Ubuntu", sans-serif;
     font-size: 42px;
     color: #0a3380;
     font-weight: 700;
@@ -1260,7 +1260,7 @@
 }
 
 .history-section {
-    font-family: Nunito;
+    font-family: "Nunito", sans-serif;
 }
 
 .history {
@@ -1373,7 +1373,7 @@
     position: relative;
     max-width: 140px;
     font-size: 14px;
-    font-family: 'Ubuntu';
+    font-family: "Ubuntu", sans-serif;
     font-weight: 700;
 }
 
@@ -1411,7 +1411,7 @@
 }
 
 .our-history-p {
-    font-family: 'Nunito';
+    font-family: "Nunito", sans-serif;
     font-size: 18px;
     line-height: 2;
     text-align: center;
@@ -1430,7 +1430,7 @@
     line-height: 1.4;
     transition: 0.4s;
     margin-bottom: 8px;
-    font-family: 'Ubuntu';
+    font-family: "Ubuntu", sans-serif;
 }
 
 .history-card:hover .history-card-h3 {
@@ -1439,7 +1439,7 @@
 
 .history-card-p {
     color: #3b4964;
-    font-family: 'Nunito';
+    font-family: "Nunito", sans-serif;
 }
 
 .history-card {
@@ -1463,7 +1463,7 @@
 }
 
 .year {
-    font-family: "Ubuntu", Sans-serif;
+    font-family: "Nunito", sans-serif;
     font-weight: 500;
     font-size: 48px;
     transition: 0.4s;
@@ -1495,7 +1495,7 @@
     max-width: 140px;
     margin: 0 auto;
     font-size: 14px;
-    font-family: 'Ubuntu';
+    font-family: "Ubuntu", sans-serif;
     font-weight: 700;
 }
 
@@ -1557,7 +1557,7 @@
 .care-a {
     color: #ff9e21;
     font-size: 14px;
-    font-family: 'Ubuntu';
+    font-family: "Ubuntu", sans-serif;
     font-weight: 700;
     position: relative;
     max-width: 175px;
@@ -1579,7 +1579,7 @@
 /* common carea start */
 
 .carea-lower-content p {
-    font-family: 'Nunito';
+    font-family: "Nunito", sans-serif;
     color: #3b4964;
     margin-bottom: 20px;
     line-height: 1.8;
@@ -1588,7 +1588,7 @@
 }
 
 .lower-carea {
-    font-family: "Ubuntu", Sans-serif;
+    font-family: "Nunito", sans-serif;
     font-weight: 700;
     color: #ccd0de;
     font-size: 18px;
@@ -1902,14 +1902,14 @@
 }
 
 .service-header {
-    font-family: 'Ubuntu';
+    font-family: "Ubuntu", sans-serif;
     font-size: 42px;
     color: #0a3380;
     font-weight: 700;
 }
 
 .service-section {
-    font-family: Nunito;
+    font-family: "Nunito", sans-serif;
 }
 
 .service-container {
@@ -1932,7 +1932,7 @@
     position: relative;
     max-width: 200px;
     font-size: 14px;
-    font-family: 'Ubuntu';
+    font-family: "Ubuntu", sans-serif;
     font-weight: 700;
     padding-left: 18px;
 }
@@ -1970,7 +1970,7 @@
 .our-service-p {
     margin: 0 0 30px 0;
     font-size: 16px;
-    font-family: 'Nunito';
+    font-family: "Nunito", sans-serif;
     text-align: center;
     line-height: 2;
     font-weight: 400;
@@ -2048,7 +2048,7 @@
     color: #0a3380;
     margin: 15px 0px 10px 0px;
     font-size: 24px;
-    font-family: Ubuntu;
+    font-family: "Ubuntu", sans-serif;
     font-weight: 700;
     line-height: 1.4;
     transition: 0.4s;
@@ -2064,7 +2064,7 @@
 }
 
 .pricing_plan-wrap {
-    font-family: "Ubuntu", Sans-serif;
+    font-family: "Nunito", sans-serif;
     font-weight: 700;
     max-width: 370px;
     width: 100%;
@@ -2148,7 +2148,7 @@
     margin: 62px auto 0 auto;
     font-size: 16px;
     font-weight: 400;
-    font-family: 'Ubuntu';
+    font-family: "Ubuntu", sans-serif;
     max-width: 142px;
     border-radius: 7px 7px 0px 0px;
 }
@@ -2339,14 +2339,14 @@
 }
 
 .doctor-header {
-    font-family: 'Ubuntu';
+    font-family: "Ubuntu", sans-serif;
     font-size: 42px;
     color: #0a3380;
     font-weight: 700;
 }
 
 .doctor-section {
-    font-family: Nunito;
+    font-family: "Nunito", sans-serif;
 }
 
 /* breadcrumb End */
@@ -2379,7 +2379,7 @@
     position: relative;
     max-width: 130px;
     font-size: 14px;
-    font-family: 'Ubuntu';
+    font-family: "Ubuntu", sans-serif;
 }
 
 .our-skill span::after {
@@ -2396,7 +2396,7 @@
 }
 
 .our-skill-content {
-    font-family: "Ubuntu", Sans-serif;
+    font-family: "Nunito", sans-serif;
     color: #0a3380;
     margin: 0px 0px 5px 0px;
 }
@@ -2418,7 +2418,7 @@
 .content-bar-label {
     width: 40px;
     height: 25px;
-    font-family: "Ubuntu", Sans-serif;
+    font-family: "Nunito", sans-serif;
     font-size: 12px;
     color: #ffffff;
     background-color: #ff9e21;
@@ -2554,7 +2554,7 @@
 }
 
 .dcard-info-title {
-    font-family: 'Ubuntu';
+    font-family: "Ubuntu", sans-serif;
     font-size: 20px;
     color: #0a3380;
     font-weight: 700;
@@ -2566,7 +2566,7 @@
 }
 
 .dcard-info {
-    font-family: 'Nunito';
+    font-family: "Nunito", sans-serif;
     font-size: 16px;
     line-height: 1.4;
     color: #3b4964;
@@ -2609,7 +2609,7 @@
 }
 
 .consultancy-left-text {
-    font-family: 'Ubuntu';
+    font-family: "Ubuntu", sans-serif;
     font-size: 24px;
     line-height: 1.5;
     color: #ffffff;
@@ -2621,7 +2621,7 @@
 .consultancy-right {
     max-width: calc(100% - 390px);
     flex: 1;
-    font-family: 'Nunito';
+    font-family: "Nunito", sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.7;
@@ -2666,7 +2666,7 @@
     max-width: 200px;
     width: 100%;
     height: 52px;
-    font-family: 'Ubuntu';
+    font-family: "Ubuntu", sans-serif;
     color: #ffffff;
     font-weight: 700;
     background: #54ced4;
@@ -2882,7 +2882,7 @@
 
 /* FAQ Start */
 .faq-header {
-    font-family: "Ubuntu";
+    font-family: "Nunito", sans-serif;
     font-size: 42px;
     color: #0a3380;
     font-weight: 700;
@@ -2890,7 +2890,7 @@
 }
 
 .faq-section {
-    font-family: "Nunito";
+    font-family: "Nunito", sans-serif;
     margin-top: 91px;
 }
 
@@ -2938,7 +2938,7 @@
 
 .faq-label {
     color: #ff9e21;
-    font-family: "Ubuntu";
+    font-family: "Nunito", sans-serif;
     font-size: 14px;
     font-weight: 700;
     margin-bottom: 10px;
@@ -2961,7 +2961,7 @@
 }
 
 .intro-ttl {
-    font-family: "Ubuntu";
+    font-family: "Nunito", sans-serif;
     font-size: 42px;
     color: #0A3380;
     font-weight: 700;
@@ -2973,7 +2973,7 @@
     margin-bottom: 25px;
     line-height: 2;
     font-size: 16px;
-    font-family: "Nunito";
+    font-family: "Nunito", sans-serif;
     font-weight: 500;
     color: #3b4964;
 }
@@ -3003,7 +3003,7 @@
     font-weight: 700;
     flex: 1;
     text-align: left;
-    font-family: "Ubuntu";
+    font-family: "Nunito", sans-serif;
     font-size: 20px;
     color: #0a3380;
     line-height: 1.5;
@@ -3047,7 +3047,7 @@
     padding-top: 23px;
     opacity: 0;
     line-height: 1.8;
-    font-family: "Nunito";
+    font-family: "Nunito", sans-serif;
     font-size: 16px;
     color: #3b4964;
     max-width: 587px;
@@ -3163,7 +3163,7 @@
 }
 
 .blog2column-header {
-    font-family: "Ubuntu";
+    font-family: "Nunito", sans-serif;
     font-size: 42px;
     color: #0a3380;
     font-weight: 700;
@@ -3175,7 +3175,7 @@
 }
 
 .blog2column-section {
-    font-family: "Nunito";
+    font-family: "Nunito", sans-serif;
     margin-top: 91px;
 }
 
@@ -3249,7 +3249,7 @@
     box-shadow: 7px 5px 15px 0px rgba(0, 0, 0, 0.09);
     border-radius: 5px;
     font-size: 14px;
-    font-family: "Nunito";
+    font-family: "Nunito", sans-serif;
     font-weight: 700;
 }
 
@@ -3306,13 +3306,13 @@
 }
 
 .post-date {
-    font-family: "Nunito";
+    font-family: "Nunito", sans-serif;
     font-size: 14px;
     color: #aeb6c2;
 }
 
 .post-title {
-    font-family: "Ubuntu";
+    font-family: "Nunito", sans-serif;
     font-size: 24px;
     color: #0A3380;
     padding-top: 7px;
@@ -3644,7 +3644,7 @@
 }
 
 .blogsingle-header {
-    font-family: "Ubuntu", sans-serif;
+    font-family: "Nunito", sans-serif;
     font-size: 42px;
     font-weight: 700;
     margin: 20px 0;
@@ -3671,7 +3671,7 @@
 .bs-breadcrumb-item {
     opacity: 0.8;
     font-weight: 400;
-    font-family: "Nunito";
+    font-family: "Nunito", sans-serif;
     font-size: 16px;
 }
 
@@ -3696,7 +3696,7 @@
     text-decoration: none;
     color: #0a3380;
     font-weight: 700;
-    font-family: "Nunito";
+    font-family: "Nunito", sans-serif;
     font-size: 16px;
 }
 
@@ -3704,7 +3704,7 @@
     color: #0a3380;
     font-weight: 700;
     opacity: 0.8;
-    font-family: "Nunito";
+    font-family: "Nunito", sans-serif;
     font-size: 16px;
     cursor: pointer;
 }
@@ -3740,7 +3740,7 @@
     display: flex;
     gap: 34px;
     padding: 40px 0 10px;
-    font-family: "Nunito";
+    font-family: "Nunito", sans-serif;
     font-size: 14px;
     font-weight: 800;
     color: #aeb6c2;
@@ -3773,7 +3773,7 @@
 }
 
 .bydeveloper {
-    font-family: "Nunito";
+    font-family: "Nunito", sans-serif;
     font-size: 14px;
     font-weight: 800;
     color: #aeb6c2;
@@ -3819,7 +3819,7 @@
 }
 
 .blog-single h2 {
-    font-family: "Ubuntu";
+    font-family: "Nunito", sans-serif;
     font-size: 36px;
     color: #0a3380;
     font-weight: 700;
@@ -3828,7 +3828,7 @@
 }
 
 .blog-single p {
-    font-family: "Nunito";
+    font-family: "Nunito", sans-serif;
     font-size: 16px;
     color: #3b4964;
     font-weight: 500;
@@ -3839,7 +3839,7 @@
 }
 
 .blog-single a {
-    font-family: "Nunito";
+    font-family: "Nunito", sans-serif;
     font-size: 16px;
     color: #2ea6f7;
     display: inline;
@@ -3848,7 +3848,7 @@
 }
 
 .blog-single u {
-    font-family: "Nunito";
+    font-family: "Nunito", sans-serif;
     font-size: 16px;
     color: #3b4964;
     font-weight: 500;
@@ -3859,7 +3859,7 @@
 }
 
 .blog-single h3 {
-    font-family: "Ubuntu";
+    font-family: "Nunito", sans-serif;
     font-size: 24px;
     color: #0a3380;
     font-weight: 700;
@@ -3868,7 +3868,7 @@
 }
 
 .blog-single span {
-    font-family: "Nunito";
+    font-family: "Nunito", sans-serif;
     font-size: 16px;
     color: #0a3380;
     font-weight: 700;
@@ -3885,7 +3885,7 @@
     position: relative;
     padding-left: 20px;
     margin-bottom: 8px;
-    font-family: "Nunito";
+    font-family: "Nunito", sans-serif;
     font-size: 16px;
     color: #3b4964;
     font-weight: 500;
@@ -3914,7 +3914,7 @@
 
 .blog-single blockquote {
     position: relative;
-    font-family: "Ubuntu";
+    font-family: "Nunito", sans-serif;
     font-size: 24px;
     font-weight: 700;
     color: #0a3380;
@@ -3945,7 +3945,7 @@
 }
 
 .blog-single cite {
-    font-family: "Nunito";
+    font-family: "Nunito", sans-serif;
     font-size: 16px;
     color: #aeb6c2;
     font-weight: 600;
@@ -3974,7 +3974,7 @@
 
 .blog-single div a {
     color: #3b4964;
-    font-family: "Nunito";
+    font-family: "Nunito", sans-serif;
     font-size: 14px;
     font-weight: 500;
     text-decoration: none;
@@ -4551,7 +4551,7 @@
 }
 
 .contacts-section {
-    font-family: Nunito;
+    font-family: "Nunito", sans-serif;
 }
 
 .quick-support {
@@ -4568,7 +4568,7 @@
 
 .left-contact-p {
     font-size: 16px;
-    font-family: 'Nunito';
+    font-family: "Nunito", sans-serif;
     font-weight: 400;
     color: #3b4964;
     padding-top: 10px;
@@ -4592,7 +4592,7 @@
 
 .contact-icon-label {
     font-size: 14px;
-    font-family: 'Nunito';
+    font-family: "Nunito", sans-serif;
     color: #2ea6f7;
     font-weight: 900;
     cursor: pointer;
@@ -4603,7 +4603,7 @@
 }
 
 .contact-address {
-    font-family: 'Nunito';
+    font-family: "Nunito", sans-serif;
     font-size: 16px;
     color: #3b4964;
     font-weight: 400;
@@ -4614,7 +4614,7 @@
 }
 
 .contact-textbox, .contact-textarea {
-    font-family: Nunito;
+    font-family: "Nunito", sans-serif;
     font-size: 16px;
     line-height: 1.875;
     font-weight: 400;
@@ -4785,7 +4785,7 @@
 
 /* 404 start */
 .error-header {
-    font-family: "Ubuntu";
+    font-family: "Nunito", sans-serif;
     font-size: 42px;
     color: #0a3380;
     font-weight: 700;
@@ -4793,7 +4793,7 @@
 }
 
 .error-section {
-    font-family: "Nunito";
+    font-family: "Nunito", sans-serif;
     margin-top: 91px;
 }
 
@@ -4824,7 +4824,7 @@
 }
 
 .error-ttl {
-    font-family: "Ubuntu";
+    font-family: "Nunito", sans-serif;
     padding-bottom: 7px;
     font-size: 48px;
     line-height: 1.277;
@@ -4835,7 +4835,7 @@
 }
 
 .error-content {
-    font-family: "Ubuntu";
+    font-family: "Nunito", sans-serif;
     font-size: 18px;
     max-width: 479px;
     line-height: 36px;

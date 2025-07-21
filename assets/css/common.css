@@ -164,7 +164,7 @@ Background Color
 .menu {
   display: flex;
   gap: 55px;
-  font-family: "Ubuntu";
+  font-family: "Ubuntu", sans-serif;
   font-size: 16px;
   font-weight: 500;
 }
@@ -177,7 +177,7 @@ Background Color
 .menu a {
   color: #0a3380;
   text-decoration: none;
-  font-family: "Ubuntu";
+  font-family: "Ubuntu", sans-serif;
   font-size: 16px;
   font-weight: 500;
   padding-bottom: 29px;
@@ -353,7 +353,7 @@ Background Color
   text-decoration: none;
   color: white;
   font-size: 16px;
-  font-family: "Ubuntu";
+  font-family: "Ubuntu", sans-serif;
 }
 
 .sidebar-link {
@@ -452,7 +452,7 @@ Background Color
   cursor: pointer;
   display: block;
   font-size: 16px;
-  font-family: "Ubuntu";
+  font-family: "Ubuntu", sans-serif;
 }
 
 .sidebar-submenu {
@@ -572,7 +572,7 @@ Background Color
 }
 
 .our-contacts-ttl {
-  font-family: "Ubuntu";
+  font-family: "Ubuntu", sans-serif;
   font-size: 20px;
   font-weight: 700;
   color: #0a3380;
@@ -635,7 +635,7 @@ Background Color
 }
 
 .open-hour-ttl {
-  font-family: "Ubuntu";
+  font-family: "Ubuntu", sans-serif;
   font-size: 20px;
   font-weight: 700;
   color: #0a3380;
@@ -1022,7 +1022,7 @@ Background Color
   max-width: fit-content;
   font-size: 14px;
   text-align: center;
-  font-family: "Ubuntu";
+  font-family: "Ubuntu", sans-serif;
   margin: 0 auto;
   padding: 0 21px;
 }
@@ -1054,7 +1054,7 @@ Background Color
 }
 
 .top-adv-title {
-  font-family: "Ubuntu";
+  font-family: "Ubuntu", sans-serif;
   font-size: 42px;
   color: #ffffff;
   font-weight: 700;
@@ -1091,7 +1091,7 @@ Background Color
   max-width: fit-content;
   font-size: 14px;
   text-align: center;
-  font-family: "Ubuntu";
+  font-family: "Ubuntu", sans-serif;
   margin: 0 auto;
   padding: 0 21px;
 }
@@ -1118,7 +1118,7 @@ Background Color
 }
 
 .adv-services-header {
-  font-family: "Ubuntu";
+  font-family: "Ubuntu", sans-serif;
   font-size: 42px;
   color: #0a3380;
   font-weight: 700;
@@ -1165,7 +1165,7 @@ Background Color
 .pediatrics-care-ttl,
 .adv-care-ttl,
 .family-care-ttl {
-  font-family: "Ubuntu";
+  font-family: "Ubuntu", sans-serif;
   font-size: 24px;
   color: #0a3380;
   font-weight: 500;
@@ -1212,7 +1212,7 @@ Background Color
 }
 
 .num {
-  font-family: "Ubuntu";
+  font-family: "Ubuntu", sans-serif;
   font-size: 36px;
   font-weight: 700;
   color: #ffffff;
@@ -1221,7 +1221,7 @@ Background Color
 
 /* 
 .top-number {
-  font-family: "Ubuntu";
+  font-family: "Ubuntu", sans-serif;
   font-size: 36px;
   font-weight: 700;
   color: #ff9e21;
@@ -1275,7 +1275,7 @@ Background Color
 }
 
 .counter-h3 {
-  font-family: "Ubuntu";
+  font-family: "Ubuntu", sans-serif;
   font-size: 14px;
   font-weight: 500;
   color: #ffffff;
@@ -1283,7 +1283,7 @@ Background Color
 }
 
 .top-counter-h3 {
-  font-family: "Ubuntu";
+  font-family: "Ubuntu", sans-serif;
   font-size: 14px;
   font-weight: 500;
   color: #0A3380;
@@ -1461,7 +1461,7 @@ Background Color
 }
 
 .top-counter-wrapper .num {
-  font-family: "Ubuntu";
+  font-family: "Ubuntu", sans-serif;
   font-size: 36px;
   font-weight: 700;
   color: #ff9e21;
@@ -1565,13 +1565,13 @@ Background Color
 .call-center-label {
   font-size: 28px;
   font-weight: 400;
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu", sans-serif;
   margin: 40px 0 20px 0;
   line-height: 1.5;
 }
 
 .call-center-no {
-  font-family: "Ubuntu";
+  font-family: "Ubuntu", sans-serif;
   font-size: 48px;
   font-weight: 700;
 }
@@ -1659,7 +1659,7 @@ Background Color
 }
 
 .marry-name {
-  font-family: "Ubuntu";
+  font-family: "Ubuntu", sans-serif;
   font-weight: 700;
   font-size: 26px;
   color: #0a3380;
@@ -1686,7 +1686,7 @@ Background Color
 }
 
 .categories {
-  font-family: "Ubuntu";
+  font-family: "Ubuntu", sans-serif;
   font-size: 17px;
   color: #0a3380;
   font-weight: 700;
@@ -1748,7 +1748,7 @@ Background Color
   padding: 0 2px;
   font-size: 18px;
   font-weight: 500;
-  font-family: "Ubuntu";
+  font-family: "Ubuntu", sans-serif;
   color: #0A3380;
   cursor: pointer;
 }
@@ -1787,7 +1787,7 @@ Background Color
 }
 
 .gallery {
-  font-family: "Ubuntu";
+  font-family: "Ubuntu", sans-serif;
   font-size: 18px;
   color: #0a3380;
   font-weight: 700;
@@ -1827,7 +1827,7 @@ Background Color
 }
 
 .emergemcy-service {
-  font-family: "Ubuntu";
+  font-family: "Ubuntu", sans-serif;
   font-size: 22px;
   color: #ffffff;
   font-weight: 400;
@@ -1839,7 +1839,7 @@ Background Color
 }
 
 .emergency-number {
-  font-family: "Ubuntu";
+  font-family: "Ubuntu", sans-serif;
   color: #ffffff;
   font-size: 24px;
   margin-bottom: 32px;
@@ -1866,7 +1866,7 @@ Background Color
   border: none;
   transition: all 0.45s ease;
   font-size: 16px;
-  font-family: "Ubuntu";
+  font-family: "Ubuntu", sans-serif;
   background: #fff;
   border-radius: 5px;
   cursor: pointer;
