@@ -529,6 +529,14 @@ Background Color
     background: rgba(49, 49, 49, 1);
   }
 
+  .sidebar.active {
+    left: 0;
+  }
+
+  .sidebar-overlay.active {
+    display: block;
+  }
+
   .clinic-logo-sp-img {
     display: block;
   }
