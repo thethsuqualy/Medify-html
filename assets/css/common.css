@@ -513,16 +513,8 @@ Background Color
     display: block;
   }
 
-  .sidebar.active {
-    left: 0;
-  }
-
   .menu {
     display: none;
-  }
-
-  .sidebar-overlay.active {
-    display: block;
   }
 
   .header {
