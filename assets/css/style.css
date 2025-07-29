@@ -3151,6 +3151,11 @@
         padding-bottom: 1px;
     }
 }
+@media screen and (max-width:425px) {
+    .faq-question-answwer-cover {
+        padding: 0;
+    }
+}
 
 /* dropdown content end */
 
@@ -3224,7 +3229,7 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px 0;
+    gap: 75px 0;
     padding-top: 30px;
     place-items: center;
 }
@@ -3336,7 +3341,54 @@
     z-index: 1;
 
 }
+.button-read-more {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #54ced4;
+    margin-top: 8px;
+}
 
+.button-read-more.latest {
+    margin-top: 20px;
+}
+
+.button-read-more,
+.button-read-more:visited {
+    color: #54ced4;
+}
+
+.button-read-more:hover {
+    color: #0A3380;
+}
+
+.btn-readmore {
+    width: 10px;
+    position: absolute;
+    left: 98px;
+    top: 5px;
+}
+
+.button-read-more:after {
+    font-family: "Flaticon";
+    font-size: 16px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    opacity: 1;
+}
+@media screen and (max-width:1260px) {
+    .slider-card-wrapper {
+        gap: 40px 0px;
+
+    }
+}
 @media screen and (max-width:1230px) {
     .wlslider img {
         max-width: 400px;
