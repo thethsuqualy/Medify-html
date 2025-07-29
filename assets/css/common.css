@@ -894,20 +894,10 @@ Background Color
   }
 }
 
-/* @media screen and (max-width: 478px) {
-  .access-map {
-    width: 410px;
-  }
-
-  .open-hours {
-    max-width: 410px;
-  }
-} */
-
 @media screen and (max-width: 478px) {
   .access-map {
-    width: 395px;
-    padding: 10px 20px 0px 0px;
+    width: 375px;
+    padding: 10px;
   }
 
   .open-hours {
@@ -917,7 +907,7 @@ Background Color
 
 @media screen and (max-width: 433px) {
   .access-map {
-    width: 385px;
+    width: 370px;
   }
 
   .open-hours {
@@ -927,7 +917,7 @@ Background Color
 
 @media screen and (max-width: 419px) {
   .access-map {
-    width: 375px;
+    width: 344px;
   }
 
   .open-hours {
@@ -937,7 +927,7 @@ Background Color
 
 @media screen and (max-width: 412px) {
   .access-map {
-    width: 360px;
+    width: 330px;
   }
 
   .open-hours {
@@ -947,7 +937,7 @@ Background Color
 
 @media screen and (max-width: 400px) {
   .access-map {
-    width: 345px;
+    width: 325px;
   }
 
   .open-hours {
