@@ -375,7 +375,7 @@
 }
 
 .top-ourteam-title {
-    font-family: "Ubuntu";
+    font-family: "Ubuntu", sans-serif;
     font-size: 42px;
     color: #0a3380;
     font-weight: 700;
