@@ -360,7 +360,7 @@ $(function () {
       prevArrow: ".next",
       nextArrow: ".prev",
       autoplay: true,
-      autoplaySpeed: 2000,
+      autoplaySpeed: 2500,
       speed: 1000,
       fade: true,
       cssEase: "ease-in-out",
