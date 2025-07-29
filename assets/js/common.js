@@ -160,6 +160,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }, 2000);
 
+   window.addEventListener("resize", () => {
+    if (window.innerWidth > 768) {
+      const hamburger = document.getElementById("hamburger");
+      const sidebar = document.getElementById("sidebar");
+      const overlay = document.getElementById("sidebarOverlay");
+
+      sidebar?.classList.remove("active");
+      overlay?.classList.remove("active");
+      hamburger?.classList.remove("active");
+
+      document.body.classList.remove("no-scroll");
+      document.body.classList.remove("hide-header");
+    }
+  });
+
   //humburger end
 
   //faq start
